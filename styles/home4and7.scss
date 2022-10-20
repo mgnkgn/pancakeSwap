@@ -1,13 +1,10 @@
+@use "../stylesheets/base/helpers" as helper;
+
 .home4,
 .home7 {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    svg {
-        width: 100%;
-        fill: #d8cbed;
-    }
 }
 
 .home4-container {
@@ -23,18 +20,23 @@
 
     .home4content {
         width: 50%;
-
+        display: flex;
+        flex-direction: column;
         h2 {
-            font-size: 32px;
-
+            font-size: 40px;
+            margin: 0 0 24px;
+            font-weight: 600;
+            line-height: 1.1;
             span {
                 color: purple;
             }
         }
 
-        p {
+        div p {
             font-size: 16px;
             color: #7a6eaa;
+            font-weight: 400;
+            margin: 0 0 24px;
         }
 
         button {
@@ -67,6 +69,18 @@
         width: 20rem;
         position: absolute;
     }
+
+    .fmg1 {
+        @include helper.addAnimation(1, 4);
+    }
+
+    .fmg2 {
+        @include helper.addAnimation(0.5, 5);
+    }
+
+    .fmg3 {
+        @include helper.addAnimation(1.5, 6);
+    }
 }
 
 .home7 {
@@ -81,40 +95,79 @@
 .home7-container {
     display: flex;
     flex-direction: row;
-    height: 20rem;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 968px;
+    padding: 30px 40px;
 
+    align-items: center;
+    justify-items: space-evenly;
+    width: 100%;
+    max-width: 1200px;   
+    .home7-leftimagecontainer{
+        align-items: flex-end;
+    }
+
+    .home7-leftimagecontainer{
+        margin-right: 3rem;
+        margin-top: 3rem;
+    }
+    .home7-rightimagecontainer{
+        margin-left: 3rem;
+        margin-bottom: 6rem;
+    }
     .home7-leftimagecontainer,
     .home7-rightimagecontainer {
+
         width: 40%;
         display: flex;
-        place-items: center;
-        padding-left: 1rem;
+        justify-items: center;
+
 
         & img {
-            width: 20rem;
+
+            width: 15rem;
             position: absolute;
+        }
+
+        .fmg1 {
+            @include helper.addAnimation(1, 4);
+        }
+
+        .fmg2 {
+            @include helper.addAnimation(0.5, 5);
+        }
+
+        .fmg3 {
+            @include helper.addAnimation(1.5, 6);
         }
     }
 
     .home7-textcontainer {
-        width: 50%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        padding: 40px 0;
+
 
         h2 {
-            font-size: 32px;
+            font-size: 40px;
             color: white;
+            font-weight: 600;
+            line-height: 1.1;
+            margin: 0 0 24px;
 
         }
-
+        div:nth-of-type(2n+1) {
+            margin: 0 0 24px;
+        }
         p {
             line-height: 1.5;
-            margin-bottom: 24px;
             font-size: 16px;
             color: white;
-
+            margin: 0px;
+            &:nth-child(2) {
+                margin: 0 0 24px;
+            }
             span {
                 font-weight: 600;
             }
@@ -128,7 +181,7 @@
             border-color: #1fc7d4;
             border-radius: 15%;
             font-size: 16px;
-            margin-right: 16px;
+            margin: 24px 0 0;
         }
 
         a {
