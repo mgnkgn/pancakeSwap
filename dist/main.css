@@ -1,3 +1,329 @@
+.home-5__container {
+  position: relative;
+  height: 799px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, #74b8f1, #e1edf5);
+}
+.home-5__container__billard-balls {
+  position: absolute;
+  width: 350px;
+  height: 800px;
+  top: 0;
+  right: 0;
+}
+.home-5__container__billard-balls .billard_ball_container {
+  position: relative;
+}
+.home-5__container__billard-balls .billard_ball_container img {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+}
+.home-5__container__billard-balls__purple_container {
+  transform: translateX(-140px) translateY(-65px) scale(1.2);
+  z-index: 5;
+}
+.home-5__container__billard-balls__purple_container .billard-ball-purple-top {
+  animation: jump-jump 2.5s ease-in-out 1s infinite;
+}
+@keyframes jump-jump {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(20px) translateY(10px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+.home-5__container__billard-balls__green_container {
+  z-index: 4;
+  transform: translateX(-120px) translateY(-40px);
+}
+.home-5__container__billard-balls__green_container .billard-ball-green-top {
+  position: absolute;
+  animation: up-down 2.5s ease-in-out 0.2s infinite;
+}
+@keyframes up-down {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(1.3333333333px) translateY(10px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+.home-5__container__billard-balls__turquoise_container {
+  z-index: 3;
+  transform: translateX(-100px) translateY(10px);
+}
+.home-5__container__billard-balls__turquoise_container .billard-ball-turquiose {
+  position: absolute;
+  animation: jump-jump 2.5s ease-in-out 0.35s infinite;
+}
+@keyframes jump-jump {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(20px) translateY(10px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+.home-5__container__billard-balls__purple-bottom_container {
+  z-index: 3.2;
+  transform: translateX(-125px) translateY(-20px);
+}
+.home-5__container__billard-balls__purple-bottom_container .billard-ball-purple-bottom {
+  position: absolute;
+  animation: jump-jump 2.5s ease-in-out 0.35s infinite;
+}
+@keyframes jump-jump {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(20px) translateY(10px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+.home-5__container__billard-balls__yellow_container {
+  z-index: 3.2;
+  transform: translateX(-180px) translateY(-40px);
+}
+.home-5__container__billard-balls__yellow_container .billard-ball-yellow {
+  position: absolute;
+  animation: up-down 2.5s ease-in-out 0.35s infinite;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.home-5__container__gamble-cards {
+  position: absolute;
+  width: 350px;
+  height: 400px;
+  bottom: 0;
+  left: 0;
+}
+.home-5__container__gamble-cards .gamble_card_container {
+  position: relative;
+}
+.home-5__container__gamble-cards .gamble_card_container img {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+}
+.home-5__container__gamble-cards_yugioh-top_container .gamble-card-yugioh-top {
+  padding: 0;
+  transform: translateX(-10px);
+  animation: up-down 2.5s ease-in-out 1s infinite;
+}
+@keyframes up-down {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(0.6px) translateY(4.5px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+.home-5__container__gamble-cards_green_container .gamble-card-green {
+  transform: translateX(-20px);
+  z-index: 4;
+  animation: jump-jump 2.5s ease-in-out 1.8s infinite;
+}
+@keyframes jump-jump {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(7px) translateY(3.5px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+.home-5__container__gamble-cards_pink_container .gamble-card-pink {
+  transform: translateX(-10px) translateY(20px);
+  z-index: 5;
+  animation: jump-jump 2.5s ease-in-out -1s infinite;
+}
+@keyframes jump-jump {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(3px) translateY(1.5px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+.home-5__container__gamble-cards_yugioh-bottom_container .gamble-card-yugioh-bottom {
+  z-index: 3;
+  animation: up-down 2.5s ease-in-out 2s infinite;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.home-5__container__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 525px;
+  width: 838px;
+  background: white;
+  border-radius: 5rem;
+  box-shadow: 0 1px 0.1px rgba(225, 237, 245, 0.5);
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 8;
+}
+.home-5__container__main h3 {
+  color: #280d5f;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: -10px;
+}
+.home-5__container__main h3 span {
+  color: #7645d9;
+}
+.home-5__container__main p {
+  font-size: 16px;
+  width: 22ch;
+  text-align: center;
+  color: #857db3;
+  margin-bottom: 40px;
+}
+.home-5__container__main__cards-container {
+  display: flex;
+  width: 600px;
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+.home-5__container__main__cards-container .card {
+  border-radius: 2rem;
+  height: 327px;
+  width: 238px;
+  display: grid;
+  grid-template-rows: 10% 1fr 20%;
+  padding: 24px;
+}
+.home-5__container__main__cards-container .card-left {
+  transform: rotate(-3.5deg);
+  background: linear-gradient(180deg, #ffb63b, #ffe568);
+  border-bottom: 5px solid #ffb237;
+  border-right: 2px solid #ffb237;
+  border-left: 2px solid #ffb237;
+}
+.home-5__container__main__cards-container .card-left_first-img {
+  margin-left: auto;
+}
+.home-5__container__main__cards-container .card-left_middle-row {
+  display: grid;
+  grid-template-rows: 7% 22% 20%;
+  height: 245px;
+  grid-row: 2/span 1;
+  color: #280d5f;
+}
+.home-5__container__main__cards-container .card-left_middle-row h5 {
+  font: 16px;
+  margin-right: auto;
+}
+.home-5__container__main__cards-container .card-left_middle-row h2 {
+  font-size: 32px;
+  margin-right: auto;
+}
+.home-5__container__main__cards-container .card-left_middle-row p {
+  color: #280d5f;
+  text-align: left;
+}
+.home-5__container__main__cards-container .card-right {
+  transform: rotate(1.5deg);
+  background: linear-gradient(180deg, #7544d7, #5222b2);
+  border: 2px solid #411a8e;
+  border-bottom: 4.1px solid #3c1786;
+}
+.home-5__container__main__cards-container .card-right_first-img {
+  margin-left: auto;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+.home-5__container__main__cards-container .card-right_middle-row {
+  display: grid;
+  grid-template-rows: 7% 22% 20%;
+  height: 245px;
+  grid-row: 2/span 1;
+  color: #280d5f;
+}
+.home-5__container__main__cards-container .card-right_middle-row h5 {
+  color: #fbfafe;
+  font: 16px;
+  margin-right: auto;
+}
+.home-5__container__main__cards-container .card-right_middle-row h2 {
+  color: #fecb0e;
+  font-size: 32px;
+  margin-right: auto;
+}
+.home-5__container__main__cards-container .card-right_middle-row p {
+  color: #fbfafe;
+  text-align: left;
+}
+.home-5__container__main__cards-container .card img {
+  height: 35px;
+  width: 35px;
+}
+.home-5__container__main__cards-container .card_btn {
+  font-size: 16px;
+  font-weight: 600;
+  background: #1fc7d4;
+  border: none;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 0 24px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.home-5__container__main__cards-container .card_btn_img-arrow {
+  transform: scale(0.65);
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
 .footer {
   background: #27262c;
   height: 520px;
@@ -129,6 +455,7 @@
   width: 55px;
 }
 .footer__section__bottom--item-2__left select {
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }

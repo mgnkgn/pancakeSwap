@@ -1,0 +1,260 @@
+@use "../themes/base-colors" as bc;
+@use "../base/helpers" as helper;
+
+.home-5__container {
+  position: relative;
+  height: 799px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, bc.$home-5-bg-i, bc.$home-5-bg-ii);
+  // Billard Balls Container
+  &__billard-balls {
+    position: absolute;
+    width: 350px;
+    height: 800px;
+    top: 0;
+    right: 0;
+    .billard_ball_container {
+      position: relative;
+      img {
+        position: absolute;
+        width: 440px;
+        height: 440px;
+      }
+    }
+    &__purple_container {
+      transform: translateX(-140px) translateY(-65px) scale(1.2);
+      z-index: 5;
+      .billard-ball-purple-top {
+        @include helper.addAnimation(1, 10);
+      }
+    }
+    &__green_container {
+      z-index: 4;
+      transform: translateX(-120px) translateY(-40px);
+      .billard-ball-green-top {
+        position: absolute;
+        @include helper.addAnimation-i(0.2, 10);
+      }
+    }
+    &__turquoise_container {
+      z-index: 3;
+      transform: translateX(-100px) translateY(10px);
+      .billard-ball-turquiose {
+        position: absolute;
+        @include helper.addAnimation(0.35, 10);
+      }
+    }
+    &__purple-bottom_container {
+      z-index: 3.2;
+      transform: translateX(-125px) translateY(-20px);
+      .billard-ball-purple-bottom {
+        position: absolute;
+        @include helper.addAnimation(0.35, 10);
+      }
+    }
+    &__yellow_container {
+      z-index: 3.2;
+      transform: translateX(-180px) translateY(-40px);
+      .billard-ball-yellow {
+        position: absolute;
+        @include helper.addAnimation-ii(0.35, 2);
+      }
+    }
+  }
+  // Gamble Cards Container
+  &__gamble-cards {
+    position: absolute;
+
+    width: 350px;
+    height: 400px;
+    bottom: 0;
+    left: 0;
+    // ### //
+    .gamble_card_container {
+      position: relative;
+      img {
+        position: absolute;
+        width: 440px;
+        height: 440px;
+        // @include helper.addAnimation(0, 2.5);
+      }
+    }
+    &_yugioh-top_container {
+      .gamble-card-yugioh-top {
+        padding: 0;
+        transform: translateX(-10px);
+        @include helper.addAnimation-i(1, 4.5);
+      }
+    }
+    // ### //
+    &_green_container {
+      .gamble-card-green {
+        transform: translateX(-20px);
+        z-index: 4;
+        @include helper.addAnimation(1.8, 3.5);
+      }
+    }
+    // ### //
+    &_pink_container {
+      .gamble-card-pink {
+        transform: translateX(-10px) translateY(20px);
+        z-index: 5;
+        @include helper.addAnimation(-1, 1.5);
+      }
+    }
+    // ### //
+    &_yugioh-bottom_container {
+      .gamble-card-yugioh-bottom {
+        z-index: 3;
+        @include helper.addAnimation-ii(2, 5);
+      }
+    }
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 525px;
+    width: 838px;
+    background: rgba(white, 1);
+    border-radius: 5rem;
+    box-shadow: 0 1px 0.1px rgba(bc.$home-5-bg-ii, 0.5);
+    // overflow: hidden;
+    position: relative;
+    background: rgba(white, 0.75);
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 8;
+    h3 {
+      color: #280d5f;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: -10px;
+      span {
+        color: #7645d9;
+      }
+    }
+    p {
+      font-size: 16px;
+      width: 22ch;
+      text-align: center;
+      color: #857db3;
+      margin-bottom: 40px;
+    }
+    &__cards-container {
+      display: flex;
+      width: 600px;
+      margin-bottom: 40px;
+      justify-content: space-between;
+      .card {
+        border-radius: 2rem;
+        height: 327px;
+        width: 238px;
+        display: grid;
+        grid-template-rows: 10% 1fr 20%;
+        padding: 24px;
+        // left Card
+        &-left {
+          transform: rotate(-3.5deg);
+          background: linear-gradient(
+            180deg,
+            bc.$card-left-i,
+            bc.$card-left-ii
+          );
+          border-bottom: 5px solid bc.$card-left-border;
+          border-right: 2px solid bc.$card-left-border;
+          border-left: 2px solid bc.$card-left-border;
+          &_first-img {
+            margin-left: auto;
+          }
+          &_middle-row {
+            display: grid;
+            grid-template-rows: 7% 22% 20%;
+            height: 245px;
+            grid-row: 2 / span 1;
+            color: bc.$card-left-text-i;
+            h5 {
+              font: 16px;
+              margin-right: auto;
+            }
+            h2 {
+              font-size: 32px;
+              margin-right: auto;
+            }
+            p {
+              color: bc.$card-left-text-i;
+              text-align: left;
+            }
+          }
+        }
+
+        // Right card
+        &-right {
+          transform: rotate(1.5deg);
+          background: linear-gradient(
+            180deg,
+            bc.$card-right-i,
+            bc.$card-right-ii
+          );
+          border: 2px solid bc.$card-right-border;
+          border-bottom: 4.1px solid bc.$card-right-border-i;
+          &_first-img {
+            margin-left: auto;
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
+              brightness(103%) contrast(103%);
+          }
+          &_middle-row {
+            display: grid;
+            grid-template-rows: 7% 22% 20%;
+            height: 245px;
+            grid-row: 2 / span 1;
+            color: bc.$card-left-text-i;
+            h5 {
+              color: #fbfafe;
+              font: 16px;
+              margin-right: auto;
+            }
+            h2 {
+              color: #fecb0e;
+              font-size: 32px;
+              margin-right: auto;
+            }
+            p {
+              color: #fbfafe;
+              text-align: left;
+            }
+          }
+        }
+
+        img {
+          height: 35px;
+          width: 35px;
+        }
+        &_btn {
+          font-size: 16px;
+          font-weight: 600;
+          background: bc.$button-color-main;
+          border: none;
+          border-radius: 1rem;
+          width: 100%;
+          padding: 0 24px;
+          height: 48px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          &_img-arrow {
+            transform: scale(0.65);
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+              brightness(102%) contrast(102%);
+          }
+        }
+      }
+    }
+  }
+}
