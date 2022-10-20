@@ -4,6 +4,7 @@
 
 // General animation code(just use(with correct delay) ==> @include addAnimation whenever you need to use it)
 
+// This one goes upleft downright
 @mixin addAnimation($delay, $distance) {
   @keyframes jump-jump {
     0% {
@@ -21,6 +22,7 @@
   animation: jump-jump 2.5s ease-in-out $delay + s infinite;
 }
 
+// This one goes upleft(but not so much) and downright
 @mixin addAnimation-i($delay, $distance) {
   @keyframes up-down {
     0% {
@@ -38,8 +40,9 @@
   animation: up-down 2.5s ease-in-out $delay + s infinite;
 }
 
+// This one goes up and down
 @mixin addAnimation-ii($delay, $distance) {
-  @keyframes up-down {
+  @keyframes only-up-down {
     0% {
       transform: translateY(0px);
     }
