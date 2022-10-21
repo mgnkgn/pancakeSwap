@@ -1,5 +1,404 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-@use "../themes/base-colors" as bc;
 
+@use "../themes/base-colors" as bc;
+@use "../components/buttons" as button;
+
+* {
+    ::-webkit-scrollbar {
+        width: .5rem;
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px var(--colors-input);
+        border-radius: .625rem;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: bc.$nav-text;
+        border-radius: .5rem;
+    }
+
+    font-size: 16px;
+
+    a {
+        text-decoration: none;
+    }
+    
+    li,
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+%submenu {
+    position: absolute;
+    width: 17.5rem;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0);
+    left: -9999px;
+    border-radius: 1rem;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+
+    &__navbar {
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        height: 3.5rem;
+        background-color: bc.$nav-background;
+        border-bottom: 1px solid bc.$nav-border;
+
+
+        &__left {
+            align-items: center;
+            height: 3rem;
+
+            &-logo {
+                width: 10rem;
+                height: 1.6rem;
+
+                &:hover {
+                    .eye {
+                        animation-name: blink;
+                        animation-duration: .3s;
+                        animation-iteration-count: 1;
+                        transform-origin: center;
+
+                        @keyframes blink {
+                            from {
+                                transform: scaleY(1);
+                            }
+
+                            50% {
+                                transform: scaleY(0.1);
+                            }
+
+
+                            to {
+                                transform: scaleY(1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-links {
+                align-items: center;
+                margin: 0;
+                margin-left: 1.5rem;
+                padding: 0;
+                height: 100%;
+
+                a {
+                    text-decoration: none;
+                    color: bc.$nav-text;
+                    padding: 0 1rem;
+                    height: 3.5rem;
+                    display: flex;
+                    align-items: center;
+                }
+
+                &--menu {
+                    position: relative;
+
+                    &:hover {
+                        border-radius: 1rem;
+                        background-color: bc.$nav-hover;
+                    }
+
+                    &:hover ul {
+                        left: 0;
+                        top: 3.5rem;
+                        background-color: bc.$nav-background;
+                        border: 1px solid bc.$nav-border;
+                    }
+                }
+
+                &--submenu {
+
+                    @extend %submenu;
+
+                    li {
+                        justify-content: space-between;
+
+                        &:hover {
+                            background-color: bc.$nav-hover;
+
+                            &:first-child {
+                                border-top-left-radius: 1rem;
+                                border-top-right-radius: 1rem;
+                            }
+
+                            &:last-child {
+                                border-bottom-right-radius: 1rem;
+                                border-bottom-left-radius: 1rem;
+                            }
+                        }
+                    }
+
+                    .leaderboard {
+                        border-top: 1px solid bc.$nav-border;
+                        border-bottom: 1px solid bc.$nav-border;
+                    }
+
+                }
+            }
+        }
+
+
+        &__right {
+            align-items: center;
+            height: 3rem;
+
+            div {
+                display: flex;
+                align-items: center;
+            }
+
+            &-price {
+                margin-right: .75rem;
+                cursor: pointer;
+
+                &:hover {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+
+                img {
+                    transition: .3s;
+                    margin-right: .5rem;
+                }
+
+                a {
+                    color: bc.$nav-text;
+                    font-weight: 600;
+                }
+            }
+
+            &-language {
+                position: relative;
+                padding: 0 0.5rem;
+                cursor: pointer;
+
+                img {
+                    margin-right: .5rem;
+                }
+
+                &:hover {
+                    img {
+                        opacity: 0.65;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: bc.$nav-text2;
+                    font-weight: 600;
+                }
+
+                &:hover ul {
+                    left: -4.5rem;
+                    top: 1.5rem;
+                    background-color: bc.$nav-background;
+                }
+
+                &--submenu {
+                    @extend %submenu;
+                    justify-content: center;
+                    width: 12rem;
+                    max-height: 42rem;
+                    font-size: 1rem;
+                    align-items: center;
+                    z-index: 20;
+
+                    ul {
+                        align-items: center;
+                        justify-content: flex-start;
+                        width: 12rem;
+                        height: 25rem;
+                        border-radius: .3rem;
+                        padding-top: 2rem;
+                        overflow: auto;
+                    }
+
+                    li {
+                        min-height: 2.1rem;
+                        height: auto;
+                        width: 11rem;
+                        text-align: center;
+
+                        &:hover {
+                            opacity: .65;
+                            transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
+                        }
+                    }
+                }
+            }
+
+
+            &-settings {
+                margin-right: .8rem;
+                cursor: pointer;
+
+                &:hover {
+                    img {
+                        opacity: 0.65;
+                    }
+                }
+            }
+
+            &-chain {
+                height: 3.5rem;
+                margin-right: .5rem;
+                position: relative;
+
+                button {
+                    cursor: pointer;
+                    align-items: center;
+                    height: 2rem;
+                    padding-left: 2rem;
+                    padding-right: .5rem;
+                    background-color: bc.$nav-hover;
+                    border-radius: 1rem;
+                    border: 0;
+                    box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
+
+                    &:hover {
+                        opacity: .65;
+                    }
+
+                    a {
+                        margin-left: .5rem;
+                        margin-right: .25rem;
+                        color: bc.$nav-text2;
+                        font-weight: 600;
+                    }
+
+                    .bnb {
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute;
+                        left: 0;
+                        top: .75rem;
+                        z-index: 40;
+                    }
+                }
+
+                &:hover {
+                    ul {
+                        left: 0;
+                        top: 3.5rem;
+                        background-color: bc.$nav-background;
+                        border: 1px solid bc.$nav-border;
+                    }
+                }
+
+                &--submenu {
+                    @extend %submenu;
+
+                    li:hover {
+                        background-color: bc.$nav-hover;
+
+                        &:first-child {
+                            border-top-left-radius: 1rem;
+                            border-top-right-radius: 1rem;
+                        }
+
+                        &:last-child {
+                            border-bottom-right-radius: 1rem;
+                            border-bottom-left-radius: 1rem;
+                        }
+                    }
+
+
+                    li:first-child {
+                        border-bottom: 1px solid bc.$nav-border;
+
+                        &:hover {
+                            background-color: bc.$nav-background;
+                            cursor: auto;
+                        }
+                    }
+
+                    li {
+                        align-items: center;
+                        justify-content: flex-start;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: bc.$nav-text;
+                        padding: 0 1rem;
+                        height: 3.5rem;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            border-radius: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            &-connect {
+                position: relative;
+
+                button {
+                    cursor: pointer;
+                    align-items: center;
+                    border: 0;
+                    border-radius: 1rem;
+                    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+                    height: 2rem;
+                    padding: 0 1rem;
+                    background-color: bc.$button-color-main;
+                    color: bc.$nav-background;
+
+                    &:hover {
+                        opacity: .65;
+                    }
+
+                    &:active {
+                        opacity: 0.85;
+                        transform: translateY(1px);
+                        box-shadow: none;
+                    }
+                }
+
+
+            }
+
+
+        }
+    }
+}
