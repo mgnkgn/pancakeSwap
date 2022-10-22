@@ -213,11 +213,9 @@
                 padding: 0 0.5rem;
                 cursor: pointer;
 
-                @extend %buttonClick;
-
-
                 img {
                     margin-right: .5rem;
+                    @extend %buttonClick;
                 }
 
                 &:hover {

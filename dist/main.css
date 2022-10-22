@@ -33,7 +33,7 @@
   padding: 0;
 }
 
-.header__navbar__right-connect button:active, .header__navbar__right-settings:active, .header__navbar__right-language:active {
+.header__navbar__right-connect button:active, .header__navbar__right-settings:active, .header__navbar__right-language img:active {
   opacity: 0.85;
   transform: translateY(1px);
   box-shadow: none;
