@@ -48,6 +48,14 @@
     padding: 0;
 }
 
+%buttonClick{
+    &:active {
+        opacity: 0.85;
+        transform: translateY(1px);
+        box-shadow: none;
+    }
+}
+
 .flex {
     display: flex;
 }
@@ -205,6 +213,9 @@
                 padding: 0 0.5rem;
                 cursor: pointer;
 
+                @extend %buttonClick;
+
+
                 img {
                     margin-right: .5rem;
                 }
@@ -223,7 +234,7 @@
 
                 &:hover ul {
                     left: -4.5rem;
-                    top: 1.5rem;
+                    top: 1.6rem;
                     background-color: bc.$nav-background;
                 }
 
@@ -235,19 +246,22 @@
                     font-size: 1rem;
                     align-items: center;
                     z-index: 20;
+                    box-shadow: 0px 2px 12px -8px rgba(25,19,38,.1),0px 1px 1px rgba(25,19,38,.05);
+
 
                     ul {
                         align-items: center;
                         justify-content: flex-start;
                         width: 12rem;
-                        height: 25rem;
+                        height: 23rem;
                         border-radius: .3rem;
-                        padding-top: 2rem;
+                        padding-top: 1.5rem;
+                        padding-bottom: 1rem;
                         overflow: auto;
                     }
 
                     li {
-                        min-height: 2.1rem;
+                        min-height: 2rem;
                         height: auto;
                         width: 11rem;
                         text-align: center;
@@ -258,6 +272,7 @@
                         }
                     }
                 }
+
             }
 
 
@@ -270,6 +285,8 @@
                         opacity: 0.65;
                     }
                 }
+
+                @extend %buttonClick;
             }
 
             &-chain {
@@ -358,6 +375,14 @@
                         display: flex;
                         align-items: center;
 
+                        &:nth-child(2) {
+                            padding: 0;
+                        }
+
+                        &:nth-child(3) {
+                            padding: 0;
+                        }
+
                         img {
                             width: 1.5rem;
                             height: 1.5rem;
@@ -388,11 +413,7 @@
                         opacity: .65;
                     }
 
-                    &:active {
-                        opacity: 0.85;
-                        transform: translateY(1px);
-                        box-shadow: none;
-                    }
+                    @extend %buttonClick;
                 }
 
 
