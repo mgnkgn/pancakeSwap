@@ -63,7 +63,19 @@
   position: absolute;
 }
 .home4-imagecontainer .fmg1 {
-  animation: jump-jump 2.5s ease-in-out 1s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 1s infinite;
+          animation: jump-jump 2.5s ease-in-out 1s infinite;
+}
+@-webkit-keyframes jump-jump {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(8px) translateY(4px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
 }
 @keyframes jump-jump {
   0% {
@@ -77,7 +89,8 @@
   }
 }
 .home4-imagecontainer .fmg2 {
-  animation: jump-jump 2.5s ease-in-out 0.5s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 0.5s infinite;
+          animation: jump-jump 2.5s ease-in-out 0.5s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -91,7 +104,8 @@
   }
 }
 .home4-imagecontainer .fmg3 {
-  animation: jump-jump 2.5s ease-in-out 1.5s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 1.5s infinite;
+          animation: jump-jump 2.5s ease-in-out 1.5s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -109,7 +123,11 @@
   background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
 }
 .home7 svg {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
 }
 
@@ -146,7 +164,8 @@
 }
 .home7-container .home7-leftimagecontainer .fmg1,
 .home7-container .home7-rightimagecontainer .fmg1 {
-  animation: jump-jump 2.5s ease-in-out 1s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 1s infinite;
+          animation: jump-jump 2.5s ease-in-out 1s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -161,7 +180,8 @@
 }
 .home7-container .home7-leftimagecontainer .fmg2,
 .home7-container .home7-rightimagecontainer .fmg2 {
-  animation: jump-jump 2.5s ease-in-out 0.5s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 0.5s infinite;
+          animation: jump-jump 2.5s ease-in-out 0.5s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -176,7 +196,8 @@
 }
 .home7-container .home7-leftimagecontainer .fmg3,
 .home7-container .home7-rightimagecontainer .fmg3 {
-  animation: jump-jump 2.5s ease-in-out 1.5s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 1.5s infinite;
+          animation: jump-jump 2.5s ease-in-out 1.5s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -234,6 +255,4 @@
   color: #1fc7d4;
   font-weight: 600;
   line-height: 1.5;
-}
-
-/*# sourceMappingURL=home4and7.css.map */
+}/*# sourceMappingURL=home4and7.css.map */
