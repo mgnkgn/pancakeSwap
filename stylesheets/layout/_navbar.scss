@@ -35,9 +35,6 @@
     -webkit-font-smoothing: antialiased;
 }
 
-
-
-
 %submenu {
     position: absolute;
     width: 17.5rem;
@@ -79,7 +76,6 @@
         height: 3.5rem;
         background-color: bc.$nav-background;
         border-bottom: 1px solid bc.$nav-border;
-
 
         &__left {
             align-items: center;
@@ -151,7 +147,9 @@
                     @extend %submenu;
 
                     li {
+                        cursor: pointer;
                         justify-content: space-between;
+                        @extend %buttonClick;
 
                         &:hover {
                             background-color: bc.$nav-hover;
@@ -172,11 +170,9 @@
                         border-top: 1px solid bc.$nav-border;
                         border-bottom: 1px solid bc.$nav-border;
                     }
-
                 }
             }
         }
-
 
         &__right {
             align-items: center;
@@ -259,20 +255,19 @@
                     }
 
                     li {
+                        @extend %buttonClick;
                         min-height: 2rem;
                         height: auto;
                         width: 11rem;
                         text-align: center;
+                        
 
                         &:hover {
                             opacity: .65;
-                            transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
                         }
                     }
                 }
-
             }
-
 
             &-settings {
                 margin-right: .8rem;
@@ -350,7 +345,6 @@
                         }
                     }
 
-
                     li:first-child {
                         border-bottom: 1px solid bc.$nav-border;
 
@@ -363,6 +357,19 @@
                     li {
                         align-items: center;
                         justify-content: flex-start;
+
+                        &:nth-child(2){
+                            @extend %buttonClick;
+
+                            a {
+                                font-weight: 600;
+                                color: bc.$nav-text2-active;
+                            }
+                        }
+
+                        &:last-child {
+                            @extend %buttonClick;
+                        }
                     }
 
                     a {
@@ -372,13 +379,10 @@
                         height: 3.5rem;
                         display: flex;
                         align-items: center;
-
+                        
                         &:nth-child(2) {
                             padding: 0;
-                        }
-
-                        &:nth-child(3) {
-                            padding: 0;
+                            color: bc.$nav-text2;
                         }
 
                         img {
@@ -413,11 +417,7 @@
 
                     @extend %buttonClick;
                 }
-
-
             }
-
-
         }
     }
 }
