@@ -1,3 +1,59 @@
 // -----------------------------------------------------------------------------
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
+
+// General animation code(just use(with correct delay) ==> @include addAnimation whenever you need to use it)
+
+// This one goes upleft downright
+@mixin addAnimation($delay, $distance) {
+  @keyframes jump-jump {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+
+    50% {
+      transform: translateX(($distance * 2) + px) translateY(($distance) + px);
+    }
+
+    100% {
+      transform: translateX(0px) translateY(0px);
+    }
+  }
+  animation: jump-jump 2.5s ease-in-out $delay + s infinite;
+}
+
+// This one goes upleft(but not so much) and downright
+@mixin addAnimation-i($delay, $distance) {
+  @keyframes up-down {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+
+    50% {
+      transform: translateX(($distance/7.5) + px) translateY(($distance) + px);
+    }
+
+    100% {
+      transform: translateX(0px) translateY(0px);
+    }
+  }
+  animation: up-down 2.5s ease-in-out $delay + s infinite;
+}
+
+// This one goes up and down
+@mixin addAnimation-ii($delay, $distance) {
+  @keyframes only-up-down {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY($distance + px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  animation: up-down 2.5s ease-in-out $delay + s infinite;
+}
