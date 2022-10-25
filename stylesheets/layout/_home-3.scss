@@ -33,6 +33,7 @@
     line-height: 1;
     color: bc.$h3-header-text;
     span {
+      font-size: inherit;
       color: bc.$h3-span-text;
     }
   }
@@ -70,7 +71,7 @@
   padding-left: 1rem;
 
   & img {
-    width: 20rem;
+    width: 25rem;
     position: absolute;
   }
 
@@ -94,13 +95,12 @@
 .text-bottom {
   display: flex;
   margin-bottom: 24px;
-
   h2 {
     font-size: 20px;
     color: bc.$h3-header-text;
   }
   span {
-    font-size: 20px;
+    font-size: inherit;
     color: bc.$h3-span-text;
   }
 }
