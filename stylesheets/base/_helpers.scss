@@ -30,7 +30,8 @@
     }
 
     50% {
-      transform: translateX(($distance/7.5) + px) translateY(($distance) + px);
+      transform: translateX(calc($distance/7.5) + px)
+        translateY(($distance) + px);
     }
 
     100% {
@@ -55,5 +56,5 @@
       transform: translateY(0px);
     }
   }
-  animation: up-down 2.5s ease-in-out $delay + s infinite;
+  animation: only-up-down 2.5s ease-in-out $delay + s infinite;
 }
