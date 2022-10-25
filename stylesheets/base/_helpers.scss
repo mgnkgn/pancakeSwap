@@ -30,8 +30,8 @@
     }
 
     50% {
-      transform: translateX(calc($distance/7.5) + px)
-        translateY(($distance) + px);
+      transform: translateX(calc($distance/7.5) + px) translateY(($distance) + px);
+
     }
 
     100% {
@@ -57,4 +57,40 @@
     }
   }
   animation: only-up-down 2.5s ease-in-out $delay + s infinite;
+}
+
+
+//Fade animation and jump
+@mixin fadeIn ($duration) {
+  @keyframes fadeIn {
+    0% { 
+      opacity: 0; 
+    }
+
+    50% { 
+      opacity: 1; 
+    }
+
+    100% { 
+      opacity: 0; 
+    }
+  }
+  animation: fadeIn $duration + s ease-in-out infinite;
+}
+
+@mixin jump ($distance) {
+  @keyframes jump {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+
+    50% {
+      transform: translateX(($distance * 2) + px) translateY(($distance) + px);
+    }
+
+    100% {
+      transform: translateX(0px) translateY(0px);
+    }
+  }
+  animation: jump 4s ease-in-out infinite;
 }
