@@ -11,7 +11,7 @@
     }
     
     ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px var(--colors-input);
+        box-shadow: inset 0 0 5px #eeeaf4;
         border-radius: .625rem;
     }
     ::-webkit-scrollbar-thumb {
@@ -36,6 +36,7 @@
 }
 
 %submenu {
+    z-index: 1000;
     position: absolute;
     width: 17.5rem;
     height: fit-content;
@@ -207,6 +208,7 @@
             &-language {
                 position: relative;
                 padding: 0 0.5rem;
+                height: 1.8rem;
                 cursor: pointer;
 
                 img {
@@ -357,6 +359,7 @@
                     li {
                         align-items: center;
                         justify-content: flex-start;
+                        cursor: pointer;
 
                         &:nth-child(2){
                             @extend %buttonClick;
