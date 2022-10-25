@@ -27,6 +27,8 @@
   z-index: 1000;
   position: absolute;
   width: 17.5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   background: rgba(255, 255, 255, 0);
   left: -9999px;
@@ -71,10 +73,24 @@
   height: 1.6rem;
 }
 .header__navbar__left-logo:hover .eye {
-  animation-name: blink;
-  animation-duration: 0.3s;
-  animation-iteration-count: 1;
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   transform-origin: center;
+}
+@-webkit-keyframes blink {
+  from {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.1);
+  }
+  to {
+    transform: scaleY(1);
+  }
 }
 @keyframes blink {
   from {
@@ -498,7 +514,19 @@
   position: absolute;
 }
 .home1__hero__img img:first-child {
-  animation: jump 4s ease-in-out infinite;
+  -webkit-animation: jump 4s ease-in-out infinite;
+          animation: jump 4s ease-in-out infinite;
+}
+@-webkit-keyframes jump {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(6px) translateY(3px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
 }
 @keyframes jump {
   0% {
@@ -512,8 +540,20 @@
   }
 }
 .home1__hero__img img:nth-child(2) {
-  animation: fadeIn 2s ease-in-out infinite;
+  -webkit-animation: fadeIn 2s ease-in-out infinite;
+          animation: fadeIn 2s ease-in-out infinite;
   top: -3rem;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes fadeIn {
   0% {
@@ -527,7 +567,8 @@
   }
 }
 .home1__hero__img img:nth-child(3) {
-  animation: fadeIn 6s ease-in-out infinite;
+  -webkit-animation: fadeIn 6s ease-in-out infinite;
+          animation: fadeIn 6s ease-in-out infinite;
   top: -2.5rem;
   left: -3rem;
 }
@@ -543,7 +584,8 @@
   }
 }
 .home1__hero__img img:nth-child(4) {
-  animation: fadeIn 4s ease-in-out infinite;
+  -webkit-animation: fadeIn 4s ease-in-out infinite;
+          animation: fadeIn 4s ease-in-out infinite;
   top: -1rem;
   left: -3rem;
 }
@@ -618,7 +660,19 @@
   z-index: 5;
 }
 .home-5__container__billard-balls__purple_container .billard-ball-purple-top {
-  animation: jump-jump 2.5s ease-in-out 1s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 1s infinite;
+          animation: jump-jump 2.5s ease-in-out 1s infinite;
+}
+@-webkit-keyframes jump-jump {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(20px) translateY(10px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
 }
 @keyframes jump-jump {
   0% {
@@ -637,7 +691,19 @@
 }
 .home-5__container__billard-balls__green_container .billard-ball-green-top {
   position: absolute;
-  animation: up-down 2.5s ease-in-out 0.2s infinite;
+  -webkit-animation: up-down 2.5s ease-in-out 0.2s infinite;
+          animation: up-down 2.5s ease-in-out 0.2s infinite;
+}
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(1.3333333333px) translateY(10px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
 }
 @keyframes up-down {
   0% {
@@ -656,7 +722,8 @@
 }
 .home-5__container__billard-balls__turquoise_container .billard-ball-turquiose {
   position: absolute;
-  animation: jump-jump 2.5s ease-in-out 0.35s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 0.35s infinite;
+          animation: jump-jump 2.5s ease-in-out 0.35s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -675,7 +742,8 @@
 }
 .home-5__container__billard-balls__purple-bottom_container .billard-ball-purple-bottom {
   position: absolute;
-  animation: jump-jump 2.5s ease-in-out 0.35s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 0.35s infinite;
+          animation: jump-jump 2.5s ease-in-out 0.35s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -694,7 +762,19 @@
 }
 .home-5__container__billard-balls__yellow_container .billard-ball-yellow {
   position: absolute;
-  animation: only-up-down 2.5s ease-in-out 0.35s infinite;
+  -webkit-animation: only-up-down 2.5s ease-in-out 0.35s infinite;
+          animation: only-up-down 2.5s ease-in-out 0.35s infinite;
+}
+@-webkit-keyframes only-up-down {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 @keyframes only-up-down {
   0% {
@@ -725,7 +805,8 @@
 .home-5__container__gamble-cards_yugioh-top_container .gamble-card-yugioh-top {
   padding: 0;
   transform: translateX(-10px);
-  animation: up-down 2.5s ease-in-out 1s infinite;
+  -webkit-animation: up-down 2.5s ease-in-out 1s infinite;
+          animation: up-down 2.5s ease-in-out 1s infinite;
 }
 @keyframes up-down {
   0% {
@@ -741,7 +822,8 @@
 .home-5__container__gamble-cards_green_container .gamble-card-green {
   transform: translateX(-20px);
   z-index: 4;
-  animation: jump-jump 2.5s ease-in-out 1.8s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 1.8s infinite;
+          animation: jump-jump 2.5s ease-in-out 1.8s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -757,7 +839,8 @@
 .home-5__container__gamble-cards_pink_container .gamble-card-pink {
   transform: translateX(-10px) translateY(20px);
   z-index: 5;
-  animation: jump-jump 2.5s ease-in-out -1s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out -1s infinite;
+          animation: jump-jump 2.5s ease-in-out -1s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -772,7 +855,8 @@
 }
 .home-5__container__gamble-cards_yugioh-bottom_container .gamble-card-yugioh-bottom {
   z-index: 3;
-  animation: only-up-down 2.5s ease-in-out 2s infinite;
+  -webkit-animation: only-up-down 2.5s ease-in-out 2s infinite;
+          animation: only-up-down 2.5s ease-in-out 2s infinite;
 }
 @keyframes only-up-down {
   0% {
@@ -799,7 +883,8 @@
   background: rgba(255, 255, 255, 0.75);
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   z-index: 8;
 }
 .home-5__container__main h3 {
@@ -1156,7 +1241,8 @@ body {
   position: absolute;
 }
 .home4-imagecontainer .fmg1 {
-  animation: jump-jump 2.5s ease-in-out 1s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 1s infinite;
+          animation: jump-jump 2.5s ease-in-out 1s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -1170,7 +1256,8 @@ body {
   }
 }
 .home4-imagecontainer .fmg2 {
-  animation: jump-jump 2.5s ease-in-out 0.5s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 0.5s infinite;
+          animation: jump-jump 2.5s ease-in-out 0.5s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -1184,7 +1271,8 @@ body {
   }
 }
 .home4-imagecontainer .fmg3 {
-  animation: jump-jump 2.5s ease-in-out 1.5s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 1.5s infinite;
+          animation: jump-jump 2.5s ease-in-out 1.5s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -1202,7 +1290,11 @@ body {
   background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
 }
 .home7 svg {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
 }
 
@@ -1239,7 +1331,8 @@ body {
 }
 .home7-container .home7-leftimagecontainer .fmg1,
 .home7-container .home7-rightimagecontainer .fmg1 {
-  animation: jump-jump 2.5s ease-in-out 1s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 1s infinite;
+          animation: jump-jump 2.5s ease-in-out 1s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -1254,7 +1347,8 @@ body {
 }
 .home7-container .home7-leftimagecontainer .fmg2,
 .home7-container .home7-rightimagecontainer .fmg2 {
-  animation: jump-jump 2.5s ease-in-out 0.5s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 0.5s infinite;
+          animation: jump-jump 2.5s ease-in-out 0.5s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -1269,7 +1363,8 @@ body {
 }
 .home7-container .home7-leftimagecontainer .fmg3,
 .home7-container .home7-rightimagecontainer .fmg3 {
-  animation: jump-jump 2.5s ease-in-out 1.5s infinite;
+  -webkit-animation: jump-jump 2.5s ease-in-out 1.5s infinite;
+          animation: jump-jump 2.5s ease-in-out 1.5s infinite;
 }
 @keyframes jump-jump {
   0% {
@@ -1329,4 +1424,264 @@ body {
   line-height: 1.5;
 }
 
-/*# sourceMappingURL=main.css.map */
+.home-3-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 0;
+  background-image: linear-gradient(90deg, rgb(241, 236, 242) 0%, rgb(233, 241, 246) 100%);
+}
+
+.home-3-container {
+  padding: 32px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 968px;
+}
+
+.home-3-text-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.home-3-text-container h2 {
+  font-size: 40px;
+  margin: 0 0 24px;
+  font-weight: 600;
+  line-height: 1;
+  color: #280d5f;
+}
+.home-3-text-container h2 span {
+  color: #7645d9;
+}
+.home-3-text-container div p {
+  font-size: 16px;
+  color: #7a6eaa;
+  font-weight: 400;
+  margin: 0 0 24px;
+}
+.home-3-text-container button {
+  background-color: #1fc7d4;
+  color: white;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-color: #1fc7d4;
+  border-radius: 15%;
+  font-size: 16px;
+  margin-right: 16px;
+}
+.home-3-text-container a {
+  text-decoration: none;
+  color: #1fc7d4;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.home-3-images-container {
+  width: 40%;
+  display: flex;
+  place-items: center;
+  padding-left: 1rem;
+}
+.home-3-images-container img {
+  width: 20rem;
+  position: absolute;
+}
+.home-3-images-container .stocks-photo {
+  -webkit-animation: jump-jump 2.5s ease-in-out 1s infinite;
+          animation: jump-jump 2.5s ease-in-out 1s infinite;
+}
+@keyframes jump-jump {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(8px) translateY(4px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+.home-3-images-container .pie-photo {
+  -webkit-animation: up-down 2.5s ease-in-out 0.5s infinite;
+          animation: up-down 2.5s ease-in-out 0.5s infinite;
+}
+@keyframes up-down {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(0.9333333333px) translateY(7px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+.home-3-images-container .file-photo {
+  -webkit-animation: jump-jump 2.5s ease-in-out 1.5s infinite;
+          animation: jump-jump 2.5s ease-in-out 1.5s infinite;
+}
+@keyframes jump-jump {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(12px) translateY(6px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+.home-3-bottom {
+  margin-top: 34px;
+  width: 100%;
+}
+
+.text-bottom {
+  display: flex;
+  margin-bottom: 24px;
+}
+.text-bottom h2 {
+  font-size: 20px;
+  color: #280d5f;
+}
+.text-bottom span {
+  font-size: 20px;
+  color: #7645d9;
+}
+
+.farms {
+  margin-right: 5px;
+}
+
+.stonks {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(5, 1fr);
+}
+.stonks div:nth-child(2),
+.stonks div:nth-child(3),
+.stonks div:nth-child(4),
+.stonks div:nth-child(5) {
+  padding-left: 16px;
+  border-left: 1px #d7caec solid;
+}
+.stonks div {
+  display: flex;
+  flex-direction: column;
+}
+.stonks div p:nth-child(1) {
+  color: #7645d9;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+  font-size: 12px;
+}
+.stonks div p:nth-child(2) {
+  color: #280d5f;
+  font-weight: 600;
+  margin: 0;
+}
+.stonks div p:nth-child(3) {
+  color: #7a6eaa;
+  margin: 0;
+}
+
+.home-2-bg {
+  background-image: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(216, 203, 237) 100%);
+}
+
+.home-2-top-bottom-margins {
+  padding: 48px 0;
+}
+
+.home-2-around-margins {
+  margin: 32px 24px;
+}
+
+.home-2-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.15;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.home-2-container .bunny {
+  height: 48px;
+  width: 48px;
+  margin-bottom: 26px;
+}
+.home-2-container h2 {
+  margin: 0;
+  font-size: 40px;
+  color: #280d5f;
+}
+.home-2-container .second-h2 {
+  margin-bottom: 32px;
+}
+.home-2-container p {
+  font-size: 16px;
+  margin: 0;
+  color: #7a6eaa;
+}
+.home-2-container .second-p {
+  margin-bottom: 20px;
+}
+.home-2-container .third-p {
+  margin-bottom: 32px;
+}
+.home-2-container .cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-2-card1, .home-2-card3, .home-2-card2 {
+  padding: 24px;
+  margin-right: 16px;
+  min-height: 237px;
+  min-width: 232px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+}
+.home-2-card1 img, .home-2-card3 img, .home-2-card2 img {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.home-2-card1-flex, .home-2-card3 .home-2-card3-flex, .home-2-card2 .home-2-card2-flex {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.home-2-card1-flex h2:nth-child(2), .home-2-card3 .home-2-card3-flex h2:nth-child(2), .home-2-card2 .home-2-card2-flex h2:nth-child(2) {
+  color: #7645d9;
+  margin-bottom: 24px;
+  justify-self: flex-start;
+}
+@media screen and (min-width: 852px) {
+  .home-2-card1-flex, .home-2-card3 .home-2-card3-flex, .home-2-card2 .home-2-card2-flex {
+    margin-right: 16px;
+    margin-bottom: 0px;
+  }
+}
+
+.home-2-card2 .home-2-card2-flex h2:nth-child(2) {
+  color: #1fc7d4;
+}
+
+.home-2-card3 {
+  margin-right: 0;
+}
+.home-2-card3 .home-2-card3-flex h2:nth-child(2) {
+  color: #ed4b9e;
+}/*# sourceMappingURL=index.css.map */
