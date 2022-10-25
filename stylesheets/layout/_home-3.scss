@@ -2,6 +2,7 @@
 @use "../themes/base-colors" as bc;
 
 .home-3-bg {
+  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
