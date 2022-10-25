@@ -694,7 +694,7 @@
 }
 .home-5__container__billard-balls__yellow_container .billard-ball-yellow {
   position: absolute;
-  animation: up-down 2.5s ease-in-out 0.35s infinite;
+  animation: only-up-down 2.5s ease-in-out 0.35s infinite;
 }
 @keyframes only-up-down {
   0% {
@@ -772,7 +772,7 @@
 }
 .home-5__container__gamble-cards_yugioh-bottom_container .gamble-card-yugioh-bottom {
   z-index: 3;
-  animation: up-down 2.5s ease-in-out 2s infinite;
+  animation: only-up-down 2.5s ease-in-out 2s infinite;
 }
 @keyframes only-up-down {
   0% {
