@@ -505,20 +505,38 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .home4 {
+  height: 40rem;
   display: flex;
   flex-direction: column;
 }
 .home4 #upper-svg {
   fill: #d8cbed;
   width: 100%;
+  height: 4%;
+  max-height: 48px;
+  margin-bottom: 1rem;
+}
+.home4 #below-svg {
+  fill: #faf9fa;
+  width: 100%;
   height: 100%;
   max-height: 48px;
+  transform: rotate(180deg);
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+  overflow: hidden;
 }
 
 .home4-container {
+  padding: 48px 24px;
   display: flex;
   flex-direction: row;
   height: 28rem;
@@ -571,7 +589,7 @@ body {
   padding-left: 1rem;
 }
 .home4-container .home4-imagecontainer img {
-  width: 20rem;
+  width: 26rem;
   position: absolute;
 }
 .home4-container .home4-imagecontainer .fmg1 {
@@ -618,7 +636,7 @@ body {
 }
 
 .home7 {
-  background-image: url(../../assets/home7/deneme.svg), linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+  background-image: url(../assets/home7/deneme.svg), linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: center, right;
 }
@@ -749,13 +767,17 @@ body {
 }
 
 @media (max-width: 1000px) {
-  .home7 .home7-container .home7-leftimagecontainer img,
-.home7 .home7-container .home7-rightimagecontainer img {
-    width: 11.14rem;
-    overflow: hidden;
-    position: block;
+  .home4 .home4-container .home4-imagecontainer img {
+    width: 20rem;
   }
 }
+.home7 .home7-container .home7-leftimagecontainer img,
+.home7 .home7-container .home7-rightimagecontainer img {
+  width: 11.14rem;
+  overflow: hidden;
+  position: block;
+}
+
 @media (max-width: 852px) {
   .home4 .home4-container {
     display: flex;
