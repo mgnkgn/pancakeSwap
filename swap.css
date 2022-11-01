@@ -733,6 +733,7 @@
 .converter-bottom-combined .converter-container .converter .swap-page .powered-by-gelato {
   display: flex;
   justify-content: center;
+  margin-top: 16px;
 }
 .converter-bottom-combined .converter-container .converter .swap-page .powered-by-gelato a {
   display: flex;
@@ -834,10 +835,13 @@
   width: -moz-fit-content;
   width: fit-content;
   margin-left: 40px;
-  margin-top: 0px;
+  margin-top: 20px;
   margin-bottom: 0px;
   text-decoration: none;
   color: #1fc7d4;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
 }
 .converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-left #ercBridge svg {
   fill: #1fc7d4;

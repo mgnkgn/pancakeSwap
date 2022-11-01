@@ -885,6 +885,7 @@
                     display: flex;
                     -webkit-box-pack: center;
                     justify-content: center;
+                    margin-top: 16px;
 
                     a {
                         display: flex;
@@ -985,6 +986,7 @@
                         text-decoration: none;
                         background-color: transparent;
                         color: #7a6eaa;
+                        
                     }
 
                     a:hover,
@@ -999,10 +1001,14 @@
                     align-items: center;
                     width: fit-content;
                     margin-left: 40px;
-                    margin-top: 0px;
+                    margin-top: 20px;
                     margin-bottom: 0px;
                     text-decoration: none;
                     color: #1fc7d4;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    font-size: 16px;
+                    
 
                     svg {
                         fill: #1fc7d4;
