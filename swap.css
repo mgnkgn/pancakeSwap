@@ -3,6 +3,17 @@
   box-sizing: border-box;
 }
 
+#swap-navbar-trade {
+  color: #7645d9;
+  font-weight: 600;
+}
+
+.sub_nav ul a {
+  display: flex;
+  color: #7a6eaa;
+  fill: #7a6eaa;
+}
+
 .swap-container {
   display: flex;
   flex-direction: column;
