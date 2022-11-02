@@ -12,7 +12,8 @@
     }
 
     50% {
-      transform: translateX(($distance * 2) + px) translateY(($distance) + px);
+      transform: translateX(calc($distance * 2) + px)
+        translateY(calc($distance) + px);
     }
 
     100% {
@@ -84,7 +85,8 @@
     }
 
     50% {
-      transform: translateX(($distance * 2) + px) translateY(($distance) + px);
+      transform: translateX(calc($distance * 2) + px)
+        translateY(($distance) + px);
     }
 
     100% {
@@ -92,4 +94,40 @@
     }
   }
   animation: jump 4s ease-in-out infinite;
+}
+
+@mixin swing-sides($angle) {
+  @keyframes swing-sides {
+    0% {
+      transform: rotate($angle + deg);
+    }
+    50% {
+      transform: rotate(calc($angle * -1) + deg);
+    }
+
+    100% {
+      transform: rotate($angle + deg);
+    }
+  }
+  animation: swing-sides 4s ease-in-out infinite;
+  transform-origin: 30% 50%;
+}
+
+// Goes upright downleft
+@mixin pottery-jump($distance, $delay) {
+  @keyframes pottery-jump {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+
+    50% {
+      transform: translateX(calc($distance * 3.5) + px)
+        translateY(calc($distance * -4) + px);
+    }
+
+    100% {
+      transform: translateX(0px) translateY(0px);
+    }
+  }
+  animation: pottery-jump 3.5s ease-in-out $delay + s infinite;
 }
