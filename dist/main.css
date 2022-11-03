@@ -427,7 +427,6 @@
 .home1__slideshow--1 :first-child p:first-child {
   font-size: 1.5rem;
   background: -webkit-linear-gradient(#ffd800, #eb8c00);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .home1__slideshow--1 :first-child p:nth-child(2) {
@@ -3805,6 +3804,959 @@ body {
 }
 .swap-bottom .swap-bottom-right div:nth-of-type(2) img {
   float: left;
+}
+
+* {
+  font-family: Kanit, sans-serif;
+  box-sizing: border-box;
+}
+
+#swap-navbar-trade {
+  color: #7645d9;
+  font-weight: 600;
+}
+
+.sub_nav ul a {
+  display: flex;
+  color: #7a6eaa;
+  fill: #7a6eaa;
+}
+
+.swap-container {
+  display: flex;
+  padding: 32px 32px 0;
+  background: linear-gradient(139.73deg, #e5fdff, #f3efff);
+  width: 100%;
+  align-items: center;
+}
+.swap-container .swap-main {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+.swap-container .swap-main .chart-order-combined {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+.swap-container .swap-main .chart-order-combined .chart {
+  padding-top: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #e7e3eb;
+  border-radius: 16px;
+  width: 100%;
+  height: 516px;
+  margin-bottom: 48px;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-header {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-header .chart-leftcontainer {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-header .chart-leftcontainer div:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+  margin-right: 4px;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-header .chart-leftcontainer div:nth-of-type(1) svg {
+  margin-right: 4px;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-header .chart-leftcontainer div:nth-of-type(2) {
+  color: #280d5f;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-header .chart-leftcontainer button {
+  padding: 0px;
+  width: 48px;
+  text-transform: uppercase;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 20px;
+  font-size: 12px;
+  padding: 0px 8px;
+  background-color: #1fc7d4;
+  color: #fff;
+  background-color: transparent;
+  color: #1fc7d4;
+  box-shadow: none;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-header .chart-leftcontainer button svg {
+  align-self: center;
+  fill: #1fc7d4;
+  flex-shrink: 0;
+  margin-left: 6px;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-header .chart-header-rightcontainer {
+  display: flex;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-header .chart-header-rightcontainer button {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0;
+  border-radius: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 48px;
+  background-color: transparent;
+  color: #1fc7d4;
+  box-shadow: none;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-header .chart-header-rightcontainer button svg {
+  align-self: center;
+  fill: #280d5f;
+  flex-shrink: 0;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-mid {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0 24px;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-mid div:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-mid div:nth-of-type(1) div:nth-of-type(1) {
+  min-height: 20px;
+  display: block;
+  background-color: #e9eaeb;
+  height: 36px;
+  width: 128px;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-mid div:nth-of-type(1) div:nth-of-type(2) {
+  color: #7645d9;
+  background-color: transparent;
+  border: none;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-mid div:nth-of-type(2) {
+  background-color: #eff4f5;
+  border-radius: 16px;
+  display: inline-flex;
+  border: 1px solid #e9eaeb;
+  width: auto;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-mid div:nth-of-type(2) button {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 32px;
+  padding: 0px 16px;
+  flex: 1 1 auto;
+  align-content: center;
+  margin-left: 2px;
+  color: #1fc7d4;
+  opacity: 0.65;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-mid div:nth-of-type(2) button:nth-of-type(1) {
+  background-color: #1fc7d4;
+  color: #fff;
+  opacity: 1;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-graph {
+  position: relative;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-graph .chart-waiting {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.swap-container .swap-main .chart-order-combined .chart .chart-graph .chart-waiting div {
+  color: #7a6eaa;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 20px;
+}
+.swap-container .swap-main .chart-order-combined .swap-orders {
+  width: 100%;
+  height: 100%;
+  overflow: inherit;
+  background: #fff;
+  border-radius: 24px;
+  margin-bottom: 24px;
+}
+.swap-container .swap-main .chart-order-combined .swap-orders .swap-orders-top {
+  border-radius: 16px;
+  display: inline-flex;
+  width: 100%;
+  background-color: #eeeaf4;
+  border: 0px;
+}
+.swap-container .swap-main .chart-order-combined .swap-orders .swap-orders-top button:nth-of-type(1) {
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 48px;
+  padding: 0px 24px;
+  position: relative;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  flex: 1 1 auto;
+  box-shadow: none;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: #280d5f;
+  background-color: #fff;
+}
+.swap-container .swap-main .chart-order-combined .swap-orders .swap-orders-top button:nth-of-type(2) {
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 48px;
+  padding: 0px 24px;
+  position: relative;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  flex: 1 1 auto;
+  box-shadow: none;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: #7a6eaa;
+  background-color: #eeeaf4;
+}
+.swap-container .swap-main .chart-order-combined .swap-orders .swap-orders-header {
+  max-width: 100%;
+  width: 100%;
+  border-bottom: 1px solid #e7e3eb;
+}
+.swap-container .swap-main .chart-order-combined .swap-orders .swap-orders-header th.order-header-list {
+  padding: 16px;
+  color: #7a6eaa;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.swap-container .swap-main .chart-order-combined .swap-orders .swap-orders-main {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px;
+}
+.swap-container .swap-main .chart-order-combined .swap-orders .swap-orders-main div {
+  color: #bdc2c4;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.swap-container .swap-main .chart-order-combined .swap-orders .swap-orders-bottom {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.swap-container .swap-main .chart-order-combined .swap-orders .swap-orders-bottom div:nth-of-type(2) {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+}
+.swap-container .swap-main .chart-order-combined .swap-orders .swap-orders-bottom div:nth-of-type(2) .swap-orders-bottom-arrows {
+  cursor: pointer;
+}
+.swap-container .swap-main .chart-order-combined .swap-orders .swap-orders-bottom div:nth-of-type(2) .swap-orders-bottom-arrows svg {
+  fill: #bdc2c4;
+}
+
+.converter-bottom-combined {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.converter-bottom-combined .converter-container {
+  padding: 0px 40px;
+}
+.converter-bottom-combined .converter-container .converter {
+  width: 328px;
+  background: #e7e3eb;
+  color: #280d5f;
+  overflow: hidden;
+  position: relative;
+  padding: 1px 1px 3px;
+  border-radius: 24px;
+}
+.converter-bottom-combined .converter-container .converter .converter-mid {
+  border-bottom: 1px solid #e7e3eb;
+  padding: 24px;
+  background-color: #fff;
+}
+.converter-bottom-combined .converter-container .converter .converter-mid div:nth-of-type(1) {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+.converter-bottom-combined .converter-container .converter .converter-mid div:nth-of-type(1) button {
+  color: #7a6eaa;
+  padding: 0px;
+  width: 32px;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 32px;
+  background-color: transparent;
+  box-shadow: none;
+  fill: #7a6eaa;
+}
+.converter-bottom-combined .converter-container .converter .converter-mid div:nth-of-type(1) h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.converter-bottom-combined .converter-container .converter .converter-mid div:nth-of-type(1) div {
+  display: flex;
+  width: max-content;
+}
+.converter-bottom-combined .converter-container .converter .converter-mid div:nth-of-type(1) div button {
+  padding: 0px;
+  width: 32px;
+  width: max-content;
+}
+.converter-bottom-combined .converter-container .converter .converter-mid div:nth-of-type(2) {
+  color: #7a6eaa;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+  text-align: center;
+}
+.converter-bottom-combined .converter-container .converter .swap-page {
+  background-color: #fff;
+  min-height: 412px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top {
+  display: grid;
+  grid-auto-rows: auto;
+  row-gap: 8px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-input div:nth-of-type(1) {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-input div:nth-of-type(1) button {
+  padding: 0px 0.5rem;
+  background-color: transparent;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 32px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-input div:nth-of-type(1) button div {
+  display: flex;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-input div:nth-of-type(1) button div svg:nth-of-type(1) {
+  margin-right: 8px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-input div:nth-of-type(1) button div #pair {
+  color: var(--colors-text);
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-input .token-amount-input {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  z-index: 1;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-input .token-amount-input label {
+  border-radius: 16px;
+  background-color: #eeeaf4;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-input .token-amount-input label div:nth-of-type(1) {
+  display: flex;
+  flex-flow: row nowrap;
+  -webkit-box-align: center;
+  align-items: center;
+  color: var(--colors-text);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.75rem 1rem 0px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-input .token-amount-input label div:nth-of-type(1) input {
+  text-align: right;
+  background-color: #eeeaf4;
+  width: 0;
+  position: relative;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  flex: 1 1 auto;
+  background-color: transparent;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+  color: #280d5f;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-input .token-amount-input label div:nth-of-type(2) {
+  padding: 0.75rem 0.75rem 0.75rem 1rem;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(1) {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(1) button {
+  padding: 0px 0.5rem;
+  background-color: transparent;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 32px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(1) button div {
+  display: flex;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(1) button div img {
+  margin-right: 8px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(1) button div #pair {
+  color: var(--colors-text);
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(1) div {
+  display: flex;
+  margin-left: 4px;
+  align-items: center;
+  gap: 4x;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(1) div svg {
+  align-self: center;
+  fill: #7a6eaa;
+  flex-shrink: 0;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(1) div #token-copied {
+  display: none;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(2) {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  z-index: 1;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(2) label {
+  border-radius: 16px;
+  background-color: #eeeaf4;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(2) label div:nth-of-type(1) {
+  display: flex;
+  flex-flow: row nowrap;
+  -webkit-box-align: center;
+  align-items: center;
+  color: var(--colors-text);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.75rem 1rem 0px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(2) label div:nth-of-type(1) input {
+  text-align: right;
+  background-color: #eeeaf4;
+  width: 0;
+  position: relative;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  flex: 1 1 auto;
+  background-color: transparent;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+  color: #280d5f;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-output div:nth-of-type(2) label div:nth-of-type(2) {
+  padding: 0.75rem 0.75rem 0.75rem 1rem;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-buttoncontainer {
+  width: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 0px px 1rem;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-buttoncontainer button {
+  padding: 0px;
+  width: 32px;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 32px;
+  padding: 0px 16px;
+  background-color: #eeeaf4;
+  color: #7a6eaa;
+  box-shadow: none;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-buttoncontainer button svg:nth-of-type(1) {
+  align-self: center;
+  fill: #1fc7d4;
+  flex-shrink: 0;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .swap-currency-buttoncontainer button svg:nth-of-type(2) {
+  display: none;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .converter-price-market {
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-start;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .converter-price-market #converter-price-market-price {
+  color: #7645d9;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin-right: 8px;
+  font-size: 12px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .converter-price-market button {
+  display: flex;
+  background-color: transparent;
+  border-color: #e9eaeb;
+  box-shadow: none;
+  color: #bdc2c4;
+  cursor: not-allowed;
+  border-width: 2px;
+  border-style: solid;
+  border-image: initial;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 16px;
+  display: inline-flex;
+  font-family: inherit;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 20px;
+  font-size: 12px;
+  padding: 0px 8px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .converter-price-market button svg {
+  fill: #bdc2c4;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .converter-price-market div {
+  display: flex;
+  justify-content: space-evenly;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .converter-price-market div svg {
+  align-self: center;
+  fill: #7a6eaa;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top input {
+  background-color: #e9eaeb;
+  box-shadow: none;
+  color: #bdc2c4;
+  cursor: not-allowed;
+  text-align: right;
+  border-radius: 16px;
+  display: block;
+  font-size: 16px;
+  height: 40px;
+  outline: 0px;
+  padding: 0px 16px;
+  border: 1px solid #d7caec;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .converter-switch {
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .converter-switch div {
+  color: #280d5f;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top .converter-switch svg {
+  align-self: center;
+  fill: #7a6eaa;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .swap-page-top #converter-limit-empty {
+  display: flex;
+  justify-self: flex-end;
+  min-height: 16px;
+  margin-bottom: 8px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page div:nth-of-type(2) {
+  margin-top: 0.25rem;
+}
+.converter-bottom-combined .converter-container .converter .swap-page div:nth-of-type(2) button {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 48px;
+  padding: 0px 24px;
+  background-color: #1fc7d4;
+  color: #fff;
+  width: 100%;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .powered-by-gelato {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .powered-by-gelato a {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: fit-content;
+}
+.converter-bottom-combined .converter-container .converter .swap-page .powered-by-gelato a img {
+  height: auto;
+  max-width: 100%;
+}
+.converter-bottom-combined .swap-bottom-container {
+  width: 100%;
+  height: 100%;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-top: 16px;
+  padding-right: 0px;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-left #version {
+  background-color: #eeeaf4;
+  border-radius: 16px;
+  display: inline-flex;
+  border: 1px solid #d7caec;
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-left #version button {
+  box-shadow: none;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 32px;
+  padding: 0px 16px;
+  background-color: #7a6eaa;
+  color: #fff;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-left #version a {
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 32px;
+  padding: 0px 16px;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  text-decoration: none;
+  background-color: transparent;
+  color: #7a6eaa;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-left #version a:hover,
+.converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-left #version button:hover {
+  opacity: 0.65;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-left #ercBridge {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: fit-content;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  color: #1fc7d4;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-left #ercBridge svg {
+  fill: #1fc7d4;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-right {
+  display: flex;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  width: auto;
+  margin-top: 15px;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-right div:nth-of-type(1) {
+  display: flex;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-right div:nth-of-type(1) a {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 48px;
+  padding: 0px 24px;
+  background-color: #7a6eaa;
+  color: #fff;
+  text-decoration: none;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom .swap-bottom-right div:nth-of-type(1) svg {
+  fill: #7a6eaa;
+}
+.converter-bottom-combined .swap-bottom-container .swap-bottom div:nth-of-type(2) img {
+  float: left;
+  margin-top: 7px;
 }
 
 /*# sourceMappingURL=main.css.map */
