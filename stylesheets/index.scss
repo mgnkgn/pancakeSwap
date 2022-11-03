@@ -11,6 +11,9 @@
 
 // Pottery
 @use "./layout/pottery";
-/* 
-trade->limit
-@use "./layout/limit.scss"; */
+
+//trade->swap
+@use "./layout/swap";
+
+//trade->limit
+@use "./layout/limit";
