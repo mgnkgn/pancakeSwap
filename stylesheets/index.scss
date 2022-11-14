@@ -6,6 +6,18 @@
 @use "./layout/home-3";
 @use "./layout/home-2";
 @use "./layout/home6";
+@use "./layout/navbar";
+// ### Home Page Finishes###
+
+// Pottery
+@use "./layout/pottery";
+
+//trade->swap
+@use "./layout/swap";
+
+//trade->limit
+@use "./layout/limit";
+
+//farms&pools
 @use "./layout/farms";
 @use "./layout/pools";
-@use "./layout/navbar";
