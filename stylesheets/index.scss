@@ -1,4 +1,3 @@
-@use "./layout/navbar";
 @use "./layout/home-1";
 @use "./layout/home-5";
 @use "./layout/footer";
@@ -7,6 +6,7 @@
 @use "./layout/home-3";
 @use "./layout/home-2";
 @use "./layout/home6";
+@use "./layout/navbar";
 // ### Home Page Finishes###
 
 // Pottery
@@ -14,3 +14,14 @@
 
 // Lottery 
 @use "./pages/lottery";
+
+//trade->swap
+@use "./layout/swap";
+
+//trade->limit
+@use "./layout/limit";
+
+//farms&pools
+@use "./layout/farms";
+@use "./layout/pools";
+
