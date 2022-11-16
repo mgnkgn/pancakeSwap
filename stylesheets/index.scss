@@ -12,6 +12,9 @@
 // Pottery
 @use "./layout/pottery";
 
+// Lottery 
+@use "./pages/lottery";
+
 //trade->swap
 @use "./layout/swap";
 
@@ -21,3 +24,4 @@
 //farms&pools
 @use "./layout/farms";
 @use "./layout/pools";
+
