@@ -6349,19 +6349,16 @@ p {
   opacity: 0.35;
   color: rgb(31, 199, 212);
   margin: 0px 8px 0px 0px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  appearance: none;
+  user-select: none;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   display: inline-flex;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: center;
   justify-content: center;
   box-sizing: border-box;
   font-family: inherit;
@@ -7639,6 +7636,7 @@ p {
   color: #1fc7d4;
 }
 
+<<<<<<< HEAD
 .competition_all_content {
   display: flex;
   flex-direction: column;
@@ -8138,3 +8136,8 @@ p {
   margin: 0;
   color: #1fc7d4;
 }/*# sourceMappingURL=index.css.map */
+=======
+/* @use "./layout/bridge"; */
+
+/*# sourceMappingURL=main.css.map */
+>>>>>>> cc4eb6b0bf52d121a1b8af23317416a4478d4d69
