@@ -1172,8 +1172,8 @@
 
 .bridge-receive {
     display: flex;
-    height: 80px;
-
+    min-height: 80px;
+    height: max-content;
     details {
         display: flex;
     }
