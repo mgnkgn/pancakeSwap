@@ -1,0 +1,506 @@
+@use "../themes/base-colors" as bc;
+
+.competition_all_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.competition_s1_container {
+  display: flex;
+
+  background-color: bc.$competition_bg;
+}
+.competition_s1 {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 48px 24px 48px 24px;
+  justify-content: space-between;
+
+  .mines_container {
+    z-index: 5;
+    p:nth-child(1) {
+      color: bc.$date_text;
+      font-size: 16px;
+    }
+    p {
+      color: bc.$compete_text;
+    }
+    .trading_competition {
+      color: white;
+      font-size: 48px;
+    }
+    .inprizes {
+      color: bc.$dollar_text;
+      font-size: 38px;
+    }
+    display: flex;
+    flex-direction: column;
+    img {
+      height: 69px;
+      width: 320px;
+    }
+    .divider {
+      height: 100px;
+      width: 780px;
+    }
+  }
+  .finished {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 58px;
+    background-image: bc.$finished_bg;
+    border: 1px solid bc.$border_finished;
+    height: 210px;
+    align-items: center;
+    border-radius: 16px;
+    padding: 24px 16px 16px;
+    img {
+      height: 64px;
+      width: 64px;
+      margin-bottom: 16px;
+    }
+    .finished_bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .finished_p {
+        font-size: 24px;
+        font-weight: 600;
+        color: bc.$finished_text;
+      }
+      p {
+        margin-bottom: 14px;
+      }
+
+      .finished_bottom_bottom {
+        display: flex;
+        .check {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .end {
+            font-weight: 700;
+            color: bc.$end_text;
+          }
+          p {
+            font-size: 12px;
+            color: bc.$subtle_text;
+            margin-top: 0;
+          }
+          img {
+            height: 20px;
+            width: 20px;
+            margin-bottom: 8px;
+          }
+        }
+        .line_divider {
+          width: 36px;
+          height: 2px;
+          margin: 12px 8px 0;
+          background-color: bc.$subtle_text;
+        }
+      }
+    }
+  }
+}
+.net {
+  position: absolute;
+  width: 100%;
+  height: 180px;
+  top: 436px;
+}
+
+.halo {
+  position: absolute;
+  width: 1000px;
+  top: 420px;
+  right: 30%;
+}
+.bunnies {
+  position: absolute;
+  width: 450px;
+  top: 290px;
+  right: 20%;
+}
+
+.coin1 {
+  position: absolute;
+  width: 5%;
+  top: 9.5%;
+  right: 64%;
+}
+.coin2 {
+  position: absolute;
+  width: 4%;
+  top: 15%;
+  right: 31%;
+  z-index: 4;
+}
+
+.connect_btn {
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 48px;
+  padding: 0px 24px;
+  background-color: #1fc7d4;
+  color: #fff;
+  width: 68%;
+}
+
+.competition_s2_container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  background-image: bc.$your_score_bg;
+}
+
+.finished_s2 {
+  position: absolute;
+  background-image: bc.$s2_finished_bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  padding: 24px 24px;
+  right: 42%;
+  top: -90px;
+  .feathered {
+    display: flex;
+    h2 {
+      color: #fff;
+      font-weight: 600;
+      font-size: 40px;
+      padding: 0 10px;
+      margin-bottom: 0;
+    }
+    img {
+      height: 32px;
+    }
+  }
+}
+.your_score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  .feathered_bunny_profile {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 96px;
+    img:nth-child(1),
+    img:nth-child(3) {
+      height: 45px;
+    }
+    img:nth-child(2) {
+      height: 95px;
+    }
+  }
+}
+
+.purple_text_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .your_score1 {
+    position: relative;
+    top: 10px;
+    z-index: 2;
+    display: flex;
+    background-color: bc.$border_finished;
+    border-radius: 16px;
+    padding: 0 24px;
+    h2 {
+      color: rgb(255, 255, 255);
+      font-weight: 600;
+      font-size: 40px;
+      padding: 0px 10px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.check_your_rank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 85px;
+  background-color: #fff;
+  border-radius: 26px;
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: bc.$farms_h2_text;
+    margin-top: 25px;
+  }
+  p {
+    font-size: 14px;
+  }
+  button {
+    width: 100%;
+  }
+  margin-bottom: 150px;
+}
+
+.coin3 {
+  position: absolute;
+  width: 4%;
+  top: -65px;
+  right: 56%;
+  z-index: 4;
+}
+
+.competition_s3_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  background-image: #faf9fa;
+  .trophies {
+    position: absolute;
+    z-index: 5;
+    width: 180px;
+    right: 45%;
+    top: -120px;
+  }
+}
+
+.team_ranks {
+  display: flex;
+  z-index: 5;
+  position: absolute;
+  top: -20px;
+  right: 41.5%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: bc.$border_finished;
+  border-radius: 16px;
+  padding: 0 24px;
+  h2 {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 40px;
+    padding: 0px 10px;
+    margin-bottom: 0px;
+  }
+}
+
+.ranking_table_board {
+  display: flex;
+  margin-top: 150px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  .left_side {
+    display: flex;
+    margin-right: 40px;
+    flex-direction: column;
+    .rankings {
+      height: 111px;
+    }
+    .syrup_storm,
+    .fearsome,
+    .chaotic {
+      position: absolute;
+      border-radius: 50%;
+      height: 128px;
+    }
+    .syrup_storm {
+      top: 85px;
+    }
+    .fearsome {
+      left: 600px;
+      top: 55px;
+    }
+    .chaotic {
+      left: 730px;
+      top: 100px;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 12px;
+      p {
+        margin: 0;
+      }
+      .storm_numbers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p:nth-child(1) {
+          color: bc.$farms_h2_text;
+          font-size: 16px;
+          font-weight: 600;
+        }
+        p:nth-child(2) {
+          color: bc.$subtle_text;
+          font-size: 12px;
+        }
+        p:last-child {
+          color: bc.$subtle_text;
+          font-size: 12px;
+        }
+        .participants {
+          display: flex;
+          margin-top: 25px;
+          p {
+            color: bc.$farms_h2_text;
+            font-size: 16px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+.total_participants {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: bc.$background_participants;
+  margin-top: 25px;
+  border-radius: 16px;
+  width: 70%;
+  h2 {
+    font-size: 24px;
+    color: bc.$border_finished;
+  }
+  .bunnyman_numbers {
+    display: flex;
+    h2 {
+      font-size: 24px;
+      color: bc.$farms_h2_text;
+      font-weight: 600;
+    }
+    img {
+      height: 26px;
+    }
+  }
+}
+
+.right_side {
+  display: flex;
+  flex-direction: column;
+
+  .table_head {
+    padding: 24px;
+    background-color: bc.$background_participants;
+    border-radius: 16px 16px 0 0;
+    h2,
+    p {
+      margin: 0;
+    }
+    h2 {
+      font-size: 24px;
+      color: bc.$border_finished;
+      font-weight: 600;
+    }
+    p {
+      color: bc.$subtle_text;
+      font-size: 12px;
+    }
+  }
+  .tabs {
+    display: flex;
+    padding: 16px 0 0 16px;
+    border: 1px solid bc.$background_participants;
+    border-bottom: none;
+    .total {
+      p {
+        font-size: 16px;
+        margin-right: 4px;
+        font-weight: 600;
+        border-radius: 16px 16px 0 0;
+        color: white;
+        padding: 8px;
+        background-color: bc.$border_finished;
+      }
+    }
+    .tabs_second {
+      p {
+        font-size: 16px;
+        margin-right: 4px;
+        font-weight: 600;
+        border-radius: 16px 16px 0 0;
+        color: bc.$border_finished;
+        padding: 8px;
+        background-color: bc.$compete_text;
+      }
+    }
+  }
+}
+.rows_grid {
+  display: flex;
+  flex-direction: column;
+  .rows_grid_1 {
+    border: 1px solid bc.$background_participants;
+    border-bottom: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    img {
+      height: 72px;
+      width: 124px;
+    }
+    .user {
+      display: flex;
+      p {
+        color: bc.$farms_community_text;
+      }
+    }
+    .user img {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .numbering {
+      color: bc.$farms_h1_text;
+      margin-left: 16px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .dollar_value {
+      color: bc.$farms_h2_text;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+.table_footer {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+  border: 1px solid bc.$background_participants;
+  border-radius: 0 0 16px 16px;
+
+  p {
+    margin: 0;
+    color: bc.$farms_community_text;
+  }
+}
