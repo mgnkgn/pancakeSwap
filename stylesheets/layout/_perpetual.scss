@@ -543,7 +543,7 @@
   height: 100rem;
   display: grid;
   grid-template-columns: 60% 20% 20%;
-  grid-template-rows: 3% 6% 25% 17% 1fr;
+  grid-template-rows: 3% 6% 25% 17% 12.5% 1fr;
   .left-first {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
@@ -785,6 +785,46 @@
       }
     }
   }
+  // left fourth actually
+  .mid-first {
+    width: 97%;
+    grid-row: 5 / -1;
+    grid-column: 1 / span 2;
+    background-color: rgb(255, 255, 255);
+    border-radius: 14px;
+    display: grid;
+    grid-template-rows: 5.7% 1fr;
+    border-bottom: 2px solid #e7e3eb;
+    margin-top: 10px;
+    margin-left: 10px;
+    &-row1 {
+      display: flex;
+      justify-content: start;
+      border-bottom: 1px solid #e7e3eb;
+      &-headers {
+        &:hover {
+          cursor: pointer;
+        }
+        // margin-left: 10px;
+        width: 65%;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        &-item {
+          &:first-child {
+            color: rgb(31, 199, 212);
+          }
+          font-size: 14px;
+          color: rgb(122, 110, 170);
+          font-weight: 600;
+          &:hover {
+            color: rgb(31, 199, 212);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
   // mid first actually
   .left-fourth {
     width: 97.5%;
@@ -816,8 +856,8 @@
         display: flex;
         justify-content: space-between;
         width: 35%;
-        &-item {
-        }
+        // &-item {
+        // }
       }
       &-right {
         margin-right: 8px;
@@ -1272,6 +1312,108 @@
           width: 85%;
           border: none;
           background-color: rgb(233, 234, 235);
+        }
+      }
+    }
+  }
+  // second right
+  .right-second {
+    margin-left: -15px;
+    border-bottom: 2px solid #e7e3eb;
+    border-radius: 14px;
+    margin-top: 10px;
+    background: rgb(255, 255, 255);
+    grid-row: 5 / span 1;
+    grid-column: 3 / -1;
+    &-row1 {
+      padding: 2px 10px;
+      display: flex;
+      &-h3 {
+        font-size: 14px;
+        color: #280d5f;
+        font-weight: 600;
+      }
+    }
+    &-row-regular {
+      padding: 2px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-left {
+        align-items: center;
+        cursor: help;
+        color: rgb(122, 110, 170);
+        font-size: 12px;
+      }
+      &-right {
+        font-size: 12px;
+        &-percentage {
+          color: rgb(49, 208, 170);
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  // right-third
+  .right-third {
+    margin-left: -15px;
+    border-bottom: 2px solid #e7e3eb;
+    border-radius: 14px;
+    margin-top: 10px;
+    background: rgb(255, 255, 255);
+    grid-row: -2 / -1;
+    grid-column: -2 / -1;
+    &-row1 {
+      margin-bottom: 10px;
+      padding: 10px 10px;
+      display: flex;
+      font-size: 14px;
+      color: #280d5f;
+      font-weight: 600;
+    }
+    &-row2 {
+      width: 90%;
+      margin: 0 auto;
+      padding: 2px 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      &-item {
+        background-color: rgb(239, 243, 245);
+        opacity: 0.35;
+        color: rgb(31, 199, 212);
+        margin: 0px 8px 0px 0px;
+        appearance: none;
+        user-select: none;
+        cursor: pointer;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        box-sizing: border-box;
+        font-family: inherit;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        padding: 4px 8px;
+        min-width: 40px;
+        word-break: keep-all;
+        min-height: 24px;
+        border: none;
+        font-size: 14px;
+        line-height: 20px;
+        background-color: rgb(239, 243, 245);
+        flex: 1 1 0%;
+        border-radius: 8px;
+        color: rgb(31, 199, 212);
+        box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
+        font-weight: 600;
+        &:hover {
+          cursor: not-allowed;
         }
       }
     }
