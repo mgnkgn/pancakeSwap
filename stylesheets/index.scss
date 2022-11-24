@@ -1,4 +1,3 @@
-@use "./layout/navbar";
 @use "./layout/home-1";
 @use "./layout/home-5";
 @use "./layout/footer";
@@ -7,13 +6,20 @@
 @use "./layout/home-3";
 @use "./layout/home-2";
 @use "./layout/home6";
+@use "./layout/navbar";
 // ### Home Page Finishes###
 
 // Pottery
 @use "./layout/pottery";
 
+// Lottery
+@use "./pages/lottery";
+
 //trade->swap
 @use "./layout/swap";
+
+// Perpetual
+@use "./layout/perpetual";
 
 //trade->limit
 @use "./layout/limit";
@@ -21,6 +27,12 @@
 //trade->liquidity
 @use "./layout/liquidity";
 
+//trade->farms and pools
+@use "./layout/farms";
+@use "./layout/pools";
+
+// Win->competition
+@use "./layout/competition";
 
 
 //compile and watch command
