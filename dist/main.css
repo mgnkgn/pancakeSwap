@@ -1847,6 +1847,443 @@ body {
   opacity: 0.65;
 }
 
+.sub_nav_adj-overview ul {
+  width: 275px !important;
+}
+
+.overview-nft-market {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 65px;
+  background: linear-gradient(90deg, #e6fcff, #f2f0ff);
+}
+.overview-nft-market-left {
+  display: flex;
+  padding: 12px 2px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.overview-nft-market-left-h3 {
+  margin-top: auto;
+  color: #7645d9;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.1;
+}
+.overview-nft-market-left-p {
+  color: #280d5f;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.overview-nft-market-right-search {
+  background-color: #eeeaf4;
+  border-radius: 16px;
+  box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
+  color: #280d5f;
+  display: block;
+  font-size: 16px;
+  height: 40px;
+  outline: 0px;
+  padding: 0px 16px;
+  width: 100%;
+  border: 1px solid #d7caec;
+}
+
+.overview-new-collections {
+  margin-top: 15px;
+  padding: 5px 65px;
+}
+.overview-new-collections-row1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  margin-bottom: 32px;
+  margin-top: 20px;
+}
+.overview-new-collections-row1-h3 {
+  color: #280d5f;
+  font-size: 24px;
+  font-weight: 600;
+}
+.overview-new-collections-row1-btn {
+  align-items: center;
+  border-radius: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 32px;
+  padding: 0px 16px;
+  background-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-image: initial;
+  border-color: #1fc7d4;
+  box-shadow: none;
+  color: #1fc7d4;
+  min-width: 132px;
+}
+.overview-new-collections-row1-btn-arrow {
+  filter: invert(77%) sepia(69%) saturate(1875%) hue-rotate(135deg) brightness(90%) contrast(84%);
+}
+.overview-new-collections-row-main {
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, 1fr);
+  gap: 12px;
+}
+.overview-new-collections-row-main-card {
+  transition: all 0.2s;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e7e3eb;
+  border-radius: 8px 8px 8px 56px;
+  border-bottom: 5px solid #e7e3eb;
+  width: 355px;
+  height: 187px;
+  padding: 8px;
+}
+.overview-new-collections-row-main-card:hover {
+  opacity: 0.65;
+  cursor: pointer;
+}
+.overview-new-collections-row-main-card-up .banner-img {
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  border-radius: 4px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+.overview-new-collections-row-main-card-down {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.overview-new-collections-row-main-card-down-upper {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  color: #280d5f;
+  font-size: 20px;
+  font-weight: 600;
+}
+.overview-new-collections-row-main-card-down-lower {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+}
+.overview-new-collections-row-main-card-down-lower-volume {
+  color: #7a6eaa;
+  font-size: 12px;
+  margin-right: 5px;
+}
+.overview-new-collections-row-main-card-down-lower .icon-img {
+  margin-right: 5px;
+}
+.overview-new-collections-row-main-card-down-lower-num {
+  color: #280d5f;
+  font-size: 16px;
+  font-weight: 600;
+}
+.overview-new-collections-row-main-card-circle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.overview-new-collections-row-main-card-circle .avatar-img {
+  border: 4px solid white;
+  margin-left: 10px;
+  z-index: 10;
+  border-radius: 50%;
+  max-height: 96px;
+  max-width: 96px;
+  width: 100%;
+}
+
+.overview-newest-arrivals {
+  margin-top: 15px;
+  padding: 5px 65px;
+  padding-bottom: 85px;
+}
+.overview-newest-arrivals-row1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  margin-bottom: 32px;
+  margin-top: 20px;
+}
+.overview-newest-arrivals-row1 .newest-arrival {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.overview-newest-arrivals-row1-h3 {
+  color: #280d5f;
+  font-size: 24px;
+  font-weight: 600;
+}
+.overview-newest-arrivals-row1-btn {
+  align-items: center;
+  border-radius: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 32px;
+  padding: 0px 16px;
+  background-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-image: initial;
+  border-color: #1fc7d4;
+  box-shadow: none;
+  color: #1fc7d4;
+  min-width: 132px;
+}
+.overview-newest-arrivals-row1-btn-arrow {
+  filter: invert(77%) sepia(69%) saturate(1875%) hue-rotate(135deg) brightness(90%) contrast(84%);
+}
+.overview-newest-arrivals-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  grid-template-rows: repeat(auto-fill, 1fr);
+}
+.overview-newest-arrivals-main-card {
+  width: 258px;
+  height: 357px;
+  background: #ffffff;
+  border: 5px solid #e7e3eb;
+  border-radius: 8px;
+}
+.overview-newest-arrivals-main-card-up {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+.overview-newest-arrivals-main-card-up > * {
+  margin: 0;
+  padding: 7.5px 0px 7.5px 7.5px;
+}
+.overview-newest-arrivals-main-card-up .banner-ct {
+  padding: 7.5px;
+  border-radius: 8.5px;
+}
+.overview-newest-arrivals-main-card-up .banner-ct .banner-img-2 {
+  border-radius: 8.5px;
+  max-height: 320px;
+  max-width: 320px;
+  width: 100%;
+}
+.overview-newest-arrivals-main-card-up-row2 {
+  margin-top: -8px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #7a6eaa;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 12px;
+}
+.overview-newest-arrivals-main-card-up-row3 {
+  margin-top: 10px;
+  color: #280d5f;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 16px;
+}
+.overview-newest-arrivals-main-card-down {
+  padding-top: 5px;
+  border-top: 1px solid #edeaf0;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+  margin-top: 10px;
+  margin-bottom: 7.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7%;
+}
+.overview-newest-arrivals-main-card-down-left {
+  display: flex;
+  align-items: center;
+  color: #7a6eaa;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  max-width: 120px;
+}
+.overview-newest-arrivals-main-card-down-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.overview-newest-arrivals-main-card-down-right-1 {
+  color: #7a6eaa;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  max-width: 120px;
+  margin-right: 5px;
+}
+.overview-newest-arrivals-main-card-down-right-2 {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overview-newest-arrivals-main-card-down-right-3 {
+  color: #280d5f;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.overview-faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background: linear-gradient(90deg, #f2ecf2, #e8f2f6);
+}
+.overview-faq-card {
+  background: #ffffff;
+  width: 838px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid #e1d7f0;
+  border-bottom: 3.5px solid #e1d7f0;
+}
+.overview-faq-card > *:not(:first-child) {
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+}
+.overview-faq-card-h3 {
+  background: linear-gradient(90deg, #f2ecf2, #e8f2f6);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+.overview-faq-card-h3 > * {
+  padding-left: 24px;
+  padding-right: 24px;
+  color: #7645d9;
+  font-size: 24px;
+  font-weight: 600;
+}
+.overview-faq-card-details {
+  color: #280d5f;
+  line-height: 1.5;
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.overview-faq-card-details-p-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  color: #7a6eaa;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.overview-faq-card-details-p-div-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.overview-faq-card-details-p-div-2 div {
+  display: flex;
+  align-items: center;
+  color: #1fc7d4;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.overview-faq-card-details-p-div-2 div:hover {
+  cursor: pointer;
+  opacity: 0.65;
+}
+.overview-faq-card-details-p-div-2 div img {
+  filter: invert(72%) sepia(94%) saturate(975%) hue-rotate(139deg) brightness(86%) contrast(91%);
+}
+.overview-faq-card-details > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e1d7f0;
+}
+.overview-faq-card-details > summary > div {
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 48px;
+  padding: 0px 24px;
+  background-color: transparent;
+  color: #1fc7d4;
+}
+.overview-faq-card-details > summary > div:hover {
+  opacity: 0.65;
+  cursor: pointer;
+}
+.overview-faq-card-details > summary > div .arrow-down-faq {
+  filter: invert(72%) sepia(94%) saturate(975%) hue-rotate(139deg) brightness(86%) contrast(91%);
+}
+.overview-faq-card-details > summary::-webkit-details-marker {
+  display: none;
+}
+
 .sub_nav {
   display: flex;
   justify-content: center;
@@ -1864,6 +2301,7 @@ body {
 }
 .sub_nav ul li {
   padding: 5px;
+  height: 55%;
 }
 .sub_nav ul li a {
   color: #7a6eaa;
@@ -2092,6 +2530,7 @@ body {
 }
 .pottery_first-right_header-2 {
   height: 80px;
+  margin-top: 35px;
   -webkit-text-stroke: 2px #ffffff;
   color: #7645d9;
   font-size: 64px;
