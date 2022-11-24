@@ -24,8 +24,16 @@
 //trade->limit
 @use "./layout/limit";
 
+//trade->liquidity
+@use "./layout/liquidity";
+
 //trade->farms and pools
 @use "./layout/farms";
 @use "./layout/pools";
+
 // Win->competition
 @use "./layout/competition";
+
+
+//compile and watch command
+//<your dir> sass --watch index.scss ../dist/main.css
