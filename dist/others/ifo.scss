@@ -1,0 +1,329 @@
+.ifo-bottom-half {
+    background-color: #faf9fa;
+    padding-bottom: 1px;
+}
+
+.how-to-take-part {
+    margin-bottom: 32px;
+    background: linear-gradient(139.73deg, #e5fdff, #f3efff);
+
+
+    &-container1 {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+    }
+
+    &-container2 {
+        margin-left: -24px;
+        margin-right: -24px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        padding-left: 24px;
+        padding-right: 24px;
+
+        h2 {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 1.1;
+            color: #7645d9;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+    }
+
+    &-main-container {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+
+        .how-to-take-part-main1 {
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            margin-bottom: 16px;
+
+
+
+            &-2 {
+                position: relative;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+
+
+                &-1 {
+                    font-size: 40px;
+                    width: 80px;
+                    height: 80px;
+                    box-shadow: rgb(25 19 38 / 15%) 0px 1px 4px;
+                    background-color: #7645d9;
+                    border: 2px solid transparent;
+                    border-radius: 50%;
+                    color: #fff;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    font-weight: 600;
+                    z-index: 5;
+
+                    &-adj {
+                        font-size: 40px;
+                        width: 80px;
+                        height: 80px;
+                        box-shadow: rgb(25 19 38 / 15%) 0px 1px 4px;
+                        background-color: #fff;
+                        border: 2px solid transparent;
+                        border-radius: 50%;
+                        color: #bdc2c4;
+                        display: flex;
+                        -webkit-box-pack: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        font-weight: 600;
+                        z-index: 5;
+                    }
+                }
+
+                &-2 {
+                    position: absolute;
+                    width: 4px;
+                    height: calc(50% + 20px);
+                    top: 50%;
+                    left: calc(50% - 2px);
+                    background-color: #31d0aa;
+
+                    &-adj {
+                        position: absolute;
+                        width: 4px;
+                        height: calc(50% + 20px);
+                        top: 0px;
+                        left: calc(50% - 2px);
+                        background-color: #bdc2c4;
+                    }
+
+                    &-adj2 {
+                        position: absolute;
+                        width: 4px;
+                        height: calc(50% + 20px);
+                        top: 50%;
+                        left: calc(50% - 2px);
+                        background-color: #bdc2c4;
+                    }
+                }
+            }
+
+            &-3 {
+                margin-left: 16px;
+                width: 100%;
+                height: 100%;
+                overflow: inherit;
+                background: #fff;
+                border-radius: 24px;
+                padding: 24px;
+
+                &left {
+                    @extend .how-to-take-part-main1-3;
+                    margin-left: 0;
+                    margin-right: 16px;
+                }
+
+                &adj {
+                    @extend .how-to-take-part-main1-3;
+                    background-color: transparent;
+                }
+
+                &-1 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 1.1;
+                    color: #7645d9;
+                    margin-bottom: 16px;
+                    margin-top: 0px;
+
+                }
+
+                &-2 {
+                    color: #7a6eaa;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    margin-bottom: 16px;
+                    font-size: 14px;
+                }
+
+                &-3 {
+                    position: relative;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    border: 0px;
+                    border-radius: 16px;
+                    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+                    cursor: pointer;
+                    display: inline-flex;
+                    font-family: inherit;
+                    font-size: 16px;
+                    font-weight: 600;
+                    -webkit-box-pack: center;
+                    justify-content: center;
+                    letter-spacing: 0.03em;
+                    line-height: 1;
+                    opacity: 1;
+                    outline: 0px;
+                    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+                    height: 48px;
+                    padding: 0px 24px;
+                    background-color: #1fc7d4;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+}
+
+.ifo-details {
+    margin-bottom: 32px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+
+    &-main {
+        display: flex;
+        -webkit-box-align: start;
+        align-items: start;
+        flex-direction: row;
+    }
+
+    &-link {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        width: fit-content;
+        color: #1fc7d4;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 16px;
+        font-size: 16px;
+        text-decoration: none;
+
+        svg {
+            align-self: center;
+            fill: #1fc7d4;
+            flex-shrink: 0;
+            margin-left: 4px;
+        }
+    }
+}
+
+.ifo-details-main-table {
+    &-faq {
+        &>* {
+            margin: 0;
+        }
+
+        display: flex;
+        flex-direction: column;
+        grid-column: 2 / span 1;
+        width: 670px;
+        // height: 430px;
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 0;
+
+        &-h3 {
+            background: #eeeef3;
+            width: 100%;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            border: 1.75px solid #ebe8ee;
+            border-top-left-radius: 24px;
+            border-top-right-radius: 24px;
+
+            span {
+                margin-left: 20px;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 1.1;
+                color: #7645d9;
+            }
+        }
+
+        .ifo-details-main-table-details-last {
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+            border-bottom: 1.75px solid #ebe8ee;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        &-details {
+            &-p-div {
+                display: flex;
+                align-items: center;
+                width: 95%;
+                color: #7a6eaa;
+                line-height: 1.5;
+                margin: 0 auto;
+                font-weight: 400;
+                font-size: 16px;
+            }
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // height: 150px;
+            width: 100%;
+
+            summary {
+                transform: translateY(30px);
+                // padding-top: 20px;
+                padding-bottom: 30px;
+                margin: 0 20px 50px 20px;
+                color: #280d5f;
+                font-size: 16px;
+                font-weight: bold;
+                // height: 85%;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #ebe8ee;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: auto;
+                    color: #1fc7d4;
+                    font-size: 16px;
+                    font-weight: 600;
+
+                    .arrow-down-faq {
+                        filter: invert(72%) sepia(94%) saturate(975%) hue-rotate(139deg) brightness(86%) contrast(91%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ifo-anchor {
+    display: contents;
+    color: #1fc7d4;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+#ifo-last-paragraph {
+    padding-bottom: 18px;
+}
