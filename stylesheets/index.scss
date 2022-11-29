@@ -34,6 +34,9 @@
 // Win->competition
 @use "./layout/competition";
 
+// IFO
+@use "./layout/ifo-bottom.scss";
+
 
 //compile and watch command
 //<your dir> sass --watch index.scss ../dist/main.css
