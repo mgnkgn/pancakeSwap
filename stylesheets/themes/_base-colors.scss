@@ -78,3 +78,32 @@ $farms_community_text: #1fc7d4;
 $farms_text_subtle: #7a6eaa;
 $farms_light_bg: #eeeaf4;
 $farms_bg: #faf9fa;
+
+// Competition
+$competition_bg: #191335;
+$finished_bg: linear-gradient(
+  0deg,
+  rgba(69, 42, 122, 1) 0%,
+  rgba(117, 68, 215, 1) 95%
+);
+$date_text: #ffd585;
+$dollar_text: #71e1c9;
+$compete_text: #d7caec;
+$end_text: #53dee9;
+$finished_text: #feba22;
+$subtle_text: #7a6eaa;
+$border_finished: #7645d9;
+
+$your_score_bg: linear-gradient(
+  0deg,
+  rgba(155, 160, 209, 1) 0%,
+  rgba(202, 214, 238, 1) 95%
+);
+
+$s2_finished_bg: linear-gradient(
+  0deg,
+  rgba(71, 43, 125, 1) 0%,
+  rgba(117, 68, 214, 1) 95%
+);
+
+$background_participants: #e0dfdf;
