@@ -2285,6 +2285,102 @@ body {
   display: none;
 }
 
+.collect-h3-adj {
+  margin: auto;
+  font-size: 64px;
+  color: #7645d9;
+}
+
+.collect-h3-bg-adj {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.collect-row1-left {
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.collect-row1-left img:hover {
+  cursor: pointer;
+  opacity: 0.65;
+}
+.collect-row1-left .svg-selected {
+  filter: invert(97%) sepia(62%) saturate(1997%) hue-rotate(152deg) brightness(94%) contrast(85%);
+}
+.collect-row1-left .svg-normal {
+  filter: invert(100%) sepia(13%) saturate(7293%) hue-rotate(177deg) brightness(96%) contrast(98%);
+}
+
+.collect-row1-right {
+  display: flex;
+  flex-direction: column;
+  height: 65px;
+  justify-content: space-between;
+}
+.collect-row1-right h5 {
+  margin: 0;
+  color: #7a6eaa;
+  line-height: 1.5;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+.collect-row1-right .collect-select-form {
+  margin: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 0px 16px;
+  box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
+  border: 1px solid #d7caec;
+  border-radius: 16px;
+  background: #eeeaf4;
+  transition: border-radius 0.15s ease 0s;
+}
+.collect-row1-right .collect-select-form > option {
+  color: #280d5f;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  background: var(--colors-input);
+  border-radius: 16px;
+  height: 40px;
+  min-width: 136px;
+  user-select: none;
+  z-index: 20;
+}
+
+.collect-down-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collect-down-navigation .collect-arrow-ct-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  filter: invert(83%) sepia(9%) saturate(97%) hue-rotate(151deg) brightness(92%) contrast(92%);
+  cursor: pointer;
+}
+.collect-down-navigation .collect-arrow-ct-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  filter: invert(82%) sepia(57%) saturate(2662%) hue-rotate(136deg) brightness(89%) contrast(85%);
+  cursor: pointer;
+}
+
 .sub_nav {
   display: flex;
   justify-content: center;
