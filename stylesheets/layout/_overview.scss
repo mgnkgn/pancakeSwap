@@ -62,6 +62,7 @@
     align-items: center;
     height: 32px;
     // border: 2px solid red;
+    width: 97.5%;
     margin-bottom: 32px;
     margin-top: 20px;
     &-h3 {
@@ -102,7 +103,7 @@
   }
   // card - rowMain
   &-row-main {
-    border: 2px solid red;
+    // border: 2px solid red;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(auto-fill, 1fr);
@@ -205,6 +206,7 @@
     align-items: center;
     height: 32px;
     // border: 2px solid red;
+    width: 97.5%;
     margin-bottom: 32px;
     margin-top: 20px;
     &-h3 {
