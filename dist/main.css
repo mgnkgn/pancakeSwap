@@ -1901,6 +1901,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 32px;
+  width: 97.5%;
   margin-bottom: 32px;
   margin-top: 20px;
 }
@@ -1939,7 +1940,6 @@ body {
   filter: invert(77%) sepia(69%) saturate(1875%) hue-rotate(135deg) brightness(90%) contrast(84%);
 }
 .overview-new-collections-row-main {
-  border: 2px solid red;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(auto-fill, 1fr);
@@ -2028,6 +2028,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 32px;
+  width: 97.5%;
   margin-bottom: 32px;
   margin-top: 20px;
 }
