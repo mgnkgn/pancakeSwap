@@ -15,6 +15,7 @@
     list-style: none;
     li {
       padding: 5px;
+      height: 55%;
       a {
         color: #7a6eaa;
       }
@@ -185,7 +186,8 @@
     // header-2
     &_header-2 {
       height: 80px;
-
+      // border: 2px solid red;
+      margin-top: 35px;
       -webkit-text-stroke: 2px #ffffff;
       color: #7645d9;
       font-size: 64px;

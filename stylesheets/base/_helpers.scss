@@ -131,3 +131,67 @@
   }
   animation: pottery-jump 3.5s ease-in-out $delay + s infinite;
 }
+
+
+
+//Keyframes Lottery 
+@mixin lottery-jump ($name, $duration, $delay) {
+  @keyframes star {
+    0% {
+      transform: translate(0px, 0px);    
+    }
+
+    50% {
+      transform: translate(10px, 10px);
+    }
+
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  @keyframes star-three {
+    0% {
+      transform: translate(0px, 0px);    
+    }
+
+    50% {
+      transform: translate(-10px, 10px);
+    }
+
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  @keyframes ticket-l {
+    0% {
+      transform: translate(0px, 0px);    
+    }
+
+    50% {
+      transform: translate(-10px, 15px);
+    }
+
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  @keyframes ticket-r {
+    0% {
+      transform: translate(0px, 0px);    
+    }
+
+    50% {
+      transform: translate(10px, 15px);
+    }
+
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  animation: $duration + s ease-in-out $delay + s infinite normal none running $name;
+}
+
