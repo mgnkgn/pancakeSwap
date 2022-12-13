@@ -176,9 +176,10 @@
         position: absolute;
         bottom: 0;
         left: 0;
+        // transform: translateX(-1px);
         .avatar-img {
           border: 4px solid white;
-          margin-left: 10px;
+          margin-left: 7px;
           z-index: 10;
           border-radius: 50%;
           max-height: 96px;
@@ -251,6 +252,11 @@
     gap: 12px;
     grid-template-rows: repeat(auto-fill, 1fr);
     &-card {
+      &:hover {
+        transition: all 0.2s;
+        cursor: pointer;
+        opacity: 0.65;
+      }
       width: 258px;
       height: 357px;
       background: #ffffff;
