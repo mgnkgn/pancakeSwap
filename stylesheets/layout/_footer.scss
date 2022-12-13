@@ -95,6 +95,7 @@
         grid-column: 1 / span 1;
         align-items: center;
         &__dark-mode-container {
+          position: relative;
           &:hover {
             cursor: pointer;
           }
@@ -106,18 +107,8 @@
           background: bc.$dark-light-mode-container-bg;
           height: 2rem;
           &_light {
+            // border: 2px solid red;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            background: bc.$bg-footer;
-            padding: 4px;
-            border-radius: 2rem;
-            box-shadow: 0px 0px 0.75px 4px
-              rgba(bc.$dark-light-mode-active-shadow, 0.9);
-            .light_mode {
-              filter: invert(70%) sepia(90%) saturate(800%) hue-rotate(357deg)
-                brightness(99%) contrast(86%);
-            }
           }
           &_dark {
             display: flex;
@@ -186,5 +177,70 @@
         }
       }
     }
+  }
+}
+
+// arranging sliding effect
+.slide-dark {
+  padding: 4px;
+  background: bc.$bg-footer;
+  box-shadow: 0px 0px 0.75px 4px rgba(bc.$dark-light-mode-active-shadow, 0.9);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    filter: invert(69%) sepia(66%) saturate(6762%) hue-rotate(231deg)
+      brightness(102%) contrast(101%);
+  }
+}
+
+.slide-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: bc.$bg-footer;
+  padding: 4px;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 0.75px 4px rgba(bc.$dark-light-mode-active-shadow, 0.9);
+  .light_mode {
+    filter: invert(70%) sepia(90%) saturate(800%) hue-rotate(357deg)
+      brightness(99%) contrast(86%);
+  }
+}
+
+.absolute-slider {
+  transition: all 5s;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: bc.$bg-footer;
+  z-index: 100;
+  padding: 4px;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 0.75px 4px rgba(bc.$dark-light-mode-active-shadow, 0.9);
+  img {
+    filter: invert(70%) sepia(90%) saturate(800%) hue-rotate(357deg)
+      brightness(99%) contrast(86%);
+  }
+}
+.absolute-slider-left {
+  left: 0;
+}
+.absolute-slider-right {
+  right: 0;
+  padding: 4px;
+  background: bc.$bg-footer;
+  box-shadow: 0px 0px 0.75px 4px rgba(bc.$dark-light-mode-active-shadow, 0.9);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    filter: invert(69%) sepia(66%) saturate(6762%) hue-rotate(231deg)
+      brightness(102%) contrast(101%);
   }
 }
