@@ -2010,7 +2010,7 @@ body {
 }
 .overview-new-collections-row-main-card-circle .avatar-img {
   border: 4px solid white;
-  margin-left: 10px;
+  margin-left: 7px;
   z-index: 10;
   border-radius: 50%;
   max-height: 96px;
@@ -2083,6 +2083,11 @@ body {
   background: #ffffff;
   border: 5px solid #e7e3eb;
   border-radius: 8px;
+}
+.overview-newest-arrivals-main-card:hover {
+  transition: all 0.2s;
+  cursor: pointer;
+  opacity: 0.65;
 }
 .overview-newest-arrivals-main-card-up {
   display: flex;
