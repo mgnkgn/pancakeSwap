@@ -787,7 +787,8 @@
         flex-direction: column;
         justify-content: end;
         &-top-p {
-          transform: translateY(10px);
+          // border: 2px solid red;
+          margin-bottom: 0.5px;
         }
         &-p {
           color: #280d5f;
@@ -804,6 +805,8 @@
         }
         // Bottom
         &-bottom {
+          // border: 2px solid orange;
+          margin-bottom: 5px;
           display: flex;
           justify-content: space-between;
           &-view {

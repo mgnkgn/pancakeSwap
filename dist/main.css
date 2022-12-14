@@ -3226,7 +3226,7 @@ body {
   justify-content: end;
 }
 .pottery_third-down_card-row4-top-p {
-  transform: translateY(10px);
+  margin-bottom: 0.5px;
 }
 .pottery_third-down_card-row4-p {
   color: #280d5f;
@@ -3242,6 +3242,7 @@ body {
   margin-bottom: -5px;
 }
 .pottery_third-down_card-row4-bottom {
+  margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
 }
