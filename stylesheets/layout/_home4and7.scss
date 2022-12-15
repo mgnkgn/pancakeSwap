@@ -9,7 +9,14 @@
 }
 
 .home4 {
-  height: 40rem;
+  height: 45rem;
+  margin-top: -2rem;
+  // // added by güneş
+  width: 100%;
+  // border: 2px solid red;
+  background: #fff;
+  transform: translateY(1.7rem);
+  // // added by güneş
 
   #upper-svg {
     fill: #d8cbed;
@@ -356,4 +363,16 @@
       }
     }
   }
+}
+.home-7-connect-btn-DM {
+  color: #191628 !important;
+}
+.home4-DM {
+  background: #08060b !important;
+}
+.home4-h2-DM {
+  color: #f4eeff !important;
+}
+.home4-btn-DM {
+  color: #191628 !important;
 }

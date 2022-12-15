@@ -50,6 +50,9 @@ rightArrow.addEventListener("click", () => {
   console.log(data);
 });
 leftArrow.addEventListener("click", () => {
+  if (pgNumber.innerHTML <= 0) {
+    return;
+  }
   pgNumber.innerHTML--;
   data = [
     {

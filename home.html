@@ -19,12 +19,12 @@
 
   <body>
     <!-- Header: Navbar + Home 1 (by Gilxhon) -->
-    <header class="header flex-col">
+    <header class="header flex-col header-dark">
       <nav class="header__navbar flex-row">
         <div class="header__navbar__left flex-row">
           <a href="">
             <div class="header__navbar__left-logo">
-              <svg
+              <!-- <svg
                 viewBox="0 0 1281 199"
                 class="sc-8a800401-0 fGhPpn desktop-icon"
                 color="text"
@@ -54,7 +54,14 @@
                   d="M74.85 117.896c0 9.718-4.546 14.779-10.154 14.779s-10.154-5.061-10.154-14.779 4.546-14.779 10.154-14.779 10.154 5.061 10.154 14.779zM140.851 117.896c0 9.718-4.546 14.779-10.154 14.779s-10.154-5.061-10.154-14.779 4.546-14.779 10.154-14.779 10.154 5.061 10.154 14.779z"
                   fill="#633001"
                 ></path>
-              </svg>
+              </svg> -->
+              <img
+                src="assets/dark-mode/PancakeSwap Logos/Full Logo/color-black.svg"
+                alt="rabbit-icon"
+                class="header-rabbit-icon"
+                width="160"
+                height="40"
+              />
             </div>
           </a>
           <ul class="header__navbar__left-links flex-row">
@@ -205,9 +212,9 @@
             <img src="./assets/header/Settings.svg" alt="" />
           </div>
           <div class="header__navbar__right-chain">
-            <button class="flex-row">
+            <button class="flex-row header-btn-link">
               <img src="/assets/header/Binance.png" alt="" class="bnb" />
-              <a>BNB Smart Chain</a>
+              <a class="header-link-bnb">BNB Smart Chain</a>
               <img src="./assets/header/Down-Arrow.svg" alt="" class="arrow" />
             </button>
             <ul class="header__navbar__right-chain--submenu">
@@ -225,20 +232,25 @@
             </ul>
           </div>
           <div class="header__navbar__right-connect flex-row">
-            <button>Connect Wallet</button>
+            <button class="header-btn-connect">Connect Wallet</button>
           </div>
         </div>
       </nav>
 
-      <section class="home1 flex-col">
+      <section class="home1 flex-col home1-light">
         <div class="container flex-col">
           <div class="home1__slideshow flex">
             <div class="home1__slideshow--1 flex-row">
               <div class="flex-col">
                 <p>Perpetual Futures</p>
                 <p>UP TO 100&times LEVERAGE</p>
-                <button class="flex-row">
-                  Trade Now <img src="/assets/header/arrow.svg" alt="" />
+                <button class="flex-row home-1-btn-light">
+                  Trade Now
+                  <img
+                    src="assets/dark-mode/right-arrow-Home-1.svg"
+                    alt=""
+                    class="home-1-img-light"
+                  />
                 </button>
               </div>
               <div>
@@ -256,12 +268,12 @@
           <div class="home1__hero flex-row">
             <div class="home1__hero__text flex-col">
               <h1>The moon is made of pancakes.</h1>
-              <p>
+              <p class="home-1-p-light">
                 Trade, earn, and win crypto on the most popular decentralized
                 platform in the galaxy.
               </p>
               <div class="flex-row">
-                <button>Connect Wallet</button>
+                <button class="home-1-btn-light">Connect Wallet</button>
                 <button>Trade Now</button>
               </div>
             </div>
@@ -275,7 +287,11 @@
           </div>
 
           <div class="home1__background">
-            <img src="/assets/header/background.svg" alt="" />
+            <img
+              src="/assets/header/background.svg"
+              alt=""
+              class="home-1-hd-bg"
+            />
           </div>
 
           <div class="home1__background--1"></div>
@@ -288,8 +304,8 @@
         <div class="home-2-around-margins">
           <div class="home-2-container">
             <img src="assets\home-2\bunny.svg" alt="bunny logo" class="bunny" />
-            <h2>Used by millions.</h2>
-            <h2 class="second-h2">Trusted with billions.</h2>
+            <h2 class="home-2-h2-main">Used by millions.</h2>
+            <h2 class="second-h2 home-2-h2-main">Trusted with billions.</h2>
             <p>
               PancakeSwap has the most users of any decentralized platform,
               ever.
@@ -300,26 +316,26 @@
             </p>
             <p class="third-p">Will you join them?</p>
             <div class="cards">
-              <div class="home-2-card1">
+              <div class="home-2-card1 home-2-card-light">
                 <img src="assets\home-2\card1.svg" alt="people logo" />
                 <div class="home-2-card1-flex">
-                  <h2>1.7 million</h2>
+                  <h2 class="home-2-card-h2">1.7 million</h2>
                   <h2>users</h2>
                   <p>in the last 30 days</p>
                 </div>
               </div>
-              <div class="home-2-card2">
+              <div class="home-2-card2 home-2-card-light">
                 <img src="assets\home-2\card2.svg" alt="people logo" />
                 <div class="home-2-card2-flex">
-                  <h2>19 million</h2>
+                  <h2 class="home-2-card-h2">19 million</h2>
                   <h2>trades</h2>
                   <p>made in the last 30 days</p>
                 </div>
               </div>
-              <div class="home-2-card3">
+              <div class="home-2-card3 home-2-card-light">
                 <img src="assets\home-2\card3.svg" alt="people logo" />
                 <div class="home-2-card3-flex">
-                  <h2>$3.9 billion</h2>
+                  <h2 class="home-2-card-h2">$3.9 billion</h2>
                   <h2>staked</h2>
                   <p>Total Value Locked</p>
                 </div>
@@ -345,7 +361,7 @@
       <div class="home4-container">
         <div class="home4-textcontainer">
           <div>
-            <h2>
+            <h2 class="home4-h2">
               <span id="trade">Trade</span> anything. No registration, no
               hassle.
             </h2>
@@ -357,7 +373,7 @@
             </p>
           </div>
           <div>
-            <button>Trade Now</button>
+            <button class="home4-btn">Trade Now</button>
             <a href="#">Learn</a>
           </div>
         </div>
@@ -403,7 +419,7 @@
           </div>
           <div class="home-3-text-container">
             <div>
-              <h2>
+              <h2 class="home3-top-h2">
                 <span class="earn">Earn </span>passive income with crypto.
               </h2>
             </div>
@@ -411,7 +427,7 @@
               <p>PancakeSwap makes it easy to make your crypto work for you.</p>
             </div>
             <div class="button-link">
-              <button class="button">Explore</button>
+              <button class="button home3-btn-exp">Explore</button>
               <a href="https://docs.pancakeswap.finance/products/yield-farming"
                 >Learn</a
               >
@@ -419,33 +435,33 @@
           </div>
           <div class="home-3-bottom">
             <div class="text-bottom">
-              <h2>Top <span class="farms">Farms</span></h2>
+              <h2 class="home3-top-h2">Top <span class="farms">Farms</span></h2>
               <img src="assets\home-3\button.svg" alt="" />
             </div>
             <div class="stonks">
               <div class="first-row">
                 <p>KRS-BUSD LP</p>
-                <p>316.901%</p>
+                <p class="home3-nums">316.901%</p>
                 <p>APY</p>
               </div>
               <div class="second-row">
                 <p>WMX-BUSD LP</p>
-                <p>305.817%</p>
+                <p class="home3-nums">305.817%</p>
                 <p>APR</p>
               </div>
               <div class="third-row">
                 <p>HOOP-BUSD LP</p>
-                <p>190.155%</p>
+                <p class="home3-nums">190.155%</p>
                 <p>APR</p>
               </div>
               <div class="fourth-row">
                 <p>CO-BUSD LP</p>
-                <p>172.351%</p>
+                <p class="home3-nums">172.351%</p>
                 <p>APR</p>
               </div>
               <div class="fifth-row">
                 <p>TRIVIA-BNB LP</p>
-                <p>139.364%</p>
+                <p class="home3-nums">139.364%</p>
                 <p>APR</p>
               </div>
             </div>
@@ -602,7 +618,7 @@
       <div class="home6-container">
         <div class="home6-top">
           <div>
-            <h2>
+            <h2 class="home6-h2">
               <span class="stavros_span">CAKE</span> makes our world go round.
             </h2>
             <p>
@@ -611,7 +627,7 @@
               with it!
             </p>
             <div>
-              <button>Buy CAKE</button>
+              <button class="home6-buy-cake-btn">Buy CAKE</button>
               <a href="">Learn</a>
             </div>
           </div>
@@ -644,27 +660,27 @@
         <div class="home6-stats-table">
           <div>
             <p>Circulating Supply</p>
-            <p>146,467,235</p>
+            <p class="home6-nums">146,467,235</p>
           </div>
           <div>
             <p>Total supply</p>
-            <p>339,969,596</p>
+            <p class="home6-nums">339,969,596</p>
           </div>
           <div>
             <p>Max Supply</p>
-            <p>750,000,000</p>
+            <p class="home6-nums">750,000,000</p>
           </div>
           <div>
             <p>Market cap</p>
-            <p>$650 million</p>
+            <p class="home6-nums">$650 million</p>
           </div>
           <div>
             <p>Burned to date</p>
-            <p>612,699,204</p>
+            <p class="home6-nums">612,699,204</p>
           </div>
           <div>
             <p>Current emissions</p>
-            <p>11.16/block</p>
+            <p class="home6-nums">11.16/block</p>
           </div>
         </div>
       </div>
@@ -689,7 +705,7 @@
           </div>
           <div>
             <p><a href="#">Learn how to start</a></p>
-            <button>Connect Wallet</button>
+            <button class="home-7-connect-btn">Connect Wallet</button>
           </div>
         </div>
         <div class="home7-rightimagecontainer">
