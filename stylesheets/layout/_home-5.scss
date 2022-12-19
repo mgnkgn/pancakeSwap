@@ -175,19 +175,22 @@
           }
           &_middle-row {
             display: grid;
-            grid-template-rows: 7% 22% 20%;
+            grid-template-rows: 7% 32% 20% !important;
             height: 245px;
             grid-row: 2 / span 1;
             color: bc.$card-left-text-i;
-            h5 {
+            h3 {
+              margin: auto !important;
               font: 16px;
               margin-right: auto;
             }
-            h2 {
+            h3 {
+              margin: auto !important;
               font-size: 32px;
               margin-right: auto;
             }
             p {
+              margin: auto !important;
               color: bc.$card-left-text-i;
               text-align: left;
             }
@@ -211,7 +214,7 @@
           }
           &_middle-row {
             display: grid;
-            grid-template-rows: 7% 22% 20%;
+            grid-template-rows: 9% 22% 20%;
             height: 245px;
             grid-row: 2 / span 1;
             color: bc.$card-left-text-i;
