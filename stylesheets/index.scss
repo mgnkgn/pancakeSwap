@@ -18,8 +18,16 @@
 // Lottery
 @use "./pages/lottery";
 
+//Prediction
+@use "./pages/prediction";
+
+//Leaderboard
+@use "./pages/leaderboard";
+
 //trade->swap
 @use "./layout/swap";
+
+
 
 // Perpetual
 @use "./layout/perpetual";

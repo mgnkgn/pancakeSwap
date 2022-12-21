@@ -1,0 +1,271 @@
+@use "../base/helpers" as helper;
+@use "../themes/base-colors" as bc;
+
+
+.leaderboard {
+    background-color: #faf9fa;
+
+    &__container {
+        margin : 0px 356px; 
+        padding : 32px 24px; 
+        border : 0px none rgb(0, 0, 0); 
+        font-size : 16px; 
+        vertical-align : baseline; 
+        box-sizing : border-box; 
+        font-family : Kanit, sans-serif; 
+        -webkit-font-smoothing : antialiased; 
+        max-width : 1200px; 
+        margin-left : 356px; 
+        margin-right : 356px; 
+        width : 1200px; 
+        min-height : 858px; 
+    }
+
+    &__top{
+        margin : 0px 0px 24px; 
+        padding : 0px 0px 24px; 
+        font-size : 16px; 
+        border-bottom : 2px solid rgb(122, 110, 170); 
+        margin-bottom : 24px; 
+        padding-bottom : 24px;     
+
+        h1 {
+            margin : 0px; 
+            padding : 0px; 
+            border : 0px none rgb(118, 69, 217); 
+            font-size : 64px;
+            color : rgb(118, 69, 217); 
+            font-weight : 600; 
+            line-height : 70.4px;         
+        }
+
+        p{
+            margin : 0px; 
+            padding : 0px; 
+            border : 0px none rgb(40, 13, 95); 
+            font-size : 16px; 
+            color : rgb(40, 13, 95); 
+            font-weight : 600; 
+            line-height : 24px; 
+        
+        }
+    }
+
+    &__teams {
+        margin : 0px 0px 32px; 
+        padding : 0px; 
+        border : 0px none rgb(0, 0, 0); 
+        font-size : 16px; 
+        vertical-align : baseline; 
+        box-sizing : border-box; 
+        font-family : Kanit, sans-serif; 
+        -webkit-font-smoothing : antialiased; 
+        margin-bottom : 32px; 
+        display : flex; 
+        -webkit-box-align : center; 
+        align-items : center; 
+        -webkit-box-pack : justify; 
+        justify-content : space-between; 
+
+        h2 {
+            margin : 0px; 
+            padding : 0px; 
+            border : 0px none rgb(40, 13, 95); 
+            font-size : 40px; 
+            vertical-align : baseline; 
+            box-sizing : border-box; 
+            font-family : Kanit, sans-serif; 
+            -webkit-font-smoothing : antialiased; 
+            color : rgb(40, 13, 95); 
+            font-weight : 600; 
+            line-height : 44px;         
+        }    
+    }
+
+    &__card {
+        margin : 0px 0px 16px; 
+        padding : 1px 1px 3px; 
+        border : 0px none rgb(40, 13, 95); 
+        font-size : 16px; 
+        vertical-align : baseline; 
+        box-sizing : border-box; 
+        font-family : Kanit, sans-serif; 
+        -webkit-font-smoothing : antialiased; 
+        background : rgb(231, 227, 235) none repeat scroll 0% 0% / auto padding-box border-box; 
+        border-radius : 24px; 
+        color : rgb(40, 13, 95); 
+        overflow : hidden; 
+        position : relative; 
+        margin-bottom : 16px; 
+
+        &--id {
+            margin : 0px; 
+            padding : 16px 0px; 
+            border : 0px none rgb(40, 13, 95); 
+            vertical-align : baseline; 
+            box-sizing : border-box; 
+            align-self : stretch; 
+            background : rgba(0, 0, 0, 0) linear-gradient(139.73deg, rgb(230, 253, 255) 0%, rgb(239, 244, 245) 46.87%, rgb(243, 239, 255) 100%) repeat scroll 0% 0% / auto padding-box border-box; 
+            flex : 0 0 auto; 
+            text-align : center; 
+            width : 56px; 
+            font-size : 24px; 
+            font-weight : 600; 
+            line-height : 36px;         
+        }
+
+        &--body {
+            margin : 0px; 
+            padding : 24px; 
+            border : 0px none rgb(40, 13, 95); 
+            font-size : 40px; 
+            box-sizing : border-box; 
+            align-items : center; 
+            flex : 1 1 0%; 
+            background: #fff;            
+            justify-content: space-between;
+            border-bottom-right-radius: 22px;
+            border-top-right-radius: 22px;
+
+            
+            p{
+                margin : 0px 0px 16px; 
+                padding : 0px 24px 0px 0px; 
+                border : 0px none rgb(122, 110, 170); 
+                font-size : 16px; 
+                vertical-align : baseline; 
+                box-sizing : border-box; 
+                font-family : Kanit, sans-serif; 
+                -webkit-font-smoothing : antialiased; 
+                color : rgb(122, 110, 170); 
+                font-weight : 400; 
+                line-height : 24px; 
+                padding-right : 24px; 
+                margin-bottom : 16px; 
+            }
+        }
+
+        &--tittle {
+            margin : 0px; 
+            padding : 0px; 
+            border : 0px none rgb(40, 13, 95); 
+            font-size : 40px; 
+            vertical-align : baseline; 
+            box-sizing : border-box; 
+            font-family : Kanit, sans-serif; 
+            -webkit-font-smoothing : antialiased; 
+            color : rgb(40, 13, 95); 
+            font-weight : 600; 
+            line-height : 44px;         
+        }
+
+        &--soon {
+            margin : 0px; 
+            padding : 0px; 
+            display : flex; 
+            border : 0px none rgb(189, 194, 196); 
+            font-size : 24px; 
+            color : rgb(189, 194, 196); 
+            font-weight : 600; 
+            line-height : 36px; 
+
+            svg {
+                align-self : center; 
+                fill : rgb(189, 194, 196); 
+                flex-shrink : 0; 
+                margin-right : 8px;             
+            }
+        }
+
+        &--people {
+            margin : 0px 0px 0px 24px; 
+            border : 0px none rgb(40, 13, 95); 
+            vertical-align : baseline;
+            margin-left : 24px; 
+            display : flex; 
+            font-size : 24px; 
+            color : rgb(40, 13, 95); 
+            font-weight : 600; 
+            line-height : 36px; 
+            
+
+            svg {
+                align-self : center; 
+                fill : rgb(40, 13, 95); 
+                flex-shrink : 0; 
+                margin-right : 8px; 
+            }
+        }
+
+        &--more {
+            margin : 0px; 
+            padding : 0px; 
+            border : 0px none rgb(40, 13, 95); 
+            font-size : 40px; 
+            vertical-align : baseline; 
+            color : rgb(40, 13, 95); 
+            text-decoration : none solid rgb(40, 13, 95); 
+            align-self: center;
+
+            button {
+                margin : 0px; 
+                padding : 0px 16px; 
+                border : 2px solid rgb(31, 199, 212); 
+                font-size : 16px; 
+                vertical-align : baseline; 
+                color : rgb(31, 199, 212); 
+                text-decoration : none solid rgb(31, 199, 212); 
+                box-sizing : border-box; 
+                font-family : Kanit, sans-serif; 
+                -webkit-font-smoothing : antialiased; 
+                position : relative; 
+                -webkit-box-align : center; 
+                align-items : center; 
+                border-radius : 16px; 
+                cursor : pointer; 
+                display : inline-flex; 
+                font-weight : 600; 
+                -webkit-box-pack : center; 
+                justify-content : center; 
+                letter-spacing : 0.48px; 
+                line-height : 16px; 
+                opacity : 0.810483; 
+                transition : background-color 0.2s ease 0s, opacity 0.2s ease 0s; 
+                height : 32px; 
+                background-color : rgba(0, 0, 0, 0); 
+                border-width : 2px; 
+                border-style : solid; 
+                border-image : none; 
+                border-color : rgb(31, 199, 212); 
+                box-shadow : none; 
+            }
+
+        }
+
+        &--avatar {
+            margin : 0px 0px 0px 24px; 
+            padding : 0px; 
+            border : 0px none rgb(40, 13, 95); 
+            font-size : 40px; 
+            display : block; 
+            align-self: center;
+
+            img {
+                margin : 0px; 
+                padding : 0px; 
+                border : 0px none rgb(40, 13, 95); 
+                font-size : 40px; 
+                vertical-align : baseline; 
+                height : 128px; 
+                max-width : 100%; 
+                border-radius : 50%;             
+            }
+        
+        }
+
+
+    
+    }
+
+
+}
