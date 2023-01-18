@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       {/* <Pottery /> */}
-      {/* <Overview /> */}
-      <Perpetual />
+      <Overview />
+      {/* <Perpetual /> */}
       <Footer />
     </div>
   );
