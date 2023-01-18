@@ -1,0 +1,111 @@
+@use "../themes/base-colors" as bc;
+
+.home-2-bg {
+  background-image: bc.$h2-bg-light-gradient;
+}
+.home-2-top-bottom-margins {
+  padding: 48px 0;
+}
+
+.home-2-around-margins {
+  margin: 32px 24px;
+}
+
+.home-2-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.15;
+
+  padding: 0;
+  margin: 0;
+  border: 0;
+  .bunny {
+    height: 48px;
+    width: 48px;
+    margin-bottom: 26px;
+  }
+  h2 {
+    margin: 0;
+    font-size: 40px;
+    color: bc.$h2-header-text-light;
+  }
+  .second-h2 {
+    margin-bottom: 32px;
+  }
+  p {
+    font-size: 16px;
+    margin: 0;
+    color: bc.$h2-sub-text-light;
+  }
+  .second-p {
+    margin-bottom: 20px;
+  }
+  .third-p {
+    margin-bottom: 32px;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.home-2-card1 {
+  padding: 24px;
+  margin-right: 16px;
+  min-height: 237px;
+  min-width: 232px;
+
+  background-color: bc.$h2-cards-light;
+  border-radius: 10px;
+  position: relative;
+  img {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+}
+.home-2-card1-flex {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  h2:nth-child(2) {
+    color: bc.$h2-card-1-light;
+    margin-bottom: 24px;
+    justify-self: flex-start;
+  }
+  @media screen and (min-width: 852px) {
+    margin-right: 16px;
+    margin-bottom: 0px;
+  }
+}
+.home-2-card2 {
+  @extend .home-2-card1;
+  .home-2-card2-flex {
+    @extend .home-2-card1-flex;
+    h2:nth-child(2) {
+      color: bc.$h2-card-2-light;
+    }
+  }
+}
+.home-2-card3 {
+  @extend .home-2-card1;
+  margin-right: 0;
+  .home-2-card3-flex {
+    @extend .home-2-card1-flex;
+    h2:nth-child(2) {
+      color: bc.$h2-card-3-light;
+    }
+  }
+}
+
+.home-2-bg-DM {
+  background-image: bc.$h2-bg-light-gradient-DM !important;
+}
+.home-2-card-light-DM {
+  background: #27262c;
+}
+.home-2-card-h2-DM {
+  color: #f4eeff !important;
+}

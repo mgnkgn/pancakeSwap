@@ -1,0 +1,10 @@
+<svg viewBox="0 0 1660 339" class="sc-4ba21b47-0 IIbzK slide-svg-dark" color="text" xmlns="http://www.w3.org/2000/svg">
+  <path d="M804 166.52c-283.5 0-536.5 123.5-804 137.48v34.5h1660V0c-301.17 0-556 166.52-856 166.52Z" fill="url(#a)"/>
+  <defs>
+    <linearGradient id="a" x1="830" y1="83.5" x2="830" y2="338.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08060B" stop-opacity=".2"/>
+      <stop offset=".55" stop-color="#08060B" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#08060B"/>
+    </linearGradient>
+  </defs>
+</svg>

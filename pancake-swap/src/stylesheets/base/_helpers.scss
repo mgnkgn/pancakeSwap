@@ -1,0 +1,197 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+// General animation code(just use(with correct delay) ==> @include addAnimation whenever you need to use it)
+
+// This one goes upleft downright
+@mixin addAnimation($delay, $distance) {
+  @keyframes jump-jump {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+
+    50% {
+      transform: translateX(calc($distance * 2) + px)
+        translateY(calc($distance) + px);
+    }
+
+    100% {
+      transform: translateX(0px) translateY(0px);
+    }
+  }
+  animation: jump-jump 2.5s ease-in-out $delay + s infinite;
+}
+
+// This one goes upleft(but not so much) and downright
+@mixin addAnimation-i($delay, $distance) {
+  @keyframes up-down {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+
+    50% {
+      transform: translateX(calc($distance/7.5) + px)
+        translateY(($distance) + px);
+    }
+
+    100% {
+      transform: translateX(0px) translateY(0px);
+    }
+  }
+  animation: up-down 2.5s ease-in-out $delay + s infinite;
+}
+
+// This one goes up and down
+@mixin addAnimation-ii($delay, $distance) {
+  @keyframes only-up-down {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY($distance + px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  animation: only-up-down 2.5s ease-in-out $delay + s infinite;
+}
+
+//Fade animation and jump
+@mixin fadeIn($duration) {
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+  animation: fadeIn $duration + s ease-in-out infinite;
+}
+
+@mixin jump($distance) {
+  @keyframes jump {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+
+    50% {
+      transform: translateX(calc($distance * 2) + px)
+        translateY(($distance) + px);
+    }
+
+    100% {
+      transform: translateX(0px) translateY(0px);
+    }
+  }
+  animation: jump 4s ease-in-out infinite;
+}
+
+@mixin swing-sides($angle) {
+  @keyframes swing-sides {
+    0% {
+      transform: rotate($angle + deg);
+    }
+    50% {
+      transform: rotate(calc($angle * -1) + deg);
+    }
+
+    100% {
+      transform: rotate($angle + deg);
+    }
+  }
+  animation: swing-sides 4s ease-in-out infinite;
+  transform-origin: 30% 50%;
+}
+
+// Goes upright downleft
+@mixin pottery-jump($distance, $delay) {
+  @keyframes pottery-jump {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+
+    50% {
+      transform: translateX(calc($distance * 3.5) + px)
+        translateY(calc($distance * -4) + px);
+    }
+
+    100% {
+      transform: translateX(0px) translateY(0px);
+    }
+  }
+  animation: pottery-jump 3.5s ease-in-out $delay + s infinite;
+}
+
+
+
+//Keyframes Lottery 
+@mixin lottery-jump ($name, $duration, $delay) {
+  @keyframes star {
+    0% {
+      transform: translate(0px, 0px);    
+    }
+
+    50% {
+      transform: translate(10px, 10px);
+    }
+
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  @keyframes star-three {
+    0% {
+      transform: translate(0px, 0px);    
+    }
+
+    50% {
+      transform: translate(-10px, 10px);
+    }
+
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  @keyframes ticket-l {
+    0% {
+      transform: translate(0px, 0px);    
+    }
+
+    50% {
+      transform: translate(-10px, 15px);
+    }
+
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  @keyframes ticket-r {
+    0% {
+      transform: translate(0px, 0px);    
+    }
+
+    50% {
+      transform: translate(10px, 15px);
+    }
+
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  animation: $duration + s ease-in-out $delay + s infinite normal none running $name;
+}
+

@@ -1,0 +1,199 @@
+@use "../themes/base-colors" as bc;
+
+ body {
+    background-color: antiquewhite;
+ }
+ 
+
+ .no-show {
+    display: none;
+ }
+
+ .competition {
+
+    &-prizes {
+        background-color:   rgba(231, 252, 255, 1);
+        //https://www.colorzilla.com/gradient-editor/
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 48px 24px 48px 24px;
+
+
+            h3 {
+                color: bc.$main-purple;
+                font-weight: 600;
+                font-size: 1.5rem;
+                margin-bottom: 0;
+            }
+
+            &-table {
+                flex: 1 1 0;
+                margin: 2rem;
+                background-color: white;
+                border-radius: 1rem;
+
+                &-heading {
+                    background-color: gainsboro;
+                    padding: 1rem;
+                    border-top-left-radius: 1rem;
+                    border-top-right-radius: 1rem;
+
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                & > p {
+                    font-size: 0.8rem;
+                    color: #9a8dc7;
+                    margin: 2rem;
+                }
+
+                .tab {
+                    padding: 2rem 0.5rem 0.2rem 0.5rem;
+
+                    button {
+                        border-top-left-radius: 1rem;
+                        border-top-right-radius: 1rem;
+                        background-color: #eeeaf4;
+                        color: #9c92bf;
+
+                        &:first-child {
+                            background-color: #7a6eaa;
+                            color: white;
+                        }
+                    }
+
+                    &-content {
+                        color: #7a6eaa;
+
+                        table {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            & > * {
+                                padding: 0.1rem;
+                            }
+                        }
+
+                        th {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+
+            &-right {
+                flex: 1 1 0;
+                margin: 2rem;
+                
+                p {
+                    color: #746a9e;
+                    font-size: 1.2rem;
+                }
+            } 
+        }
+    }
+
+    &-rules {
+        background-color: #faf9fa;
+
+        h3 {
+            color: bc.$main-purple;
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 48px 24px 48px 24px;
+
+            &-left {
+                flex: 1 1 auto;
+                font-size: 0.8rem;
+                color: #9a8dc7;
+                margin: 2rem;
+
+                div {
+                    background-color: white;
+                    border-radius: 2rem;
+                    padding: 1.2rem;
+                    margin: 1rem;
+                }
+            }
+
+            &-right {
+                background-color: white;
+                flex: 2 1 80%;
+                border-radius: 1rem;
+                padding: 1.2rem;
+                margin: 1rem;
+
+                h3 {
+                    background-color: #eeeff4;
+                    border-top-left-radius: 1rem;
+                    border-top-right-radius: 1rem;
+                    font-weight: 600;
+                    font-size: 2rem;
+                    margin-bottom: 0;
+                    color: #290e60;
+                    padding: 1rem;
+                }
+
+                details {
+
+                    summary {
+                        background-color: white;
+                        font-weight: 600;
+                        padding: 1.3rem;
+                        list-style: none;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        p {
+                            font-size: 1.2rem;
+                            color: #290e60;
+                        }
+
+                        div {
+                            font-size: 1.2rem;
+                            color: #65d8e1;
+                        }
+                    }
+
+                    summary::-webkit-details-marker {
+                        display: none; //for Chrome
+                    }
+
+                    & > div {
+                        background-color: white;
+                        padding: 1.3rem;
+                        font-size: 0.8rem;
+                        color: #9a8dc7;
+                    }
+                }     
+            }
+        }
+
+        
+
+        
+    }
+
+    &-finished {
+        background-color: #271c40;
+
+        
+    }
+
+ }

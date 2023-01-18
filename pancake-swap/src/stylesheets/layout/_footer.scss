@@ -1,0 +1,246 @@
+@use "../themes/base-colors" as bc;
+
+.footer {
+  background: bc.$bg-footer;
+  height: 520px;
+  display: grid;
+  grid-template-rows: 55% 20% 1fr;
+
+  //   First Row
+  &__section {
+    &__lists {
+      margin: 20px 40px;
+      grid-row: 1 / span 1;
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: space-between;
+
+      .footer__section__div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--icon {
+          margin-top: 8px;
+        }
+        h3 {
+          margin: 5px;
+          text-align: left;
+          width: 100%;
+          text-transform: uppercase;
+          color: bc.$main-purple;
+        }
+        ul {
+          width: 100%;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          list-style: none;
+          .footer__lists__container_item {
+            &--yellow {
+              color: bc.$yellow-list;
+            }
+            &--dash {
+              margin-top: -20px;
+              margin-bottom: 15px;
+              font-size: 1.8rem;
+              height: 10px;
+            }
+          }
+
+          li {
+            color: bc.$main-text;
+          }
+        }
+      }
+    }
+  }
+  //   Second Row(icons)
+  &__section__icons {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin-top: 60px;
+    margin-left: 40px;
+
+    &_item {
+      width: 25px;
+      height: 25px;
+      filter: invert(79%) sepia(28%) saturate(439%) hue-rotate(210deg)
+        brightness(89%) contrast(84%);
+      &--twitter {
+        filter: invert(71%) sepia(43%) saturate(869%) hue-rotate(132deg)
+          brightness(90%) contrast(83%);
+      }
+    }
+  }
+  //   Last Row
+  &__section__bottom {
+    border-top: 0.00001px solid bc.$main-text;
+    margin: 2px 30px 0px 15px;
+    grid-row: 3 / -1;
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 8% 1fr 10%;
+    margin-top: 20px;
+
+    // border: 2px solid red;
+    &--item {
+      display: flex;
+      &-1 {
+        justify-content: space-around;
+        grid-column: 1 / span 1;
+        align-items: center;
+        &__dark-mode-container {
+          position: relative;
+          &:hover {
+            cursor: pointer;
+          }
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 60%;
+          border-radius: 2rem;
+          background: bc.$dark-light-mode-container-bg;
+          height: 2rem;
+          &_light {
+            // border: 2px solid red;
+            display: flex;
+          }
+          &_dark {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          img {
+            border-radius: 2rem;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      &-2 {
+        margin-left: -20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-column: 2 / span 1;
+        // border: 2px solid red;
+        &__left {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 55px;
+          select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            // text-indent: 1px;
+            // text-overflow: "";
+          }
+          &__select {
+            background: bc.$bg-footer;
+            border: none;
+            color: bc.$footer-world-icon;
+            font-size: 16px;
+          }
+          &__world-icon {
+            filter: invert(83%) sepia(7%) saturate(1201%) hue-rotate(213deg)
+              brightness(86%) contrast(89%);
+          }
+        }
+        &__right {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 75px;
+          color: bc.$footer-world-icon;
+          font-weight: 600;
+        }
+      }
+      &-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__btn {
+          background: bc.$button-color-main;
+          border: none;
+          width: 100%;
+          height: 30%;
+          border-radius: 2rem;
+          color: bc.$main-text;
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+// arranging sliding effect
+.slide-dark {
+  padding: 4px;
+  background: bc.$bg-footer;
+  box-shadow: 0px 0px 0.75px 4px rgba(bc.$dark-light-mode-active-shadow, 0.9);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    filter: invert(69%) sepia(66%) saturate(6762%) hue-rotate(231deg)
+      brightness(102%) contrast(101%);
+  }
+}
+
+.slide-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: bc.$bg-footer;
+  padding: 4px;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 0.75px 4px rgba(bc.$dark-light-mode-active-shadow, 0.9);
+  .light_mode {
+    filter: invert(70%) sepia(90%) saturate(800%) hue-rotate(357deg)
+      brightness(99%) contrast(86%);
+  }
+}
+
+.absolute-slider {
+  transition: all 5s;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: bc.$bg-footer;
+  z-index: 100;
+  padding: 4px;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 0.75px 4px rgba(bc.$dark-light-mode-active-shadow, 0.9);
+  img {
+    filter: invert(70%) sepia(90%) saturate(800%) hue-rotate(357deg)
+      brightness(99%) contrast(86%);
+  }
+}
+.absolute-slider-left {
+  left: 0;
+}
+.absolute-slider-right {
+  right: 0;
+  padding: 4px;
+  background: bc.$bg-footer;
+  box-shadow: 0px 0px 0.75px 4px rgba(bc.$dark-light-mode-active-shadow, 0.9);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    filter: invert(69%) sepia(66%) saturate(6762%) hue-rotate(231deg)
+      brightness(102%) contrast(101%);
+  }
+}

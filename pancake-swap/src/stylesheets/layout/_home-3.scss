@@ -1,0 +1,152 @@
+@use "../base/helpers" as helper;
+@use "../themes/base-colors" as bc;
+
+.home-3-bg {
+  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 0;
+  background-image: bc.$h3-bg-light-gradient;
+}
+
+.home-3-container {
+  padding: 32px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 968px;
+}
+
+.home-3-text-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 40px;
+    margin: 0 0 24px;
+    font-weight: 600;
+    line-height: 1;
+    color: bc.$h3-header-text;
+    span {
+      font-size: inherit;
+      color: bc.$h3-span-text;
+    }
+  }
+
+  div p {
+    font-size: 16px;
+    color: bc.$h3-sub-text-light;
+    font-weight: 400;
+    margin: 0 0 24px;
+  }
+
+  button {
+    background-color: #1fc7d4;
+    color: white;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-color: #1fc7d4;
+    border-radius: 15%;
+    font-size: 16px;
+    margin-right: 16px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #1fc7d4;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+.home-3-images-container {
+  width: 40%;
+  display: flex;
+  place-items: center;
+  padding-left: 1rem;
+
+  & img {
+    width: 25rem;
+    position: absolute;
+  }
+
+  .stocks-photo {
+    @include helper.addAnimation(1, 4);
+  }
+
+  .pie-photo {
+    @include helper.addAnimation-i(0.5, 7);
+  }
+
+  .file-photo {
+    @include helper.addAnimation(1.5, 6);
+  }
+}
+
+.home-3-bottom {
+  margin-top: 34px;
+  width: 100%;
+}
+.text-bottom {
+  display: flex;
+  margin-bottom: 24px;
+  h2 {
+    font-size: 20px;
+    color: bc.$h3-header-text;
+  }
+  span {
+    font-size: inherit;
+    color: bc.$h3-span-text;
+  }
+}
+.farms {
+  margin-right: 5px;
+}
+.stonks {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(5, 1fr);
+  div:nth-child(2),
+  div:nth-child(3),
+  div:nth-child(4),
+  div:nth-child(5) {
+    padding-left: 16px;
+    border-left: 1px bc.$h3-border-color solid;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    p:nth-child(1) {
+      color: bc.$h3-span-text;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0 0 8px 0;
+      font-size: 12px;
+    }
+    p:nth-child(2) {
+      color: bc.$h3-header-text;
+      font-weight: 600;
+      margin: 0;
+    }
+    p:nth-child(3) {
+      color: bc.$h3-sub-text-light;
+      margin: 0;
+    }
+  }
+}
+
+// dark mode
+.home-3-bg-DM {
+  background: #3b3d51 !important;
+}
+.home3-top-h2-DM {
+  color: #fff !important;
+}
+.home3-btn-exp-DM {
+  color: #191628 !important;
+}
