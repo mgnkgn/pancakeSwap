@@ -7,21 +7,23 @@ import Swap from "./Swap";
 import Limit from "./Limit";
 import Bridge from "./Bridge";
 import Ifo from "./Ifo";
-import Home from "./Home";
+import Home4 from "./Home4";
 import "./stylesheets/index.scss";
+import Home7 from "./Home7";
 
 function App() {
   return (
     <div className="App">
       {/* <Pottery /> */}
-{/*       <Overview /> */}
+      {/*       <Overview /> */}
       {/* <Perpetual /> */}
+      {/*       <Footer /> */}
+      <Home4 />
+      <Home7 />
       <Swap />
-{/*       <Footer /> */}
       <Limit />
       <Bridge />
-      <Ifo /> 
-      <Home />
+      <Ifo />
     </div>
   );
 }
