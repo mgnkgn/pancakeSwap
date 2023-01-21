@@ -1158,10 +1158,14 @@
     
 
     .footer__section__bottom--item-1__dark-mode-container_light {
-        background-color: white;
-        box-shadow: none;
+        padding: 3px;
+    background-color: white;
+    border-radius: 50%;
     }
 
+    .footer__section__bottom--item-1__dark-mode-container_light>svg {
+        fill: #ffb237;
+    }
     .footer__section__bottom--item-1__dark-mode-container_dark>svg {
         fill: white;
     }
