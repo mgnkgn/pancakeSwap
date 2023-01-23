@@ -1,4 +1,5 @@
 import React from "react";
+import PotteryCard from "./PotteryCard";
 
 const Pottery = () => {
   return (
@@ -131,89 +132,7 @@ const Pottery = () => {
         </div>
         <div className="pottery_second_bottom">
           <div className="pottery_second_bottom_first">
-            <div className="pottery_second_bottom_first_card">
-              <div className="pottery_second_bottom_first_card-row-1">
-                <h4 className="pottery_second_bottom_first_card-row-1-h4 pottery-card-h4-selected">
-                  Deposit
-                </h4>
-                <h4 className="pottery_second_bottom_first_card-row-1-h4">
-                  Claim
-                </h4>
-              </div>
-              {/* <!-- If Deposit Is Selected(Base Case) --> */}
-              <div className="pottery_second_bottom_first_card-row-2">
-                <div className="pottery_second_bottom_first_card-row-2-left">
-                  <h2 className="pottery_second_bottom_first_card-row-2-left-h2">
-                    Pottery
-                  </h2>
-                  <p className="pottery_second_bottom_first_card-row-2-left-p">
-                    Stake CAKE, Earn CAKE, Win CAKE
-                  </p>
-                </div>
-                <div className="pottery_second_bottom_first_card-row-2-right">
-                  <img
-                    src={require("./assets/pottery/pot-icon.svg").default}
-                    alt="pot-icon"
-                    className="img-pot-icon-pt"
-                  />
-                  <img
-                    src={
-                      require("./assets/pottery/pancakeSwapRabbit.svg").default
-                    }
-                    alt="pancakeSwapRabbit"
-                    className="img-rabbit-pt"
-                  />
-                </div>
-              </div>
-              <div className="pottery_second_bottom_first_card-row-3">
-                <h3 className="pottery_second_bottom_first_card-row-3-h3">
-                  YOUR DEPOSIT
-                </h3>
-                <p className="pottery_second_bottom_first_card-row-3-p1">
-                  0.000
-                </p>
-                <p className="pottery_second_bottom_first_card-row-3-p2">
-                  ~0.00 USD
-                </p>
-              </div>
-              <div className="pottery_second_bottom_first_card-row-4">
-                <div className="pottery_second_bottom_first_card-row-4-left">
-                  <p className="pottery_second_bottom_first_card-row-4-left-p1">
-                    APY
-                  </p>
-                  <p className="pottery_second_bottom_first_card-row-4-left-p2">
-                    Next draw date
-                  </p>
-                  <p className="pottery_second_bottom_first_card-row-4-left-p3">
-                    Total Value Locked
-                  </p>
-                  <p className="pottery_second_bottom_first_card-row-4-left-p4">
-                    Max. deposit cap
-                  </p>
-                </div>
-                <div className="pottery_second_bottom_first_card-row-4-right">
-                  <p className="pottery_second_bottom_first_card-row-4-right-p1">
-                    13.93%
-                  </p>
-                  <p className="pottery_second_bottom_first_card-row-4-right-p2">
-                    <span> in</span>
-                    <span> 5d</span> <span>20h</span>
-                    <span>55m</span>
-                  </p>
-                  <p className="pottery_second_bottom_first_card-row-4-right-p3">
-                    164,972.37 CAKE
-                  </p>
-                  <p className="pottery_second_bottom_first_card-row-4-right-p4">
-                    710,000.00 CAKE
-                  </p>
-                </div>
-              </div>
-              <div className="pottery_second_bottom_first_card-row-5">
-                <button className="pottery_second_bottom_first_card-row-5-btn">
-                  Connect Wallet
-                </button>
-              </div>
-            </div>
+            <PotteryCard />
           </div>
           <div className="pottery_second_bottom_second">
             <img

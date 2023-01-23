@@ -9,7 +9,7 @@ import "./stylesheets/index.scss";
 function App() {
   return (
     <div className="App">
-      {/* <Pottery /> */}
+      <Pottery />
       <Overview />
       {/* <Perpetual /> */}
       <Footer />
