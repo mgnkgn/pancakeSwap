@@ -3,8 +3,14 @@ import Footer from "./Footer";
 import bnbLogo from "./assets/home4/BNB@2x.webp"
 import btcLogo from "./assets/home4/BTC@2x.webp"
 import cakeLogo from "./assets/home4/CAKE@2x.webp"
+import { MotionImageContainer } from "./MotionImage";
+
+
+
 
 const Home4 = () => {
+  const images = [bnbLogo, btcLogo, cakeLogo];
+
   return (
     <>
       {/* Home4 -fatih */}
@@ -27,17 +33,12 @@ const Home4 = () => {
               <a href="#">Learn</a>
             </div>
           </div>
-          <div className="home4-imagecontainer">
-            <img className="fmg1" src={bnbLogo} alt="" />
-            <img className="fmg3" src={btcLogo} alt="" />
-            <img className="fmg2" src={cakeLogo} alt="" />
-          </div>
+          <MotionImageContainer images={images} className="home4-imagecontainer" />
         </div>
       </div>
     </>
-
-
   );
 };
 
 export default Home4;
+

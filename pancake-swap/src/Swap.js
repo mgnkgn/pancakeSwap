@@ -1,5 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
+import bnbCoinIcon from "./assets/header/Binance.png";
+import ethCoinIcon from "./assets/header/Ethereum.png";
 
 const Swap = () => {
     return (
@@ -169,7 +171,7 @@ const Swap = () => {
                     </div>
                     <div className="header__navbar__right-chain">
                         <button className="flex-row">
-                            <img src="./assets/header/Binance.png" alt="" className="bnb" />
+                            <img src={bnbCoinIcon} alt="" className="bnb" />
                             <a>BNB Smart Chain</a>
                             <img src="./assets/header/Down-Arrow.svg" alt="" className="arrow" />
                         </button>
@@ -178,11 +180,11 @@ const Swap = () => {
                                 <a>Select a Network</a>
                             </li>
                             <li className="flex-row">
-                                <a href=""><img src="./assets/header/Binance.png" alt="" /></a>
+                                <a href=""><img src={bnbCoinIcon} alt="" /></a>
                                 <a href="">BNB Smart Chain</a>
                             </li>
                             <li className="flex-row">
-                                <a href=""><img src="./assets/header/Ethereum.png" alt="" /></a>
+                                <a href=""><img src={ethCoinIcon} alt="" /></a>
                                 <a href="">Ethereum</a>
                             </li>
                         </ul>

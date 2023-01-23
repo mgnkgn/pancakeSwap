@@ -5,17 +5,16 @@ import topImgL from "./assets/home7/left/1-top@2x.webp"
 import bottomImgR from "./assets/home7/right/2-bottom@2x.webp"
 import topImgR from "./assets/home7/right/2-top@2x.webp"
 import rightImgR from "./assets/home7/right/2-right@2x.webp"
+import { MotionImageContainer } from "./MotionImage"
 
 const Home7 = () => {
+    const imagesR = [bottomImgR, topImgR, rightImgR]
+    const imagesL = [leftImgL, bottomImgL, topImgL]
     return (
         <>
             <div className="home7">
                 <div className="home7-container">
-                    <div className="home7-leftimagecontainer">
-                        <img className="fmg1" src={leftImgL} alt="" />
-                        <img className="fmg2" src={bottomImgL} alt="" />
-                        <img className="fmg3" src={topImgL} alt="" />
-                    </div>
+                    <MotionImageContainer images={imagesL} className="home7-leftimagecontainer" />
                     <div className="home7-textcontainer">
                         <div>
                             <h2>Start in seconds.</h2>
@@ -35,15 +34,7 @@ const Home7 = () => {
                             <button className="home-7-connect-btn">Connect Wallet</button>
                         </div>
                     </div>
-                    <div className="home7-rightimagecontainer">
-                        <img
-                            className="fmg1"
-                            src={bottomImgR}
-                            alt=""
-                        />
-                        <img className="fmg2" src={topImgR} alt="" />
-                        <img className="fmg3" src={rightImgR} alt="" />
-                    </div>
+                    <MotionImageContainer images={imagesR} className="home7-rightimagecontainer" />
                 </div>
             </div>
         </>
