@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "./Footer";
 import bnbCoinIcon from "./assets/header/Binance.png";
 import ethCoinIcon from "./assets/header/Ethereum.png";
 import { TopNavbar } from "./TopNavbar";
+import { InputField, Result } from "./form";
 
 
 const Limit = () => {
+  const [inputValue, setInputValue] = useState("");
   return (
     <>
       <TopNavbar />
@@ -403,7 +405,7 @@ const Limit = () => {
                       </div>
                       <div className="token-amount-input">
                         <label>
-                          <div>
+         {/*                  <div>
                             <input
                               className="token-amount-input _1cvvxtw5 _1cvvxtw8"
                               inputMode="decimal"
@@ -418,7 +420,8 @@ const Limit = () => {
                               spellCheck="false"
                               defaultValue=""
                             />
-                          </div>
+                          </div> */}
+                          <InputField inputValue={inputValue} setInputValue={setInputValue} />
                           <div></div>
                         </label>
                       </div>
@@ -482,8 +485,10 @@ const Limit = () => {
                       </div>
                       <div>
                         <label>
+                        
                           <div>
-                            <input
+                          <Result inputValue={inputValue} />
+{/*                             <input
                               inputMode="decimal"
                               title="Token Amount"
                               autoComplete="off"
@@ -495,7 +500,7 @@ const Limit = () => {
                               maxLength={79}
                               spellCheck="false"
                               defaultValue=""
-                            />
+                            /> */}
                           </div>
                           <div />
                         </label>
@@ -516,7 +521,8 @@ const Limit = () => {
                         <div id="converter-price-market-text">Market</div>
                       </button>
                     </div>
-                    <input
+                    <Result inputValue={inputValue} />
+{/*                     <input
                       disabled=""
                       autoComplete="off"
                       autoCorrect="off"
@@ -529,7 +535,7 @@ const Limit = () => {
                       scale="md"
                       className="sc-c22a9310-0 sc-595efb6e-0 kCXkcn efNNfh"
                       defaultValue=""
-                    />
+                    /> */}
                     <div className="converter-switch">
                       <div>CAKE per BNB</div>
                       <svg

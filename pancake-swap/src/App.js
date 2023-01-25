@@ -10,14 +10,11 @@ import Ifo from "./Ifo";
 import Home4 from "./Home4";
 import "./stylesheets/index.scss";
 import Home7 from "./Home7";
+import { ParentComponent } from "./form";
 
 function App() {
   return (
     <div className="App">
-      {/* <Pottery /> */}
-      {/*       <Overview /> */}
-      {/* <Perpetual /> */}
-      {/*       <Footer /> */}
       <Home4 />
       <Home7 />
       <Swap />

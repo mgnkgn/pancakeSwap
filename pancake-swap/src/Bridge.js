@@ -160,27 +160,12 @@ const Bridge = () => {
                                   />
                                 </svg>
                               </div>
-                              <input
-                                aria-invalid="false"
-                                autoComplete="off"
-                                id="From-input-network"
-                                name="From-input-network"
-                                placeholder="Select"
-                                readOnly=""
-                                type="text"
-                                autoCorrect="off"
-                                className="MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd"
-                                defaultValue="ETH"
-                              />
-                              <svg
-                                width="25px"
-                                className="MuiSvgIcon-root jss393"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                              >
-                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
-                              </svg>
+                              <select >
+                                <option value="ETH">ETH</option>
+                                <option value="BSC">BSC</option>
+                                <option value="MATIC">MATIC</option>
+
+                              </select>
                             </div>
                           </div>
                           {/* network */}
@@ -208,25 +193,13 @@ const Bridge = () => {
                                   />
                                 </svg>
                               </div>
-                              <input
-                                aria-invalid="false"
-                                autoComplete="off"
-                                id="From-input-token"
-                                name="From-input-token"
-                                placeholder="Select"
-                                readOnly=""
-                                type="text"
-                                autoCorrect="off"
-                                defaultValue="USDC"
-                              />
-                              <svg
-                                className="MuiSvgIcon-root jss395"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                              >
-                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
-                              </svg>
+                              <select className="converter-select">
+                                <option value="USDC">USDC</option>
+                                <option value="ETH">ETH</option>
+                                <option value="BSC">BSC</option>
+                                <option value="MATIC">MATIC</option>
+
+                              </select>
                             </div>
                           </div>
                         </div>
@@ -261,7 +234,7 @@ const Bridge = () => {
                       <div className="bridge-currency-from-container">
                         <label>To</label>
                         <div className="bridge-currency123">
-                          {/* from */}
+                          {/* to-from */}
                           <div className="from-token123">
                             <label htmlFor="From-input-token">Token</label>
                             <div>
@@ -286,29 +259,15 @@ const Bridge = () => {
                                   />
                                 </svg>
                               </div>
-                              <input
-                                aria-invalid="false"
-                                autoComplete="off"
-                                id="From-input-token"
-                                name="From-input-token"
-                                placeholder="Select"
-                                readOnly=""
-                                type="text"
-                                autoCorrect="off"
-                                defaultValue="USDC"
-                              />
-                              <svg
-                                width="25px"
-                                className="MuiSvgIcon-root jss393"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                              >
-                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
-                              </svg>
+                              <select >
+                                <option value="USDC">USDC</option>
+                                <option value="ETH">ETH</option>
+                                <option value="BSC">BSC</option>
+                                <option value="MATIC">MATIC</option>
+                              </select>
                             </div>
                           </div>
-                          {/* network */}
+                          {/* to-network */}
                           <div>
                             <label htmlFor="From-input-network">Network</label>
                             <div>
@@ -353,26 +312,11 @@ const Bridge = () => {
                                   />
                                 </svg>
                               </div>
-                              <input
-                                aria-invalid="false"
-                                autoComplete="off"
-                                id="From-input-network"
-                                name="From-input-network"
-                                placeholder="Select"
-                                readOnly=""
-                                type="text"
-                                autoCorrect="off"
-                                className="MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd"
-                                defaultValue="ETH"
-                              />
-                              <svg
-                                className="MuiSvgIcon-root jss395"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                              >
-                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
-                              </svg>
+                              <select >
+                                <option value="ETH">ETH</option>
+                                <option value="BSC">BSC</option>
+                                <option value="MATIC">MATIC</option>
+                              </select>
                             </div>
                           </div>
                         </div>

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "./Footer";
 import bnbCoinIcon from "./assets/header/Binance.png";
 import ethCoinIcon from "./assets/header/Ethereum.png";
 import { TopNavbar } from "./TopNavbar";
+import { InputField, Result,  } from "./form";
 
 const Swap = () => {
+    const [inputValue, setInputValue] = useState('');
     return (
         <>
             <TopNavbar />
@@ -291,7 +293,7 @@ const Swap = () => {
                                         </div>
                                         <div className="token-amount-input">
                                             <label>
-                                                <div>
+                                      {/*           <div>
                                                     <input
                                                         className="token-amount-input _1cvvxtw5 _1cvvxtw8"
                                                         inputMode="decimal"
@@ -305,8 +307,10 @@ const Swap = () => {
                                                         maxLength={79}
                                                         spellCheck="false"
                                                         defaultValue=""
+
                                                     />
-                                                </div>
+                                                </div> */}
+                                                    <InputField inputValue={inputValue} setInputValue={setInputValue} />
                                                 <div></div>
                                             </label>
                                         </div>
@@ -370,7 +374,9 @@ const Swap = () => {
                                         </div>
                                         <div>
                                             <label>
-                                                <div>
+                                            <div>
+                                            <Result inputValue={inputValue} />
+                                                {/*
                                                     <input
                                                         inputMode="decimal"
                                                         title="Token Amount"
@@ -384,6 +390,7 @@ const Swap = () => {
                                                         spellCheck="false"
                                                         defaultValue=""
                                                     />
+                                                 */}
                                                 </div>
                                                 <div />
                                             </label>
