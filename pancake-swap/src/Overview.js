@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "react";
+
+import { TopNavbar } from "./TopNavbar";
 import OverviewCardsSec from "./OverviewCardsSec";
 import OverviewCardsFirst from "./OverviewCardsFirst";
 
@@ -223,7 +225,7 @@ const Overview = () => {
 
   return (
     <>
-      {" "}
+      <TopNavbar />{" "}
       <div className="sub_nav sub_nav_adj-overview">
         <ul>
           <li>
@@ -256,6 +258,7 @@ const Overview = () => {
             id="overview-nft-market-right-search"
             className="overview-nft-market-right-search"
             placeholder="Search address"
+            autoComplete="off"
             ref={inputTopRef}
             onChange={onChangeHandlerInput}
           />

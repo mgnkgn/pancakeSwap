@@ -1,9 +1,10 @@
 import React from "react";
 
 const OverviewCardsFirst = (props) => {
-  if (props.keyWord.length > 0) {
+  const lowerKeyword = props.keyWord.toLowerCase();
+  if (lowerKeyword.length > 0) {
     const searchedItem = props.arrayBanners.filter((el) =>
-      el.title.includes(props.keyWord)
+      el.title.toLowerCase().includes(lowerKeyword)
     );
     return searchedItem.map((el, i) => (
       <div

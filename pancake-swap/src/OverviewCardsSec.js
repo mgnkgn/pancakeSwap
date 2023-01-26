@@ -1,12 +1,17 @@
 import React from "react";
 
 const OverviewCardsSec = (props) => {
-  if (props.keyWord.length > 0) {
+  const lowerKeyword = props.keyWord.toLowerCase();
+
+  if (lowerKeyword.length > 0) {
     const searchedItem = props.arraySec.filter((el) =>
-      el.headerMain.includes(props.keyWord)
+      el.headerMain.toLowerCase().includes(lowerKeyword)
     );
-    return searchedItem.map((el) => (
-      <div className="overview-newest-arrivals-main-card">
+    return searchedItem.map((el, i) => (
+      <div
+        className="overview-newest-arrivals-main-card"
+        key={`${el.headerMain}-${i}`}
+      >
         <div className="overview-newest-arrivals-main-card-up">
           <div className="overview-newest-arrivals-main-card-up-row1 banner-ct">
             <img src={`${el.img}`} alt="banner" className="banner-img-2" />
