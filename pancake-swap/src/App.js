@@ -5,7 +5,11 @@ import Footer from "./Footer";
 import Pottery from "./Pottery";
 import Overview from "./Overview";
 import Perpetual from "./Perpetual";
-
+import Swap from "./Swap";
+import Limit from "./Limit";
+import Bridge from "./Bridge";
+import Ifo from "./Ifo";
+import Home4 from "./Home4";
 import "./stylesheets/index.scss";
 import { TopNavbar } from "./TopNavbar";
 import Home from "./Home";

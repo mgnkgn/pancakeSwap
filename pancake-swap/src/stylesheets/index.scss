@@ -42,6 +42,9 @@
 // IFO
 @use "./layout/ifo-bottom.scss";
 
+// Bridge
+@use "./layout/bridge";
+
 
 //compile and watch command
 //<your dir> sass --watch index.scss ../dist/main.css

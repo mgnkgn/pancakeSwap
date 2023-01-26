@@ -52,7 +52,6 @@
   height: 28rem;
   align-items: center;
   justify-content: center;
-  background-color: white;
   width: 100%;
   max-width: 968px;
 
@@ -125,8 +124,8 @@
 }
 
 .home7 {
-  // background-image: url(../assets/home7/deneme.svg),
-  //   linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+  background-image: url(../../assets/home7/deneme.svg),
+  linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: center, right;
 
