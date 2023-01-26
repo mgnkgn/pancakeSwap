@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { ThemeContext } from "./context/light-ctx";
 
 const OverviewCardsSec = (props) => {
+  const { isLight } = useContext(ThemeContext);
   const lowerKeyword = props.keyWord.toLowerCase();
 
   if (lowerKeyword.length > 0) {
@@ -9,7 +12,11 @@ const OverviewCardsSec = (props) => {
     );
     return searchedItem.map((el, i) => (
       <div
-        className="overview-newest-arrivals-main-card"
+        className={
+          isLight
+            ? "overview-newest-arrivals-main-card"
+            : "overview-newest-arrivals-main-card overview-newest-arrivals-main-card-dark"
+        }
         key={`${el.headerMain}-${i}`}
       >
         <div className="overview-newest-arrivals-main-card-up">
@@ -19,7 +26,13 @@ const OverviewCardsSec = (props) => {
           <div className="overview-newest-arrivals-main-card-up-row2">
             {el.headerTop}
           </div>
-          <div className="overview-newest-arrivals-main-card-up-row3">
+          <div
+            className={
+              isLight
+                ? "overview-newest-arrivals-main-card-up-row3"
+                : "overview-newest-arrivals-main-card-up-row3 dark-mode-white"
+            }
+          >
             {el.headerMain}
           </div>
         </div>
@@ -38,7 +51,13 @@ const OverviewCardsSec = (props) => {
                 className="icon-img-2"
               />
             </div>
-            <div className="overview-newest-arrivals-main-card-down-right-3">
+            <div
+              className={
+                isLight
+                  ? "overview-newest-arrivals-main-card-down-right-3"
+                  : "overview-newest-arrivals-main-card-down-right-3 dark-mode-white"
+              }
+            >
               {el.coinNum}
             </div>
           </div>
@@ -46,8 +65,15 @@ const OverviewCardsSec = (props) => {
       </div>
     ));
   }
-  return props.arraySec.map((el) => (
-    <div className="overview-newest-arrivals-main-card">
+  return props.arraySec.map((el, i) => (
+    <div
+      className={
+        isLight
+          ? "overview-newest-arrivals-main-card"
+          : "overview-newest-arrivals-main-card overview-newest-arrivals-main-card-dark"
+      }
+      key={`${el.headerMain}-${i}`}
+    >
       <div className="overview-newest-arrivals-main-card-up">
         <div className="overview-newest-arrivals-main-card-up-row1 banner-ct">
           <img src={`${el.img}`} alt="banner" className="banner-img-2" />
@@ -55,7 +81,13 @@ const OverviewCardsSec = (props) => {
         <div className="overview-newest-arrivals-main-card-up-row2">
           {el.headerTop}
         </div>
-        <div className="overview-newest-arrivals-main-card-up-row3">
+        <div
+          className={
+            isLight
+              ? "overview-newest-arrivals-main-card-up-row3"
+              : "overview-newest-arrivals-main-card-up-row3 dark-mode-white"
+          }
+        >
           {el.headerMain}
         </div>
       </div>
@@ -74,7 +106,13 @@ const OverviewCardsSec = (props) => {
               className="icon-img-2"
             />
           </div>
-          <div className="overview-newest-arrivals-main-card-down-right-3">
+          <div
+            className={
+              isLight
+                ? "overview-newest-arrivals-main-card-down-right-3"
+                : "overview-newest-arrivals-main-card-down-right-3 dark-mode-white"
+            }
+          >
             {el.coinNum}
           </div>
         </div>

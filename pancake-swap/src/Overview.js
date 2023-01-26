@@ -1,10 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
+
+import { ThemeContext } from "./context/light-ctx";
 
 import { TopNavbar } from "./TopNavbar";
 import OverviewCardsSec from "./OverviewCardsSec";
 import OverviewCardsFirst from "./OverviewCardsFirst";
+import Footer from "./Footer";
 
 const Overview = () => {
+  const { isLight } = useContext(ThemeContext);
   const [inputTop, setInputTop] = useState("");
   const inputTopRef = useRef();
 
@@ -241,10 +245,22 @@ const Overview = () => {
           </li>
         </ul>
       </div>
-      <div className="overview-nft-market">
+      <div
+        className={
+          isLight
+            ? "overview-nft-market"
+            : "overview-nft-market overview-nft-market-dark"
+        }
+      >
         <div className="overview-nft-market-left">
           <h3 className="overview-nft-market-left-h3">NFT Marketplace</h3>
-          <p className="overview-nft-market-left-p">
+          <p
+            className={
+              isLight
+                ? "overview-nft-market-left-p"
+                : "overview-nft-market-left-p overview-nft-market-left-p-dark"
+            }
+          >
             Buy and Sell NFTs on BNB Smart Chain
           </p>
         </div>
@@ -256,7 +272,11 @@ const Overview = () => {
             type="search"
             name="overview-nft-market-right-search"
             id="overview-nft-market-right-search"
-            className="overview-nft-market-right-search"
+            className={
+              isLight
+                ? "overview-nft-market-right-search"
+                : "overview-nft-market-right-search overview-nft-market-right-search-dark"
+            }
             placeholder="Search address"
             autoComplete="off"
             ref={inputTopRef}
@@ -265,9 +285,21 @@ const Overview = () => {
         </form>
       </div>
       {/* 1st row */}
-      <div className="overview-new-collections">
+      <div
+        className={
+          isLight
+            ? "overview-new-collections"
+            : "overview-new-collections overview-new-collections-dark"
+        }
+      >
         <div className="overview-new-collections-row1">
-          <h2 className="overview-new-collections-row1-h3">
+          <h2
+            className={
+              isLight
+                ? "overview-new-collections-row1-h3"
+                : "overview-new-collections-row1-h3 overview-new-collections-row1-h3-dark"
+            }
+          >
             Newest Collections
           </h2>
           <button className="overview-new-collections-row1-btn">
@@ -280,13 +312,31 @@ const Overview = () => {
           </button>
         </div>
         <div className="overview-new-collections-row-main">
-          <OverviewCardsFirst arrayBanners={arrayBanners} keyWord={inputTop} />
+          <OverviewCardsFirst
+            arrayBanners={arrayBanners}
+            keyWord={inputTop}
+            isLight={isLight}
+          />
         </div>
       </div>
       {/* 2nd row */}
-      <div className="overview-new-collections">
+      <div
+        className={
+          isLight
+            ? "overview-new-collections"
+            : "overview-new-collections overview-new-collections-dark"
+        }
+      >
         <div className="overview-new-collections-row1">
-          <h2 className="overview-new-collections-row1-h3">Hot Collections</h2>
+          <h2
+            className={
+              isLight
+                ? "overview-new-collections-row1-h3"
+                : "overview-new-collections-row1-h3 overview-new-collections-row1-h3-dark"
+            }
+          >
+            Hot Collections
+          </h2>
           <button className="overview-new-collections-row1-btn">
             View All
             <img
@@ -298,7 +348,13 @@ const Overview = () => {
         </div>
         <div className="overview-new-collections-row-main"></div>
       </div>
-      <div className="overview-newest-arrivals">
+      <div
+        className={
+          isLight
+            ? "overview-newest-arrivals"
+            : "overview-newest-arrivals overview-new-collections-dark"
+        }
+      >
         <div className="overview-newest-arrivals-row1">
           <h2 className="overview-newest-arrivals-row1-h3 newest-arrival">
             Newest Arrivals
@@ -318,12 +374,30 @@ const Overview = () => {
         </div>
       </div>
       {/* FAQ */}
-      <div className="overview-faq">
-        <div className="overview-faq-card">
-          <div className="overview-faq-card-h3">
+      <div
+        className={isLight ? "overview-faq" : "overview-faq overview-faq-dark"}
+      >
+        <div
+          className={
+            isLight ? "overview-faq-card" : "overview-faq-card border-dark"
+          }
+        >
+          <div
+            className={
+              isLight
+                ? "overview-faq-card-h3"
+                : "overview-faq-card-h3 overview-faq-dark"
+            }
+          >
             <h3>FAQs</h3>
           </div>
-          <details className="overview-faq-card-details">
+          <details
+            className={
+              isLight
+                ? "overview-faq-card-details"
+                : "overview-faq-card-details bg-faq-dark"
+            }
+          >
             <summary>
               I sold an NFT, where’s my BNB?
               <div>
@@ -335,14 +409,26 @@ const Overview = () => {
                 />
               </div>
             </summary>
-            <div className="overview-faq-card-details-p-div">
+            <div
+              className={
+                isLight
+                  ? "overview-faq-card-details"
+                  : "overview-faq-card-details bg-faq-dark"
+              }
+            >
               Trades are settled in WBNB, which is a wrapped version of BNB used
               on BNB Smart Chain. That means that when you sell an item, WBNB is
               sent to your wallet instead of BNB. You can instantly swap your
               WBNB for BNB with no trading fees on PancakeSwap.
             </div>
           </details>
-          <details className="overview-faq-card-details">
+          <details
+            className={
+              isLight
+                ? "overview-faq-card-details"
+                : "overview-faq-card-details bg-faq-dark"
+            }
+          >
             <summary>
               How can I list my NFT collection on the Market?
               <div>
@@ -354,14 +440,20 @@ const Overview = () => {
                 />
               </div>
             </summary>
-            <div className="overview-faq-card-details-p-div overview-faq-card-details-p-div-2">
+            <div
+              className={
+                isLight
+                  ? "overview-faq-card-details"
+                  : "overview-faq-card-details bg-faq-dark"
+              }
+            >
               In Phase 2 of the NFT Marketplace, collections must be whitelisted
               before they may be listed. We are now accepting applications from
               NFT collection owners seeking to list their collections.
               <div>
                 Please apply here
                 <img
-                  src="assets/overview/link-square.svg"
+                  src={require("./assets/overview/link-square.svg").default}
                   alt="link-svg"
                   className="link-svg"
                   width="20"
@@ -370,7 +462,13 @@ const Overview = () => {
               </div>
             </div>
           </details>
-          <details className="overview-faq-card-details">
+          <details
+            className={
+              isLight
+                ? "overview-faq-card-details"
+                : "overview-faq-card-details bg-faq-dark"
+            }
+          >
             <summary>
               What are the fees?
               <div>
@@ -382,7 +480,13 @@ const Overview = () => {
                 />
               </div>
             </summary>
-            <div className="overview-faq-card-details-p-div">
+            <div
+              className={
+                isLight
+                  ? "overview-faq-card-details"
+                  : "overview-faq-card-details bg-faq-dark"
+              }
+            >
               100% of all platform fees taken by PancakeSwap from sales are used
               to buy back and BURN CAKE tokens in our weekly CAKE burns.
               Platform fees: 2% is subtracted from NFT sales on the market.
@@ -393,6 +497,7 @@ const Overview = () => {
           </details>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

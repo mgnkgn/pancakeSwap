@@ -54,8 +54,10 @@
 
 // overview-new-collections
 .overview-new-collections {
-  margin-top: 15px;
+  // background-color: red;
+  // margin-top: 15px;
   padding: 5px 65px;
+  padding-top: 15px;
   &-row1 {
     display: flex;
     justify-content: space-between;
@@ -115,13 +117,19 @@
         cursor: pointer;
       }
       position: relative;
-      background: #ffffff;
+      background-color: #fff;
       border: 1px solid #e7e3eb;
       border-radius: 8px 8px 8px 56px;
       border-bottom: 5px solid #e7e3eb;
       width: 355px;
       height: 187px;
       padding: 8px;
+      &-dark {
+        background: #383241;
+        border: 1px solid #383241;
+        border-radius: 8px 8px 8px 56px;
+        border-bottom: 5px solid #383241;
+      }
       // card-upper
       &-up {
         .banner-img {
@@ -193,8 +201,8 @@
 
 // overview-newest-arrivals
 .overview-newest-arrivals {
-  margin-top: 15px;
   padding: 5px 65px;
+  padding-top: 20px;
   padding-bottom: 85px;
   &-row1 {
     .newest-arrival {
@@ -599,4 +607,71 @@
       brightness(89%) contrast(85%);
     cursor: pointer;
   }
+}
+
+// DARK-MODE
+.overview-nft-market-dark {
+  background: linear-gradient(90deg, #313c5b, #3b2d56);
+}
+
+.overview-nft-market-left-p-dark {
+  color: #fff;
+}
+
+.overview-nft-market-right-search-dark {
+  background-color: #372f47;
+  border-radius: 16px;
+  box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
+  color: #f4eeff;
+  display: block;
+  font-size: 16px;
+  height: 40px;
+  outline: 0px;
+  padding: 0px 16px;
+  width: 100%;
+  border: 1px solid #262130;
+}
+
+.overview-new-collections-dark {
+  background: black;
+}
+
+.overview-new-collections-row-main-card-dark {
+  background: #27262c;
+
+  border-color: #25202b;
+}
+.overview-new-collections-row-main-card-down-upper-dark {
+  color: #fff;
+}
+.dark-purple {
+  color: #443f4d;
+}
+.overview-new-collections-row1-h3-dark {
+  color: #fff;
+}
+
+.overview-newest-arrivals-main-card-dark {
+  background: #27262c;
+  border-color: #25202b;
+}
+
+.dark-mode-white {
+  color: #fff;
+}
+
+.overview-faq-dark {
+  background: #3b3b4f;
+}
+
+.border-dark {
+  border: 2px solid #363140;
+}
+
+.bg-faq-dark {
+  background: #27262c;
+  color: #f4eeff;
+}
+.link-svg {
+  cursor: pointer;
 }
