@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "./context/light-ctx";
 
 const Footer = () => {
+  const { toggleTheme, isLight } = useContext(ThemeContext);
+
+  const themeClickHandler = () => {
+    toggleTheme();
+  };
   return (
     <footer className="footer">
       <section className="footer__section__lists">
@@ -80,9 +86,18 @@ const Footer = () => {
       </section>
       <section className="footer__section__bottom">
         <div className="footer__section__bottom--item-1 footer__section__bottom--item">
-          <div className="footer__section__bottom--item-1__dark-mode-container">
+          <div
+            className="footer__section__bottom--item-1__dark-mode-container"
+            onClick={themeClickHandler}
+          >
             {/* <!-- ABSOLUTE SLIDER BEGINS--> */}
-            <div className="absolute-slider absolute-slider-left">
+            <div
+              className={
+                isLight
+                  ? "absolute-slider absolute-slider-left"
+                  : "absolute-slider absolute-slider-right"
+              }
+            >
               <img
                 src={require("./assets/footer/footer_light_mode.svg").default}
                 alt="light-dark-switch"
@@ -113,7 +128,10 @@ const Footer = () => {
               alt="world icon"
               className="footer__section__bottom--item-2__left__world-icon"
             />
-            <select className="footer__section__bottom--item-2__left__select">
+            <select
+              className="footer__section__bottom--item-2__left__select"
+              defaultValue={"EN"}
+            >
               <option value="AF">AF</option>
               <option value="SQ">SQ</option>
               <option value="AR">AR</option>
@@ -128,9 +146,7 @@ const Footer = () => {
               <option value="CS">CS</option>
               <option value="DA">DA</option>
               <option value="NL">NL</option>
-              <option value="EN" selected>
-                EN
-              </option>
+              <option value="EN">EN</option>
               <option value="ET">ET</option>
               <option value="FJ">FJ</option>
               <option value="FI">FI</option>

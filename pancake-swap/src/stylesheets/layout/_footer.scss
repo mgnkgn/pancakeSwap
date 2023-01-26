@@ -21,6 +21,8 @@
         align-items: center;
         &--icon {
           margin-top: 8px;
+          // border: 2px solid red;
+          cursor: pointer;
         }
         h3 {
           margin: 5px;
@@ -49,6 +51,7 @@
           }
 
           li {
+            cursor: pointer;
             color: bc.$main-text;
           }
         }
@@ -66,6 +69,7 @@
     margin-left: 40px;
 
     &_item {
+      cursor: pointer;
       width: 25px;
       height: 25px;
       filter: invert(79%) sepia(28%) saturate(439%) hue-rotate(210deg)
@@ -123,6 +127,7 @@
         }
       }
       &-2 {
+        cursor: pointer;
         margin-left: -20px;
         display: flex;
         justify-content: space-between;
@@ -162,6 +167,7 @@
         }
       }
       &-3 {
+        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
