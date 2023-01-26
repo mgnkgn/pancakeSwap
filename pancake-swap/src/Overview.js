@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+
+import { TopNavbar } from "./TopNavbar";
 import OverviewCardsSec from "./OverviewCardsSec";
 import OverviewCardsFirst from "./OverviewCardsFirst";
 
 const Overview = () => {
+  const [inputTop, setInputTop] = useState("");
+  const inputTopRef = useRef();
+
+  const onSubmitHandlerTop = (event) => {
+    event.preventDefault();
+    const enteredAdress = inputTopRef.current.value;
+    // setInputTop(enteredAdress);
+  };
+
+  const onChangeHandlerInput = (event) => {
+    event.preventDefault();
+    const enteredAddress = event.target.value;
+    console.log(event.target.value);
+    setInputTop(enteredAddress);
+  };
   const arrayBanners = [
     {
       title: "MoonPets",
@@ -12,7 +29,7 @@ const Overview = () => {
       num: "13.3663",
     },
     {
-      title: "Gooodfellas Binions",
+      title: "Goodfellas Binions",
       avatar:
         "https://static-nft.pancakeswap.com/mainnet/0x59b39a2092cda9C590B1576EE5AA204a487e46e6/avatar.png",
       img: "https://pancakeswap.finance/_next/image?url=https%3A%2F%2Fstatic-nft.pancakeswap.com%2Fmainnet%2F0x59b39a2092cda9C590B1576EE5AA204a487e46e6%2Fbanner-sm.png&w=750&q=75",
@@ -89,6 +106,7 @@ const Overview = () => {
       num: "1,179.5932",
     },
   ];
+
   // second type of arrays
   const arrayBannersSec = [
     {
@@ -204,13 +222,14 @@ const Overview = () => {
       coinNum: "0.3",
     },
   ];
+
   return (
     <>
-      {" "}
-      <div class="sub_nav sub_nav_adj-overview">
+      <TopNavbar />{" "}
+      <div className="sub_nav sub_nav_adj-overview">
         <ul>
           <li>
-            <a href="#" class="selected_pottery">
+            <a href="#" className="selected_pottery">
               Overview
             </a>
           </li>
@@ -222,78 +241,89 @@ const Overview = () => {
           </li>
         </ul>
       </div>
-      <div class="overview-nft-market">
-        <div class="overview-nft-market-left">
-          <h3 class="overview-nft-market-left-h3">NFT Marketplace</h3>
-          <p class="overview-nft-market-left-p">
+      <div className="overview-nft-market">
+        <div className="overview-nft-market-left">
+          <h3 className="overview-nft-market-left-h3">NFT Marketplace</h3>
+          <p className="overview-nft-market-left-p">
             Buy and Sell NFTs on BNB Smart Chain
           </p>
         </div>
-        <div class="overview-nft-market-right">
+        <form
+          className="overview-nft-market-right"
+          onSubmit={onSubmitHandlerTop}
+        >
           <input
             type="search"
             name="overview-nft-market-right-search"
             id="overview-nft-market-right-search"
-            class="overview-nft-market-right-search"
-            value="Search address"
+            className="overview-nft-market-right-search"
+            placeholder="Search address"
+            autoComplete="off"
+            ref={inputTopRef}
+            onChange={onChangeHandlerInput}
           />
-        </div>
+        </form>
       </div>
-      <div class="overview-new-collections">
-        <div class="overview-new-collections-row1">
-          <h2 class="overview-new-collections-row1-h3">Newest Collections</h2>
-          <button class="overview-new-collections-row1-btn">
+      {/* 1st row */}
+      <div className="overview-new-collections">
+        <div className="overview-new-collections-row1">
+          <h2 className="overview-new-collections-row1-h3">
+            Newest Collections
+          </h2>
+          <button className="overview-new-collections-row1-btn">
             View All
             <img
               src={require("./assets/overview/right-arrow-svg.svg").default}
               alt="btn-arrow"
-              class="overview-new-collections-row1-btn-arrow"
+              className="overview-new-collections-row1-btn-arrow"
             />
           </button>
         </div>
-        <div class="overview-new-collections-row-main">
-          <OverviewCardsFirst arrayBanners={arrayBanners} />
+        <div className="overview-new-collections-row-main">
+          <OverviewCardsFirst arrayBanners={arrayBanners} keyWord={inputTop} />
         </div>
       </div>
-      <div class="overview-new-collections">
-        <div class="overview-new-collections-row1">
-          <h2 class="overview-new-collections-row1-h3">Hot Collections</h2>
-          <button class="overview-new-collections-row1-btn">
+      {/* 2nd row */}
+      <div className="overview-new-collections">
+        <div className="overview-new-collections-row1">
+          <h2 className="overview-new-collections-row1-h3">Hot Collections</h2>
+          <button className="overview-new-collections-row1-btn">
             View All
             <img
               src={require("./assets/overview/right-arrow-svg.svg").default}
               alt="btn-arrow"
-              class="overview-new-collections-row1-btn-arrow"
+              className="overview-new-collections-row1-btn-arrow"
             />
           </button>
         </div>
-        <div class="overview-new-collections-row-main"></div>
+        <div className="overview-new-collections-row-main"></div>
       </div>
-      <div class="overview-newest-arrivals">
-        <div class="overview-newest-arrivals-row1">
-          <h2 class="overview-newest-arrivals-row1-h3 newest-arrival">
+      <div className="overview-newest-arrivals">
+        <div className="overview-newest-arrivals-row1">
+          <h2 className="overview-newest-arrivals-row1-h3 newest-arrival">
             Newest Arrivals
           </h2>
-          <button class="overview-newest-arrivals-row1-btn">
+          <button className="overview-newest-arrivals-row1-btn">
             View All
             <img
               src={require("./assets/overview/right-arrow-svg.svg").default}
               alt="btn-arrow"
-              class="overview-newest-arrivals-row1-btn-arrow"
+              className="overview-newest-arrivals-row1-btn-arrow"
             />
           </button>
         </div>
-        <div class="overview-newest-arrivals-main">
-          <OverviewCardsSec arraySec={arrayBannersSec} />
+        <div className="overview-newest-arrivals-main">
+          <OverviewCardsSec arraySec={arrayBannersSec} keyWord={inputTop} />
           {/* */}
         </div>
       </div>
-      <div class="overview-faq">
-        <div class="overview-faq-card">
-          <div class="overview-faq-card-h3">
+      {/* FAQ */}
+      <div className="overview-faq">
+        <div className="overview-faq-card">
+          <div className="overview-faq-card-h3">
             <h3>FAQs</h3>
           </div>
-          <details class="overview-faq-card-details">
+          <details className="overview-faq-card-details">
             <summary>
               I sold an NFT, where’s my BNB?
               <div>
@@ -301,18 +331,18 @@ const Overview = () => {
                 <img
                   src={require("./assets/pottery/arrow-down-faq.svg").default}
                   alt="arrow-down-faq"
-                  class="arrow-down-faq"
+                  className="arrow-down-faq"
                 />
               </div>
             </summary>
-            <div class="overview-faq-card-details-p-div">
+            <div className="overview-faq-card-details-p-div">
               Trades are settled in WBNB, which is a wrapped version of BNB used
               on BNB Smart Chain. That means that when you sell an item, WBNB is
               sent to your wallet instead of BNB. You can instantly swap your
               WBNB for BNB with no trading fees on PancakeSwap.
             </div>
           </details>
-          <details class="overview-faq-card-details">
+          <details className="overview-faq-card-details">
             <summary>
               How can I list my NFT collection on the Market?
               <div>
@@ -320,11 +350,11 @@ const Overview = () => {
                 <img
                   src={require("./assets/pottery/arrow-down-faq.svg").default}
                   alt="arrow-down-faq"
-                  class="arrow-down-faq"
+                  className="arrow-down-faq"
                 />
               </div>
             </summary>
-            <div class="overview-faq-card-details-p-div overview-faq-card-details-p-div-2">
+            <div className="overview-faq-card-details-p-div overview-faq-card-details-p-div-2">
               In Phase 2 of the NFT Marketplace, collections must be whitelisted
               before they may be listed. We are now accepting applications from
               NFT collection owners seeking to list their collections.
@@ -333,14 +363,14 @@ const Overview = () => {
                 <img
                   src="assets/overview/link-square.svg"
                   alt="link-svg"
-                  class="link-svg"
+                  className="link-svg"
                   width="20"
                   height="20"
                 />
               </div>
             </div>
           </details>
-          <details class="overview-faq-card-details">
+          <details className="overview-faq-card-details">
             <summary>
               What are the fees?
               <div>
@@ -348,11 +378,11 @@ const Overview = () => {
                 <img
                   src={require("./assets/pottery/arrow-down-faq.svg").default}
                   alt="arrow-down-faq"
-                  class="arrow-down-faq"
+                  className="arrow-down-faq"
                 />
               </div>
             </summary>
-            <div class="overview-faq-card-details-p-div">
+            <div className="overview-faq-card-details-p-div">
               100% of all platform fees taken by PancakeSwap from sales are used
               to buy back and BURN CAKE tokens in our weekly CAKE burns.
               Platform fees: 2% is subtracted from NFT sales on the market.

@@ -1,32 +1,77 @@
 import React from "react";
 
 const OverviewCardsFirst = (props) => {
-  return props.arrayBanners.map((el) => (
-    <div class="overview-new-collections-row-main-card">
-      <div class="overview-new-collections-row-main-card-up">
-        <img src={`${el.img}`} alt="banner" class="banner-img" />
+  const lowerKeyword = props.keyWord.toLowerCase();
+  if (lowerKeyword.length > 0) {
+    const searchedItem = props.arrayBanners.filter((el) =>
+      el.title.toLowerCase().includes(lowerKeyword)
+    );
+    return searchedItem.map((el, i) => (
+      <div
+        className="overview-new-collections-row-main-card"
+        key={`${el.title}-${i}`}
+      >
+        <div className="overview-new-collections-row-main-card-up">
+          <img src={`${el.img}`} alt="banner" className="banner-img" />
+        </div>
+        <div className="overview-new-collections-row-main-card-down">
+          <div className="overview-new-collections-row-main-card-down-upper">
+            {el.title}
+          </div>
+          <div className="overview-new-collections-row-main-card-down-lower">
+            <div className="overview-new-collections-row-main-card-down-lower-volume">
+              Volume
+            </div>
+            <img
+              src={require("./assets/overview/icon-lower-part.svg").default}
+              alt="icon-volume"
+              className="icon-img"
+            />
+            <div className="overview-new-collections-row-main-card-down-lower-num">
+              {el.num}
+            </div>
+          </div>
+        </div>
+
+        <div className="overview-new-collections-row-main-card-circle">
+          <img
+            src={`${el.avatar}`}
+            alt="avatar-banner"
+            className="avatar-img"
+          />
+        </div>
       </div>
-      <div class="overview-new-collections-row-main-card-down">
-        <div class="overview-new-collections-row-main-card-down-upper">
+    ));
+  }
+  return props.arrayBanners.map((el, i) => (
+    <div
+      className="overview-new-collections-row-main-card"
+      key={`${el.title}-${i}`}
+    >
+      <div className="overview-new-collections-row-main-card-up">
+        <img src={`${el.img}`} alt="banner" className="banner-img" />
+      </div>
+      <div className="overview-new-collections-row-main-card-down">
+        <div className="overview-new-collections-row-main-card-down-upper">
           {el.title}
         </div>
-        <div class="overview-new-collections-row-main-card-down-lower">
-          <div class="overview-new-collections-row-main-card-down-lower-volume">
+        <div className="overview-new-collections-row-main-card-down-lower">
+          <div className="overview-new-collections-row-main-card-down-lower-volume">
             Volume
           </div>
           <img
             src={require("./assets/overview/icon-lower-part.svg").default}
             alt="icon-volume"
-            class="icon-img"
+            className="icon-img"
           />
-          <div class="overview-new-collections-row-main-card-down-lower-num">
+          <div className="overview-new-collections-row-main-card-down-lower-num">
             {el.num}
           </div>
         </div>
       </div>
 
-      <div class="overview-new-collections-row-main-card-circle">
-        <img src={`${el.avatar}`} alt="avatar-banner" class="avatar-img" />
+      <div className="overview-new-collections-row-main-card-circle">
+        <img src={`${el.avatar}`} alt="avatar-banner" className="avatar-img" />
       </div>
     </div>
   ));

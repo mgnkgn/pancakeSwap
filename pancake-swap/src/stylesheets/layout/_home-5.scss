@@ -237,6 +237,10 @@
           width: 35px;
         }
         &_btn {
+          &:hover {
+            opacity: 0.65;
+          }
+          cursor: pointer;
           font-size: 16px;
           font-weight: 600;
           background: bc.$button-color-main;
@@ -262,10 +266,14 @@
 .home-5__container__main-DM {
   background: rgba(8, 6, 11, 0.6);
   padding: 16px;
-  border: 1px solid var(--colors-cardBorder);
+  border: 1px solid #383241;
   box-sizing: border-box;
   backdrop-filter: blur(12px);
   border-radius: 72px;
+  // color: #fff;
+  .dark-h3 {
+    color: #fff;
+  }
 }
 .home-5__container-DM {
   background: linear-gradient(180deg, #0b416e, #091216);

@@ -1,4 +1,6 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+
 import Footer from "./Footer";
 import Pottery from "./Pottery";
 import Overview from "./Overview";
@@ -9,18 +11,30 @@ import Bridge from "./Bridge";
 import Ifo from "./Ifo";
 import Home4 from "./Home4";
 import "./stylesheets/index.scss";
-import Home7 from "./Home7";
+import { TopNavbar } from "./TopNavbar";
+import Home from "./Home";
+import { ThemeProvider } from "./context/light-ctx";
 
 function App() {
   return (
-    <div className="App">
-      <Home4 />
-      <Home7 />
-      <Swap />
-      <Limit />
-      <Bridge />
-      <Ifo />
-    </div>
+    <ThemeProvider>
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <div className="App">
+              <TopNavbar />
+              <Home />
+              <Footer />
+            </div>
+          }
+        />
+        <Route path="/perpetual" element={<Perpetual />} />
+        <Route path="/overview" element={<Overview />} />
+        <Route path="/pottery" element={<Pottery />} />
+      </Routes>
+    </ThemeProvider>
   );
 }
 
