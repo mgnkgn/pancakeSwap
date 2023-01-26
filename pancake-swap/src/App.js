@@ -10,6 +10,7 @@ import "./stylesheets/index.scss";
 import { TopNavbar } from "./TopNavbar";
 import Home from "./Home";
 import { ThemeProvider } from "./context/light-ctx";
+import DraggableTest from "./DraggableTest";
 
 function App() {
   return (

@@ -701,6 +701,10 @@
     // border: 2px solid red;
     border-radius: 14px;
     &-row1 {
+      &:hover {
+        cursor: grab;
+      }
+      // border: 2px solid red;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -798,6 +802,9 @@
     margin-top: 10px;
     margin-left: 10px;
     &-row1 {
+      &:hover {
+        cursor: grab;
+      }
       display: flex;
       justify-content: start;
       border-bottom: 1px solid #e7e3eb;
@@ -838,6 +845,12 @@
     display: grid;
     grid-template-rows: 5% 8% 50% 1fr;
     &-h3 {
+      &:hover {
+        cursor: grab;
+      }
+      width: 100%;
+      // border: 2px solid red;
+      height: 35px;
       grid-row: 1 / span 1;
       color: #280d5f;
       font-size: 14px;
@@ -988,6 +1001,9 @@
     grid-row: 4 / span 1;
     grid-column: 2 / span 1;
     &-mainheader {
+      &:hover {
+        cursor: grab;
+      }
       &-h3 {
         color: #280d5f;
         font-size: 14px;
@@ -1063,6 +1079,9 @@
     margin-top: 10px;
     background: rgb(255, 255, 255);
     &-row1 {
+      &:hover {
+        cursor: grab;
+      }
       height: 4.5%;
       margin-top: 5px;
       padding: 5px 10px;
@@ -1230,7 +1249,8 @@
       }
       .rabbit-slider-img {
         position: absolute;
-        top: 345px;
+        top: 270px;
+
         &:hover {
           cursor: grab;
         }
@@ -1326,6 +1346,9 @@
     grid-row: 5 / span 1;
     grid-column: 3 / -1;
     &-row1 {
+      &:hover {
+        cursor: grab;
+      }
       padding: 2px 10px;
       display: flex;
       &-h3 {
@@ -1364,6 +1387,9 @@
     grid-row: -2 / -1;
     grid-column: -2 / -1;
     &-row1 {
+      &:hover {
+        cursor: grab;
+      }
       margin-bottom: 10px;
       padding: 10px 10px;
       display: flex;
