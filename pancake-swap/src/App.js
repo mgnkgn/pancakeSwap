@@ -9,7 +9,6 @@ import Swap from "./Swap";
 import Limit from "./Limit";
 import Bridge from "./Bridge";
 import Ifo from "./Ifo";
-import Home4 from "./Home4";
 import "./stylesheets/index.scss";
 import { TopNavbar } from "./TopNavbar";
 import Home from "./Home";
@@ -27,12 +26,20 @@ function App() {
               <TopNavbar />
               <Home />
               <Footer />
+              <Swap />
+              <Limit />
+              <Bridge />
+              <Ifo />
             </div>
           }
         />
         <Route path="/perpetual" element={<Perpetual />} />
         <Route path="/overview" element={<Overview />} />
         <Route path="/pottery" element={<Pottery />} />
+        <Route path="/swap" element={<Swap />} />
+        <Route path="/limit" element={<Limit />} />
+        <Route path="/ifo" element={<Ifo />} />
+        <Route path="/bridge" element={<Bridge />} />
       </Routes>
     </ThemeProvider>
   );

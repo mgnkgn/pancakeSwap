@@ -1,10 +1,12 @@
 import React from "react";
 import Footer from "./Footer";
 import arrowDownFaq from "./assets/pottery/arrow-down-faq.svg"
+import { TopNavbar } from "./TopNavbar";
 
 const Ifo = () => {
     return (
         <>
+        <TopNavbar />
             <div className="ifo-bottom-half">
                 <div className="how-to-take-part">
                     <div className="how-to-take-part-container1">
