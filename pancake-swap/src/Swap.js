@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Footer from "./Footer";
 import bnbCoinIcon from "./assets/header/Binance.png";
 import ethCoinIcon from "./assets/header/Ethereum.png";
 import { TopNavbar } from "./TopNavbar";
 import { InputField, Result,  } from "./form";
+import { ThemeContext } from "./context/light-ctx";
 
 const Swap = () => {
     const [inputValue, setInputValue] = useState('');
+    const {isLight} = useContext(ThemeContext);
     return (
         <>
             <TopNavbar />
-            <div className="sub_nav">
+            <div className={isLight ? "sub_nav" : "sub_nav-DM"}>
                 <ul>
                     <li><a href="#" className="selected_pottery">Swap</a></li>
                     <li><a href="limit">Limit</a></li>
@@ -29,7 +31,7 @@ const Swap = () => {
                     </svg></a></li>
                 </ul>
             </div>
-            <div className="swap-container">
+            <div className={isLight ? "swap-container" :"swap-container-DM"}>
                 <div className="swap-main">
                     <div className="chart">
                         <div className="chart-header">

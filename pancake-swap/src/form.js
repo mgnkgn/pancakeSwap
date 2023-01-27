@@ -17,7 +17,7 @@ export function Result({ inputValue }) {
         return inputValue * 1.341231;
     }
     const result = performConversion(inputValue); // perform the conversion
-    return <input value={result} />;
+    return <input value={result} placeholder="0"/>;
 }
 
 /* export function ParentComponent() {
