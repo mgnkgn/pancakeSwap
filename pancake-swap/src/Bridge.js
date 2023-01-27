@@ -9,7 +9,7 @@ const Bridge = () => {
           <a href=""></a>
           <div className="header__navbar__left-logo">
             <a href=""></a>
-            <a href="home.html">
+            <a href="/">
               {" "}
               <svg
                 viewBox="0 0 1281 199"
@@ -48,7 +48,7 @@ const Bridge = () => {
                 <a href="">Bridge</a>
               </li>
               <li className="header__navbar__left-links--menu">
-                <a href="swap.html">Swap</a>
+                <a href="swap">Swap</a>
               </li>
             </ul>
           </div>

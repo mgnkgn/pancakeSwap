@@ -22,7 +22,7 @@ const Limit = () => {
       <div className="sub_nav">
         <ul>
           <li>
-            <a href="swap.html">Swap</a>
+            <a href="swap">Swap</a>
           </li>
           <li>
             <a href="#" className="selected_pottery">
@@ -30,10 +30,10 @@ const Limit = () => {
             </a>
           </li>
           <li>
-            <a href="liquidity.html">Liquidity</a>
+            <a href="liquidity">Liquidity</a>
           </li>
           <li>
-            <a href="perpetual.html">
+            <a href="perpetual">
               Perpetual{" "}
               <svg
                 viewBox="0 0 24 24"
@@ -47,7 +47,7 @@ const Limit = () => {
             </a>
           </li>
           <li>
-            <a href="bridge.html">
+            <a href="bridge">
               Bridge{" "}
               <svg
                 viewBox="0 0 24 24"
@@ -558,7 +558,7 @@ const Limit = () => {
                     target="_blank"
                     rel="noreferrer noopener"
                     id="ercBridge"
-                    href="https://docs.binance.org/smart-chain/guides/cross-chain.html"
+                    href="https://docs.binance.org/smart-chain/guides/cross-chain"
                     color="primary"
                     fontSize="16px"
                     className="sc-c56ebc7d-0 sc-2d8b3c99-0 dXeKWX jluAhG"
