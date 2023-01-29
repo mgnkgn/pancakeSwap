@@ -3,12 +3,12 @@ import Footer from "./Footer";
 import bnbCoinIcon from "./assets/header/Binance.png";
 import ethCoinIcon from "./assets/header/Ethereum.png";
 import { TopNavbar } from "./TopNavbar";
-import { InputField, Result,  } from "./form";
+import { InputField, Result, } from "./form";
 import { ThemeContext } from "./context/light-ctx";
 
 const Swap = () => {
     const [inputValue, setInputValue] = useState('');
-    const {isLight} = useContext(ThemeContext);
+    const { isLight } = useContext(ThemeContext);
     return (
         <>
             <TopNavbar />
@@ -31,7 +31,7 @@ const Swap = () => {
                     </svg></a></li>
                 </ul>
             </div>
-            <div className={isLight ? "swap-container" :"swap-container-DM"}>
+            <div className={isLight ? "swap-container" : "swap-container-DM"}>
                 <div className="swap-main">
                     <div className="chart">
                         <div className="chart-header">
@@ -289,7 +289,7 @@ const Swap = () => {
                                         </div>
                                         <div className="token-amount-input">
                                             <label>
-                                                    <InputField inputValue={inputValue} setInputValue={setInputValue} />
+                                                <InputField inputValue={inputValue} setInputValue={setInputValue} />
                                                 <div></div>
                                             </label>
                                         </div>
@@ -346,9 +346,9 @@ const Swap = () => {
                                         </div>
                                         <div>
                                             <label>
-                                            <div>
-                                            <Result inputValue={inputValue} />
-                                                {/*
+                                                <div>
+                                                    <Result inputValue={inputValue} />
+                                                    {/*
                                                     <input
                                                         inputMode="decimal"
                                                         title="Token Amount"
