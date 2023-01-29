@@ -64,7 +64,7 @@ export const TopNavbar = () => {
                 </a>
               </li>
               <li className="flex-row">
-                <Link to="/">Bridge</Link>
+                <Link to="/bridge">Bridge</Link>
                 <a href="">
                   <img src="./assets/header/New-Window.svg" alt="" />
                 </a>

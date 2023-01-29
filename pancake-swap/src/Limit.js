@@ -2,19 +2,33 @@ import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import { TopNavbar } from "./TopNavbar";
 import { InputField, Result } from "./form";
+import { useIconChanger } from "./IconChanger";
+import { GetIconBySymbol } from "./tokenicons";
 
 
 const Limit = () => {
   const [inputValue, setInputValue] = useState("");
   const [outputValue, setOutputValue] = useState("");
+  const { fromToken, setFromToken, toToken, setToToken, fromNetwork, toNetwork, fromTokenSelectHandler,
+    fromNetworkSelectHandler, toTokenSelectHandler, toNetworkSelectHandler } = useIconChanger()
+  const [showTokenCopied, setShowTokenCopied] = useState(false);
+
+  let handleCopy = (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(outputValue);
+    setShowTokenCopied(true);
+    setTimeout(() => {
+      setShowTokenCopied(false);
+    }, 600);
+  }
   let performConversion = (inputValue) => {
     return inputValue * 1.341231;
   };
-  useEffect (() => {
+  useEffect(() => {
     const result = performConversion(inputValue);
     setOutputValue(result);
   }, [inputValue]);
-  
+
 
   return (
     <>
@@ -380,98 +394,95 @@ const Limit = () => {
                 </div>
                 <div className="swap-page">
                   <div className="swap-page-top">
-                    <div className="swap-currency-input">
-                      <div>
-                        <button>
-                          <div>
-                            <svg
-                              viewBox="0 0 96 96"
-                              width="24px"
-                              color="text"
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="sc-4ba21b47-0 IIbzK"
-                              style={{ marginRight: 8 }}
-                            >
-                              <circle cx={48} cy={48} r={48} fill="#F0B90B" />
-                              <path
-                                d="M30.9008 25.9057L47.8088 16.0637L64.7169 25.9057L58.5007 29.5416L47.8088 23.3355L37.117 29.5416L30.9008 25.9057ZM64.7169 38.3179L58.5007 34.682L47.8088 40.8881L37.117 34.682L30.9008 38.3179V45.5897L41.5926 51.7958V64.2079L47.8088 67.8438L54.0251 64.2079V51.7958L64.7169 45.5897V38.3179ZM64.7169 58.0018V50.7301L58.5007 54.366V61.6377L64.7169 58.0018ZM69.1305 60.572L58.4386 66.7781V74.0499L75.3467 64.2079V44.524L69.1305 48.1599V60.572ZM62.9143 32.1118L69.1305 35.7477V43.0195L75.3467 39.3836V32.1118L69.1305 28.4759L62.9143 32.1118ZM41.5926 69.411V76.6828L47.8088 80.3187L54.0251 76.6828V69.411L47.8088 73.0469L41.5926 69.411ZM30.9008 58.0018L37.117 61.6377V54.366L30.9008 50.7301V58.0018ZM41.5926 32.1118L47.8088 35.7477L54.0251 32.1118L47.8088 28.4759L41.5926 32.1118ZM26.4872 35.7477L32.7034 32.1118L26.4872 28.4759L20.271 32.1118V39.3836L26.4872 43.0195V35.7477ZM26.4872 48.1599L20.271 44.524V64.2079L37.1791 74.0499V66.7781L26.4872 60.572V48.1599Z"
-                                fill="white"
-                              />
-                            </svg>
-                            <select>
-                              <option value="BNB">BNB</option>
-                            </select>
-                          </div>
-                        </button>
-                      </div>
-                      <div className="token-amount-input">
-                        <label>
-                          <InputField inputValue={inputValue} setInputValue={setInputValue} />
-                          <div></div>
-                        </label>
-                      </div>
-                    </div>
-                    <div className="swap-currency-buttoncontainer">
-                      <button>
-                        <svg
-                          viewBox="0 0 24 24"
-                          className="sc-4ba21b47-0 hgqOyz _1cvvxtw3"
-                          color="primary"
-                          width="20px"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M11 5V16.17L6.11997 11.29C5.72997 10.9 5.08997 10.9 4.69997 11.29C4.30997 11.68 4.30997 12.31 4.69997 12.7L11.29 19.29C11.68 19.68 12.31 19.68 12.7 19.29L19.29 12.7C19.68 12.31 19.68 11.68 19.29 11.29C18.9 10.9 18.27 10.9 17.88 11.29L13 16.17V5C13 4.45 12.55 4 12 4C11.45 4 11 4.45 11 5Z"></path>
-                        </svg>
-                        <svg
-                          viewBox="0 0 24 24"
-                          className="sc-4ba21b47-0 hgqOyz _1cvvxtw4"
-                          color="primary"
-                          width="20px"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M16 17.01V11c0-.55-.45-1-1-1s-1 .45-1 1v6.01h-1.79c-.45 0-.67.54-.35.85l2.79 2.78c.2.19.51.19.71 0l2.79-2.78c.32-.31.09-.85-.35-.85H16zM8.65 3.35L5.86 6.14c-.32.31-.1.85.35.85H8V13c0 .55.45 1 1 1s1-.45 1-1V6.99h1.79c.45 0 .67-.54.35-.85L9.35 3.35a.501.501 0 00-.7 0z"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <div className="swap-currency-output">
-                      <div>
-                        <button>
-                          <div>
-                            <img
-                              alt="CAKE logo"
-                              width="24px"
-                              src="https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
-                            />
-                            <select>
-                              <option value="CAKE">CAKE</option>
-                            </select>
-                          </div>
-                        </button>
-                        <div>
-                          <svg
-                            viewBox="0 0 24 24"
-                            color="textSubtle"
-                            width="16px"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="sc-4ba21b47-0 ebMyYP"
-                            style={{ cursor: "pointer" }}
-                            onClick={() => {navigator.clipboard.writeText(outputValue)}}
-                          >
-                            <path d="M15 1H4C2.9 1 2 1.9 2 3V16C2 16.55 2.45 17 3 17C3.55 17 4 16.55 4 16V4C4 3.45 4.45 3 5 3H15C15.55 3 16 2.55 16 2C16 1.45 15.55 1 15 1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM18 21H9C8.45 21 8 20.55 8 20V8C8 7.45 8.45 7 9 7H18C18.55 7 19 7.45 19 8V20C19 20.55 18.55 21 18 21Z"></path>
-                          </svg>
-                          <div id="token-copied">Token address copied</div>
-                        </div>
-                      </div>
-                      <div>
-                        <label>
+                  <div className="swap-currency-input">
+                                        <div>
+                                            <button>
+                                                <div>
+                                                    <GetIconBySymbol symbol={fromToken} />
+                                                    {/* <div id="pair">BNB</div> */}
+                                                    <select onChange={fromTokenSelectHandler}>
+                                                        <option value="BNB">BNB</option>
+                                                        <option value="CAKE">CAKE</option>
+                                                        <option value="ETH">ETH</option>
+                                                        <option value="USDC">USDC</option>
+                                                        <option value="USDT">USDT</option>
+                                                        <option value="LUSD">LUSD</option>
+                                                    </select>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div className="token-amount-input">
+                                            <label>
+                                                <InputField inputValue={inputValue} setInputValue={setInputValue} />
+                                                <div></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div className="swap-currency-buttoncontainer">
+                                        <button onClick={() => {
+                                            let temp = fromToken
+                                            setFromToken(toToken)
+                                            setToToken(temp)
 
-                          <div>
-                            <Result inputValue={inputValue} />
-                          </div>
-                          <div />
-                        </label>
-                      </div>
-                    </div>
+                                        }}>
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                className="sc-4ba21b47-0 hgqOyz _1cvvxtw3"
+                                                color="primary"
+                                                width="20px"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path d="M11 5V16.17L6.11997 11.29C5.72997 10.9 5.08997 10.9 4.69997 11.29C4.30997 11.68 4.30997 12.31 4.69997 12.7L11.29 19.29C11.68 19.68 12.31 19.68 12.7 19.29L19.29 12.7C19.68 12.31 19.68 11.68 19.29 11.29C18.9 10.9 18.27 10.9 17.88 11.29L13 16.17V5C13 4.45 12.55 4 12 4C11.45 4 11 4.45 11 5Z"></path>
+                                            </svg>
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                className="sc-4ba21b47-0 hgqOyz _1cvvxtw4"
+                                                color="primary"
+                                                width="20px"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path d="M16 17.01V11c0-.55-.45-1-1-1s-1 .45-1 1v6.01h-1.79c-.45 0-.67.54-.35.85l2.79 2.78c.2.19.51.19.71 0l2.79-2.78c.32-.31.09-.85-.35-.85H16zM8.65 3.35L5.86 6.14c-.32.31-.1.85.35.85H8V13c0 .55.45 1 1 1s1-.45 1-1V6.99h1.79c.45 0 .67-.54.35-.85L9.35 3.35a.501.501 0 00-.7 0z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div className="swap-currency-output">
+                                        <div>
+                                            <button>
+                                                <div>
+                                                    <GetIconBySymbol symbol={toToken} />
+                                                    <select onChange={toTokenSelectHandler}>
+                                                        <option value="CAKE">CAKE</option>
+                                                        <option value="BNB">BNB</option>
+                                                        <option value="ETH">ETH</option>
+                                                        <option value="USDC">USDC</option>
+                                                        <option value="USDT">USDT</option>
+                                                        <option value="LUSD">LUSD</option>
+                                                    </select>
+                                                </div>
+                                            </button>
+                                            <div onClick={handleCopy}>
+                                                <svg
+                                                    viewBox="0 0 24 24"
+                                                    color="textSubtle"
+                                                    width="16px"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="sc-4ba21b47-0 ebMyYP"
+                                                    style={{ cursor: "pointer" }}
+                                                >
+                                                    <path d="M15 1H4C2.9 1 2 1.9 2 3V16C2 16.55 2.45 17 3 17C3.55 17 4 16.55 4 16V4C4 3.45 4.45 3 5 3H15C15.55 3 16 2.55 16 2C16 1.45 15.55 1 15 1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM18 21H9C8.45 21 8 20.55 8 20V8C8 7.45 8.45 7 9 7H18C18.55 7 19 7.45 19 8V20C19 20.55 18.55 21 18 21Z"></path>
+                                                </svg>
+                                                {showTokenCopied ? <div id="token-copied">Token address copied</div> : null}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                <div>
+                                                    <Result inputValue={inputValue} />
+                                                </div>
+                                                <div />
+                                            </label>
+                                        </div>
+                                    </div>
                     <div className="converter-price-market">
                       <div id="converter-price-market-price">Price</div>
                       <button disabled="">
@@ -487,21 +498,7 @@ const Limit = () => {
                         <div id="converter-price-market-text">Market</div>
                       </button>
                     </div>
-                    <Result inputValue={inputValue} />
-                    {/*                     <input
-                      disabled=""
-                      autoComplete="off"
-                      autoCorrect="off"
-                      pattern="^[0-9]*[.,]?[0-9]*$"
-                      minLength={1}
-                      maxLength={79}
-                      spellCheck="false"
-                      type="text"
-                      inputMode="decimal"
-                      scale="md"
-                      className="sc-c22a9310-0 sc-595efb6e-0 kCXkcn efNNfh"
-                      defaultValue=""
-                    /> */}
+                    <Result inputValue={inputValue} coeffient="1.2" />
                     <div className="converter-switch">
                       <div>CAKE per BNB</div>
                       <svg

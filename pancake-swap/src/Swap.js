@@ -1,14 +1,39 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Footer from "./Footer";
 import bnbCoinIcon from "./assets/header/Binance.png";
 import ethCoinIcon from "./assets/header/Ethereum.png";
 import { TopNavbar } from "./TopNavbar";
 import { InputField, Result, } from "./form";
 import { ThemeContext } from "./context/light-ctx";
+import { GetIconBySymbol } from "./tokenicons";
+import { useIconChanger } from "./IconChanger";
 
 const Swap = () => {
+    const { fromToken, setFromToken, toToken, setToToken, fromNetwork, toNetwork, fromTokenSelectHandler,
+        fromNetworkSelectHandler, toTokenSelectHandler, toNetworkSelectHandler } = useIconChanger()
     const [inputValue, setInputValue] = useState('');
+    const [outputValue, setOutputValue] = useState("");
+    const [showTokenCopied, setShowTokenCopied] = useState(false);
+
+    let handleCopy = (e) => {
+        e.preventDefault();
+        navigator.clipboard.writeText(outputValue);
+        setShowTokenCopied(true);
+        setTimeout(() => {
+            setShowTokenCopied(false);
+        }, 600);
+    }
+
+    let performConversion = (inputValue) => {
+        return inputValue * 1.341231;
+    };
+    useEffect(() => {
+        const result = performConversion(inputValue);
+        setOutputValue(result);
+    }, [inputValue]);
+
     const { isLight } = useContext(ThemeContext);
+    
     return (
         <>
             <TopNavbar />
@@ -37,29 +62,16 @@ const Swap = () => {
                         <div className="chart-header">
                             <div className="chart-leftcontainer">
                                 <div>
-                                    <svg
-                                        viewBox="0 0 96 96"
-                                        width="24px"
-                                        color="text"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="sc-4ba21b47-0 IIbzK"
-                                        style={{ marginRight: 4 }}
-                                    >
-                                        <circle cx={48} cy={48} r={48} fill="#F0B90B" />
-                                        <path
-                                            d="M30.9008 25.9057L47.8088 16.0637L64.7169 25.9057L58.5007 29.5416L47.8088 23.3355L37.117 29.5416L30.9008 25.9057ZM64.7169 38.3179L58.5007 34.682L47.8088 40.8881L37.117 34.682L30.9008 38.3179V45.5897L41.5926 51.7958V64.2079L47.8088 67.8438L54.0251 64.2079V51.7958L64.7169 45.5897V38.3179ZM64.7169 58.0018V50.7301L58.5007 54.366V61.6377L64.7169 58.0018ZM69.1305 60.572L58.4386 66.7781V74.0499L75.3467 64.2079V44.524L69.1305 48.1599V60.572ZM62.9143 32.1118L69.1305 35.7477V43.0195L75.3467 39.3836V32.1118L69.1305 28.4759L62.9143 32.1118ZM41.5926 69.411V76.6828L47.8088 80.3187L54.0251 76.6828V69.411L47.8088 73.0469L41.5926 69.411ZM30.9008 58.0018L37.117 61.6377V54.366L30.9008 50.7301V58.0018ZM41.5926 32.1118L47.8088 35.7477L54.0251 32.1118L47.8088 28.4759L41.5926 32.1118ZM26.4872 35.7477L32.7034 32.1118L26.4872 28.4759L20.271 32.1118V39.3836L26.4872 43.0195V35.7477ZM26.4872 48.1599L20.271 44.524V64.2079L37.1791 74.0499V66.7781L26.4872 60.572V48.1599Z"
-                                            fill="white"
-                                        />
-                                    </svg>
-                                    <img
-                                        className="sc-b728c75b-0 hUFSSE"
-                                        alt="CAKE logo"
-                                        width="24px"
-                                        src="https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
-                                    />
+                                    <GetIconBySymbol symbol={fromToken} />
+                                    <GetIconBySymbol symbol={toToken} />
                                 </div>
-                                <div>BNB/CAKE</div>
-                                <button>
+                                <div>{fromToken}/{toToken}</div>
+                                <button onClick={() => {
+                                    let temp = fromToken
+                                    setFromToken(toToken)
+                                    setToToken(temp)
+
+                                }}>
                                     <svg
                                         viewBox="0 0 24 25"
                                         color="primary"
@@ -266,23 +278,15 @@ const Swap = () => {
                                         <div>
                                             <button>
                                                 <div>
-                                                    <svg
-                                                        viewBox="0 0 96 96"
-                                                        width="24px"
-                                                        color="text"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        className="sc-4ba21b47-0 IIbzK"
-                                                        style={{ marginRight: 8 }}
-                                                    >
-                                                        <circle cx={48} cy={48} r={48} fill="#F0B90B" />
-                                                        <path
-                                                            d="M30.9008 25.9057L47.8088 16.0637L64.7169 25.9057L58.5007 29.5416L47.8088 23.3355L37.117 29.5416L30.9008 25.9057ZM64.7169 38.3179L58.5007 34.682L47.8088 40.8881L37.117 34.682L30.9008 38.3179V45.5897L41.5926 51.7958V64.2079L47.8088 67.8438L54.0251 64.2079V51.7958L64.7169 45.5897V38.3179ZM64.7169 58.0018V50.7301L58.5007 54.366V61.6377L64.7169 58.0018ZM69.1305 60.572L58.4386 66.7781V74.0499L75.3467 64.2079V44.524L69.1305 48.1599V60.572ZM62.9143 32.1118L69.1305 35.7477V43.0195L75.3467 39.3836V32.1118L69.1305 28.4759L62.9143 32.1118ZM41.5926 69.411V76.6828L47.8088 80.3187L54.0251 76.6828V69.411L47.8088 73.0469L41.5926 69.411ZM30.9008 58.0018L37.117 61.6377V54.366L30.9008 50.7301V58.0018ZM41.5926 32.1118L47.8088 35.7477L54.0251 32.1118L47.8088 28.4759L41.5926 32.1118ZM26.4872 35.7477L32.7034 32.1118L26.4872 28.4759L20.271 32.1118V39.3836L26.4872 43.0195V35.7477ZM26.4872 48.1599L20.271 44.524V64.2079L37.1791 74.0499V66.7781L26.4872 60.572V48.1599Z"
-                                                            fill="white"
-                                                        />
-                                                    </svg>
+                                                    <GetIconBySymbol symbol={fromToken} />
                                                     {/* <div id="pair">BNB</div> */}
-                                                    <select>
+                                                    <select onChange={fromTokenSelectHandler}>
                                                         <option value="BNB">BNB</option>
+                                                        <option value="ETH">ETH</option>
+                                                        <option value="USDC">USDC</option>
+                                                        <option value="USDT">USDT</option>
+                                                        <option value="LUSD">LUSD</option>
+                                                        <option value="CAKE">CAKE</option>
                                                     </select>
                                                 </div>
                                             </button>
@@ -295,7 +299,12 @@ const Swap = () => {
                                         </div>
                                     </div>
                                     <div className="swap-currency-buttoncontainer">
-                                        <button>
+                                        <button onClick={() => {
+                                            let temp = fromToken
+                                            setFromToken(toToken)
+                                            setToToken(temp)
+
+                                        }}>
                                             <svg
                                                 viewBox="0 0 24 24"
                                                 className="sc-4ba21b47-0 hgqOyz _1cvvxtw3"
@@ -320,17 +329,18 @@ const Swap = () => {
                                         <div>
                                             <button>
                                                 <div>
-                                                    <img
-                                                        alt="CAKE logo"
-                                                        width="24px"
-                                                        src="https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
-                                                    />
-                                                    <select>
+                                                    <GetIconBySymbol symbol={toToken} />
+                                                    <select onChange={toTokenSelectHandler}>
                                                         <option value="CAKE">CAKE</option>
+                                                        <option value="BNB">BNB</option>
+                                                        <option value="ETH">ETH</option>
+                                                        <option value="USDC">USDC</option>
+                                                        <option value="USDT">USDT</option>
+                                                        <option value="LUSD">LUSD</option>
                                                     </select>
                                                 </div>
                                             </button>
-                                            <div>
+                                            <div onClick={handleCopy}>
                                                 <svg
                                                     viewBox="0 0 24 24"
                                                     color="textSubtle"
@@ -341,28 +351,13 @@ const Swap = () => {
                                                 >
                                                     <path d="M15 1H4C2.9 1 2 1.9 2 3V16C2 16.55 2.45 17 3 17C3.55 17 4 16.55 4 16V4C4 3.45 4.45 3 5 3H15C15.55 3 16 2.55 16 2C16 1.45 15.55 1 15 1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM18 21H9C8.45 21 8 20.55 8 20V8C8 7.45 8.45 7 9 7H18C18.55 7 19 7.45 19 8V20C19 20.55 18.55 21 18 21Z"></path>
                                                 </svg>
-                                                <div id="token-copied">Token address copied</div>
+                                                {showTokenCopied ? <div id="token-copied">Token address copied</div> : null}
                                             </div>
                                         </div>
                                         <div>
                                             <label>
                                                 <div>
                                                     <Result inputValue={inputValue} />
-                                                    {/*
-                                                    <input
-                                                        inputMode="decimal"
-                                                        title="Token Amount"
-                                                        autoComplete="off"
-                                                        autoCorrect="off"
-                                                        type="text"
-                                                        pattern="^[0-9]*[.,]?[0-9]*$"
-                                                        placeholder={0.0}
-                                                        minLength={1}
-                                                        maxLength={79}
-                                                        spellCheck="false"
-                                                        defaultValue=""
-                                                    />
-                                                 */}
                                                 </div>
                                                 <div />
                                             </label>

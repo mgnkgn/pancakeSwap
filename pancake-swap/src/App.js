@@ -26,10 +26,6 @@ function App() {
               <TopNavbar />
               <Home />
               <Footer />
-              <Swap />
-              <Limit />
-              <Bridge />
-              <Ifo />
             </div>
           }
         />
