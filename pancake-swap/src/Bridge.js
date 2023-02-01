@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import lightModeIcon from "./assets/footer/footer_light_mode.svg"
 import { ThemeContext } from "./context/light-ctx";
 import { useIconChanger } from "./IconChanger";
@@ -23,10 +24,10 @@ const Bridge = () => {
     <>
       <nav className="header__navbar flex-row">
         <div className="header__navbar__left flex-row">
-          <a href=""></a>
+          <Link to="/"></Link>
           <div className="header__navbar__left-logo">
-            <a href=""></a>
-            <a href="/">
+            <Link to="/"></Link>
+            <Link to="/">
               {" "}
               <svg
                 viewBox="0 0 1281 199"
@@ -59,13 +60,13 @@ const Bridge = () => {
                   fill="#633001"
                 />
               </svg>
-            </a>
+            </Link>
             <ul className="header__navbar__left-links flex-row">
               <li className="header__navbar__left-links--menu">
-                <a href="">Bridge</a>
+                <Link to="/">Bridge</Link>
               </li>
               <li className="header__navbar__left-links--menu">
-                <a href="swap">Swap</a>
+                <Link to="/swap">Swap</Link>
               </li>
             </ul>
           </div>
