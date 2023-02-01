@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import Footer from "./Footer";
-import bnbCoinIcon from "./assets/header/Binance.png";
-import ethCoinIcon from "./assets/header/Ethereum.png";
 import { TopNavbar } from "./TopNavbar";
 import { InputField, Result, } from "./form";
 import { ThemeContext } from "./context/light-ctx";
 import { GetIconBySymbol } from "./tokenicons";
 import { useIconChanger } from "./IconChanger";
+import { ReactComponent as HideChart } from "./assets/swap/hide-chart.svg";
+import { ReactComponent as ShowChart } from "./assets/swap/show-chart.svg";
 
 const Swap = () => {
     const { fromToken, setFromToken, toToken, setToToken, fromNetwork, toNetwork, fromTokenSelectHandler,
@@ -14,6 +14,11 @@ const Swap = () => {
     const [inputValue, setInputValue] = useState('');
     const [outputValue, setOutputValue] = useState("");
     const [showTokenCopied, setShowTokenCopied] = useState(false);
+    const [showChart, setShowChart] = useState(true);
+
+    let hideChartHandler = () => {
+        setShowChart(!showChart);
+    };
 
     let handleCopy = (e) => {
         e.preventDefault();
@@ -33,7 +38,7 @@ const Swap = () => {
     }, [inputValue]);
 
     const { isLight } = useContext(ThemeContext);
-    
+
     return (
         <>
             <TopNavbar />
@@ -58,7 +63,7 @@ const Swap = () => {
             </div>
             <div className={isLight ? "swap-container" : "swap-container-DM"}>
                 <div className="swap-main">
-                    <div className="chart">
+                    <div className={showChart ? "chart" : "chart-hid"}>
                         <div className="chart-header">
                             <div className="chart-leftcontainer">
                                 <div>
@@ -190,26 +195,8 @@ const Swap = () => {
                             </div>
                             <div className="converter-mid">
                                 <div>
-                                    <button>
-                                        <svg
-                                            viewBox="0 0 23 22"
-                                            color="textSubtle"
-                                            width="20px"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="sc-4ba21b47-0 ebMyYP"
-                                        >
-                                            <path
-                                                d="M21.5 1l-20 20"
-                                                strokeWidth={2}
-                                                stroke="currentColor"
-                                                strokeLinecap="round"
-                                            />
-                                            <path
-                                                fillRule="evenodd"
-                                                clipRule="evenodd"
-                                                d="M7.033 19H19.5a1 1 0 100-2H9.033l-2 2zm3-3H18.5a1 1 0 001-1V6.533l-2 2V14h-2v-3.467l-2 2V14h-1.467l-2 2zm.936-8H10.5a1 1 0 00-1 1v.469L10.969 8zm-2 2L5.5 13.469V11a1 1 0 011-1h2.469zM4.5 14.469l-2 2V6a1 1 0 012 0v8.469z"
-                                            ></path>
-                                        </svg>
+                                    <button onClick={hideChartHandler}>
+                                        {showChart ? <HideChart /> : <ShowChart />}
                                     </button>
                                     <h2>Swap</h2>
                                     <div>
