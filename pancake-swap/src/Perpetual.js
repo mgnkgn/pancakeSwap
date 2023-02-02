@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { VictoryLine, VictoryChart, VictoryTheme } from "victory";
 import Draggable, { DraggableCore } from "react-draggable";
 import PerpetualNav from "./PerpetualNav";
+import PerpetualGraph from "./PerpetualGraph";
 
 const Perpetual = () => {
   return (
     <>
-      <body>
+      <div>
         <PerpetualNav />
         <main className="perpetual-main">
           <section className="left-first">
@@ -68,546 +70,546 @@ const Perpetual = () => {
                     <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
                   <div className="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
-                  <div class="btc-submenu-main-row">
-                    <div class="btc-submenu-main-row-star">
+                  <div className="btc-submenu-main-row">
+                    <div className="btc-submenu-main-row-star">
                       <img
                         src={
                           require("./assets/perpetual/star_perpetual.svg")
                             .default
                         }
                         alt="star"
-                        class="btc-submenu-main-row-star-img"
+                        className="btc-submenu-main-row-star-img"
                       />
                     </div>
-                    <div class="btc-submenu-main-row-btcusdt">
+                    <div className="btc-submenu-main-row-btcusdt">
                       BTCUSDT <span>Perpetual</span>
                     </div>
-                    <div class="btc-submenu-main-row-price">16,295</div>
-                    <div class="btc-submenu-main-row-vol">44,637,793</div>
+                    <div className="btc-submenu-main-row-price">16,295</div>
+                    <div className="btc-submenu-main-row-vol">44,637,793</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="left-second-2">16601</div>
-            <div class="left-second-3">
-              <div class="left-second-3-1 left-second-3-row">
-                <div class="up">Mark</div>
-                <div class="down">16,614</div>
+            <div className="left-second-2">16601</div>
+            <div className="left-second-3">
+              <div className="left-second-3-1 left-second-3-row">
+                <div className="up">Mark</div>
+                <div className="down">16,614</div>
               </div>
-              <div class="left-second-3-2 left-second-3-row">
-                <div class="up">Index</div>
-                <div class="down">16,632</div>
+              <div className="left-second-3-2 left-second-3-row">
+                <div className="up">Index</div>
+                <div className="down">16,632</div>
               </div>
-              <div class="left-second-3-3 left-second-3-row">
-                <div class="up">Funding / Countdown</div>
-                <div class="down">
-                  <span class="down-span-left">0.0001%</span>
-                  <span class="down-span-right"> 00:55:34</span>
+              <div className="left-second-3-3 left-second-3-row">
+                <div className="up">Funding / Countdown</div>
+                <div className="down">
+                  <span className="down-span-left">0.0001%</span>
+                  <span className="down-span-right"> 00:55:34</span>
                 </div>
               </div>
-              <div class="left-second-3-4 left-second-3-row">
-                <div class="up">24h Change</div>
-                <div class="down">-32 -0.19%</div>
+              <div className="left-second-3-4 left-second-3-row">
+                <div className="up">24h Change</div>
+                <div className="down">-32 -0.19%</div>
               </div>
-              <div class="left-second-3-5 left-second-3-row">
-                <div class="up">24h High</div>
-                <div class="down">17,168</div>
+              <div className="left-second-3-5 left-second-3-row">
+                <div className="up">24h High</div>
+                <div className="down">17,168</div>
               </div>
-              <div class="left-second-3-6 left-second-3-row">
-                <div class="up">24h Low</div>
-                <div class="down">15,811</div>
+              <div className="left-second-3-6 left-second-3-row">
+                <div className="up">24h Low</div>
+                <div className="down">15,811</div>
               </div>
-              <div class="left-second-3-7 left-second-3-row">
-                <div class="up">24h Volume(BTC)</div>
-                <div class="down">2,689.732</div>
+              <div className="left-second-3-7 left-second-3-row">
+                <div className="up">24h Volume(BTC)</div>
+                <div className="down">2,689.732</div>
               </div>
-              <div class="left-second-3-8 left-second-3-row">
-                <div class="up">24h Volume(USDT)</div>
-                <div class="down">44,319,163.94</div>
+              <div className="left-second-3-8 left-second-3-row">
+                <div className="up">24h Volume(USDT)</div>
+                <div className="down">44,319,163.94</div>
               </div>
             </div>
-            <div class="left-second-4">
+            <div className="left-second-4">
               <img
                 src={
                   require("./assets/perpetual/arrowish_settings.svg").default
                 }
                 alt="arrowish_settings"
-                class="left-second-4-img"
+                className="left-second-4-img"
               />
             </div>
           </section>
@@ -716,70 +718,9 @@ const Perpetual = () => {
                   </div>
                 </div>
               </div>
+              {/* #########GRAPH############ */}
               <div className="left-third-graph">
-                <svg
-                  width="100%"
-                  height="100%"
-                  preserveAspectRatio="none"
-                  viewBox="0 0 100 50"
-                  color="text"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="sc-4ba21b47-0 IIbzK"
-                >
-                  <path
-                    d="M 0 49 C 1 49 1 45 4 47 C 7 49 7 35 11 37 C 13 38 14 32 16 34 C 18 35.6667 20 40 22 39 C 24 38 24 34 26 34 C 27 34 29 39 32 36 C 33 35 34 32 35 32 C 37 32 37 35 39 34 C 40 33 39 29 43 31 C 46 32 45 28 47 30 C 50 32 49 22 51 24 Q 53 26 55 24 C 56 23 56 25 57 26 C 58 27 59 28 60 28 C 63 28 66 17 67 16 C 68 15 69 17 70 16 C 71 15 71 13 74 13 C 76 13 76 14 77 15 C 79 17 80 18 82 18 C 83 18 83 17 84 17 C 87 17 89 24 91 24 C 93 24 95 20 96 17 C 97.6667 13.3333 98 9 101 6"
-                    stroke="#7645D9"
-                    stroke-width="0.2"
-                    stroke-dasharray="156"
-                    stroke-dashoffset="156"
-                    fill="transparent"
-                    opacity="0.5"
-                    filter="url(#glow)"
-                  >
-                    <animate
-                      id="firstline"
-                      attributeName="stroke-dashoffset"
-                      dur="2s"
-                      from="156"
-                      to="-156"
-                      begin="0s;firstline.end+0.5s"
-                    ></animate>
-                  </path>
-                  <path
-                    d="M 0 49 C 1 49 1 45 4 47 C 7 49 7 35 11 37 C 13 38 14 32 16 34 C 18 35.6667 20 40 22 39 C 24 38 24 34 26 34 C 27 34 29 39 32 36 C 33 35 34 32 35 32 C 37 32 37 35 39 34 C 40 33 39 29 43 31 C 46 32 45 28 47 30 C 50 32 49 22 51 24 Q 53 26 55 24 C 56 23 56 25 57 26 C 58 27 59 28 60 28 C 63 28 66 17 67 16 C 68 15 69 17 70 16 C 71 15 71 13 74 13 C 76 13 76 14 77 15 C 79 17 80 18 82 18 C 83 18 83 17 84 17 C 87 17 89 24 91 24 C 93 24 95 20 96 17 C 97.6667 13.3333 98 9 101 6"
-                    stroke="#7645D9"
-                    stroke-width="0.2"
-                    stroke-dasharray="156"
-                    stroke-dashoffset="156"
-                    fill="transparent"
-                    opacity="0.5"
-                    filter="url(#glow)"
-                  >
-                    <animate
-                      id="secondline"
-                      attributeName="stroke-dashoffset"
-                      dur="2s"
-                      from="156"
-                      to="-156"
-                      begin="1.3s;secondline.end+0.5s"
-                    ></animate>
-                  </path>
-                  <defs>
-                    <filter id="glow">
-                      <feGaussianBlur
-                        className="blur"
-                        result="coloredBlur"
-                        stdDeviation="4"
-                      ></feGaussianBlur>
-                      <feMerge>
-                        <feMergeNode in="coloredBlur"></feMergeNode>
-                        <feMergeNode in="coloredBlur"></feMergeNode>
-                        <feMergeNode in="coloredBlur"></feMergeNode>
-                        <feMergeNode in="SourceGraphic"></feMergeNode>
-                      </feMerge>
-                    </filter>
-                  </defs>
-                </svg>
+                <PerpetualGraph />
               </div>
             </section>
           </Draggable>
@@ -1205,7 +1146,7 @@ const Perpetual = () => {
             </section>
           </Draggable>
         </main>
-      </body>
+      </div>
     </>
   );
 };
