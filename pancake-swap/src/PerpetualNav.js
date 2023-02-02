@@ -3,48 +3,48 @@ import { Link } from "react-router-dom";
 
 const PerpetualNav = () => {
   return (
-    <nav class="perpetual-nav">
+    <nav className="perpetual-nav">
       <Link to="/">
-        <div class="perpetual-nav-logo">
+        <div className="perpetual-nav-logo">
           {" "}
           <img
             src={require("./assets/perpetual/logo-with-text-light.svg").default}
             alt="logo-with-text-light"
-            class="perpetual-nav-logo-img"
+            className="perpetual-nav-logo-img"
           />
         </div>
       </Link>
-      <div class="perpetual-nav-mid">
-        <div class="perpetual-nav-mid-left">
+      <div className="perpetual-nav-mid">
+        <div className="perpetual-nav-mid-left">
           Grid <span>New</span>
         </div>
-        <div class="perpetual-nav-mid-mid">Perpetuals</div>
-        <div class="perpetual-nav-mid-right">Swap</div>
+        <div className="perpetual-nav-mid-mid">Perpetuals</div>
+        <div className="perpetual-nav-mid-right">Swap</div>
       </div>
-      <div class="perpetual-nav-right">
-        <div class="perpetual-nav-right-item-logo">
+      <div className="perpetual-nav-right">
+        <div className="perpetual-nav-right-item-logo">
           <img
             src={require("./assets/perpetual/bunny-round.svg").default}
             alt="bunny-round"
-            class="perpetual-nav-right-item-logo-bunny"
+            className="perpetual-nav-right-item-logo-bunny"
           />
         </div>
-        <div class="perpetual-nav-right-item">4.060</div>
-        <div class="perpetual-nav-right-item">
+        <div className="perpetual-nav-right-item">4.060</div>
+        <div className="perpetual-nav-right-item">
           <img
             src={require("./assets/perpetual/svg_audio.svg").default}
             alt="svg_audio"
-            class="perpetual-nav-right-item-img perpetual-nav-right-item-img-audio"
+            className="perpetual-nav-right-item-img perpetual-nav-right-item-img-audio"
           />
-          <div class="dropdown-audio">Submit a ticket</div>
+          <div className="dropdown-audio">Submit a ticket</div>
         </div>
-        <div class="perpetual-nav-right-item">
+        <div className="perpetual-nav-right-item">
           <img
             src={require("./assets/perpetual/svg_world.svg").default}
             alt="svg_world"
-            class="perpetual-nav-right-item-img perpetual-nav-right-item-img-world"
+            className="perpetual-nav-right-item-img perpetual-nav-right-item-img-world"
           />
-          <ul class="dropdown">
+          <ul className="dropdown">
             <li>
               <a href="">العربية</a>
             </li>
@@ -132,116 +132,116 @@ const PerpetualNav = () => {
           </ul>
         </div>
 
-        <div class="perpetual-nav-right-item">
+        <div className="perpetual-nav-right-item">
           <img
             src={require("./assets/perpetual/svg_settings.svg").default}
             alt="svg_disc"
-            class="perpetual-nav-right-item-img perpetual-nav-right-item-img-settings"
+            className="perpetual-nav-right-item-img perpetual-nav-right-item-img-settings"
           />
-          <div class="dropdown-settings">
-            <div class="dropdown-settings-first">
+          <div className="dropdown-settings">
+            <div className="dropdown-settings-first">
               <div>Theme</div>
-              <div class="light-dark">
-                <div class="light-mode">
+              <div className="light-dark">
+                <div className="light-mode">
                   <img
                     src={
                       require("./assets/footer/footer_light_mode.svg").default
                     }
                     alt="light-mode"
-                    class="light-mode-img"
+                    className="light-mode-img"
                   />
                 </div>
-                <div class="dark-mode">
+                <div className="dark-mode">
                   <img
                     src={
                       require("./assets/footer/footer_dark_mode.svg").default
                     }
                     alt="dark-mode"
-                    class="dark-mode-img"
+                    className="dark-mode-img"
                   />
                 </div>
               </div>
             </div>
-            <div class="dropdown-settings-row">
+            <div className="dropdown-settings-row">
               <div>Quick Trading</div>
-              <div class="green-checkbox">
-                <div class="green-checkbox-white"></div>
+              <div className="green-checkbox">
+                <div className="green-checkbox-white"></div>
               </div>
             </div>
-            <div class="dropdown-settings-row">
+            <div className="dropdown-settings-row">
               <div>Favorites</div>
-              <div class="green-checkbox">
-                <div class="green-checkbox-white"></div>
+              <div className="green-checkbox">
+                <div className="green-checkbox-white"></div>
               </div>
             </div>
-            <div class="dropdown-settings-row">
+            <div className="dropdown-settings-row">
               <div>Market</div>
-              <div class="green-checkbox">
-                <div class="green-checkbox-white"></div>
+              <div className="green-checkbox">
+                <div className="green-checkbox-white"></div>
               </div>
             </div>
-            <div class="dropdown-settings-row">
+            <div className="dropdown-settings-row">
               <div>Chart</div>
-              <div class="green-checkbox">
-                <div class="green-checkbox-white"></div>
+              <div className="green-checkbox">
+                <div className="green-checkbox-white"></div>
               </div>
             </div>
-            <div class="dropdown-settings-row">
+            <div className="dropdown-settings-row">
               <div>Depth</div>
-              <div class="green-checkbox">
-                <div class="green-checkbox-white"></div>
+              <div className="green-checkbox">
+                <div className="green-checkbox-white"></div>
               </div>
             </div>
-            <div class="dropdown-settings-row">
+            <div className="dropdown-settings-row">
               <div>Order Book</div>
-              <div class="green-checkbox">
-                <div class="green-checkbox-white"></div>
+              <div className="green-checkbox">
+                <div className="green-checkbox-white"></div>
               </div>
             </div>
-            <div class="dropdown-settings-row">
+            <div className="dropdown-settings-row">
               <div>Trades</div>
-              <div class="green-checkbox">
-                <div class="green-checkbox-white"></div>
+              <div className="green-checkbox">
+                <div className="green-checkbox-white"></div>
               </div>
             </div>
-            <div class="dropdown-settings-row">
+            <div className="dropdown-settings-row">
               <div>Position & Open Orders</div>
-              <div class="green-checkbox">
-                <div class="green-checkbox-white"></div>
+              <div className="green-checkbox">
+                <div className="green-checkbox-white"></div>
               </div>
             </div>
-            <div class="dropdown-settings-row">
+            <div className="dropdown-settings-row">
               <div>Place Orders</div>
-              <div class="green-checkbox">
-                <div class="green-checkbox-white"></div>
+              <div className="green-checkbox">
+                <div className="green-checkbox-white"></div>
               </div>
             </div>
-            <div class="dropdown-settings-row">
+            <div className="dropdown-settings-row">
               <div>Margin Ratio</div>
-              <div class="green-checkbox">
-                <div class="green-checkbox-white"></div>
+              <div className="green-checkbox">
+                <div className="green-checkbox-white"></div>
               </div>
             </div>
-            <div class="dropdown-settings-row">
+            <div className="dropdown-settings-row">
               <div>Assets</div>
-              <div class="green-checkbox">
-                <div class="green-checkbox-white"></div>
+              <div className="green-checkbox">
+                <div className="green-checkbox-white"></div>
               </div>
             </div>
-            <div class="dropdown-settings-last">
+            <div className="dropdown-settings-last">
               <div>Back to Default Layout</div>
               <div></div>
             </div>
           </div>
         </div>
-        <div class="perpetual-nav-right-item">
+        <div className="perpetual-nav-right-item">
           <img
             src={require("./assets/perpetual/svg_questionMark.svg").default}
             alt="svg_questionMark"
-            class="perpetual-nav-right-item-img"
+            className="perpetual-nav-right-item-img"
           />
         </div>
-        <div class="perpetual-nav-right-btn">Connect Wallet</div>
+        <div className="perpetual-nav-right-btn">Connect Wallet</div>
       </div>
     </nav>
   );
