@@ -1,9 +1,14 @@
 import React from "react";
 import { render } from "react-dom";
 
+import TopNavBar from "./TopNavbar";
+import Footer from "./Footer";
+
+
 const Liquidity = () => {
     return (
         <>
+            <TopNavBar />
             <div class="swap-container">
         <div class="swap-main">
             //liquidity converter
@@ -84,7 +89,8 @@ const Liquidity = () => {
                 </div>
             </div>
         </div>
-    </div>   
+    </div>
+    <Footer />
         </>
     )
 };
