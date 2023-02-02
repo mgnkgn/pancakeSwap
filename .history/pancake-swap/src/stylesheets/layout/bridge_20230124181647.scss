@@ -577,13 +577,14 @@
                                             padding-left: 1rem;
                                         }
 
-                                        select {
-                                            width: 250px;
-                                            padding: 17px 16px;
-                                            padding-top: 18px;
+                                        input {
+                                            display: flex;
+                                            cursor: pointer;
                                             background-color: transparent;
                                             border: none;
+                                            padding-top: 1rem;
                                             text-align: left;
+
                                         }
                                     }
                                 }
@@ -621,18 +622,20 @@
                                         display: inline-flex;
                                         position: relative;
                                         align-items: center;
-                                        padding: 8px 2px;
+                                        width: 289px;
+                                        padding: 8px 0px;
+
 
                                         div:nth-of-type(1) {
                                             padding-left: 1rem;
                                         }
 
-                                        select {
-                                            width: 250px;
-                                            padding: 17px 16px;
-                                            padding-top: 18px;
+                                        input {
+                                            display: flex;
+                                            cursor: pointer;
                                             background-color: transparent;
                                             border: none;
+                                            padding-top: 1rem;
                                             text-align: left;
                                         }
                                     }
@@ -1146,11 +1149,11 @@
 
 
 
- #bridge-footer-bottom-item >div {
+.footer__section__bottom--item-1.footer__section__bottom--item>div {
     background-color: #bdc2c4;
 }
 
-#bridge-footer-bottom-item {
+.footer__section__bottom--item-1.footer__section__bottom--item {
     width: 90px;
     
 

@@ -98,11 +98,18 @@ const Footer = () => {
                   : "absolute-slider absolute-slider-right"
               }
             >
-              <img
+              {isLight 
+              ? <img
                 src={require("./assets/footer/footer_light_mode.svg").default}
                 alt="light-dark-switch"
                 className="absolute-switcher-img"
-              />
+              /> 
+              : <img
+                src={require("./assets/footer/footer_dark_mode.svg").default}
+                alt="dark mode icon"
+                className="dark_mode"
+              />}
+
             </div>
             {/* <!-- ABSOLUTE SLIDER ENDS --> */}
             <div className="footer__section__bottom--item-1__dark-mode-container_light">

@@ -49,10 +49,10 @@ export const TopNavbar = () => {
             <Link to="/">Trade</Link>
             <ul className="header__navbar__left-links--submenu">
               <li>
-                <Link to="/">Swap</Link>
+                <Link to="/swap">Swap</Link>
               </li>
               <li>
-                <Link to="/">Limit</Link>
+                <Link to="/limit">Limit</Link>
               </li>
               <li>
                 <Link to="/">Liquidity</Link>
@@ -64,7 +64,7 @@ export const TopNavbar = () => {
                 </a>
               </li>
               <li className="flex-row">
-                <Link to="/">Bridge</Link>
+                <Link to="/bridge">Bridge</Link>
                 <a href="">
                   <img src="./assets/header/New-Window.svg" alt="" />
                 </a>
@@ -129,7 +129,7 @@ export const TopNavbar = () => {
                 <Link to="/">Info</Link>
               </li>
               <li>
-                <Link to="/">IFO</Link>
+                <Link to="/ifo">IFO</Link>
               </li>
               <li>
                 <Link to="/">Voting</Link>

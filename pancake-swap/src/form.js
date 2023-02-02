@@ -12,12 +12,12 @@ export function InputField({ inputValue, setInputValue }) {
     );
 }
 
-export function Result({ inputValue }) {
+export function Result({ inputValue, coeffient = 1 }) {
     function performConversion(inputValue) {
-        return inputValue * 1.341231;
+        return inputValue * 1.341231 * coeffient;
     }
     const result = performConversion(inputValue); // perform the conversion
-    return <input value={result} />;
+    return <input value={result} placeholder="0"/>;
 }
 
 /* export function ParentComponent() {

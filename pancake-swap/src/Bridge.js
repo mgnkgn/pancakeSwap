@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import lightModeIcon from "./assets/footer/footer_light_mode.svg"
+import { ThemeContext } from "./context/light-ctx";
+import { useIconChanger } from "./IconChanger";
+import { GetIconBySymbol } from "./tokenicons.js"
 
 const Bridge = () => {
+  const { toggleTheme, isLight } = useContext(ThemeContext);
+  const { fromToken, setFromToken, toToken, setToToken, fromNetwork, setFromNetwork, toNetwork, setToNetwork, fromTokenSelectHandler,
+    fromNetworkSelectHandler, toTokenSelectHandler, toNetworkSelectHandler } = useIconChanger()
+
+  useEffect(() => {
+    setFromToken("ETH")
+    setToToken("USDC")
+    setFromNetwork("USDC")
+    setToNetwork("ETH")
+  }, [])
+
+  const themeClickHandler = () => {
+    toggleTheme();
+  };
   return (
     <>
       <nav className="header__navbar flex-row">
         <div className="header__navbar__left flex-row">
-          <a href=""></a>
+          <Link to="/"></Link>
           <div className="header__navbar__left-logo">
-            <a href=""></a>
-            <a href="home.html">
+            <Link to="/"></Link>
+            <Link to="/">
               {" "}
               <svg
                 viewBox="0 0 1281 199"
@@ -42,22 +60,22 @@ const Bridge = () => {
                   fill="#633001"
                 />
               </svg>
-            </a>
+            </Link>
             <ul className="header__navbar__left-links flex-row">
               <li className="header__navbar__left-links--menu">
-                <a href="">Bridge</a>
+                <Link to="/">Bridge</Link>
               </li>
               <li className="header__navbar__left-links--menu">
-                <a href="swap.html">Swap</a>
+                <Link to="/swap">Swap</Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="header__navbar__right flex-row">
-          <div className="footer__section__bottom--item-1 footer__section__bottom--item">
-            <div className="footer__section__bottom--item-1__dark-mode-container">
+          <div className="footer__section__bottom--item-1 footer__section__bottom--item" id="bridge-footer-bottom-item">
+            <div className="footer__section__bottom--item-1__dark-mode-container" onClick={themeClickHandler}>
               <div className="footer__section__bottom--item-1__dark-mode-container_light">
-              <svg viewBox="0 0 24 24" color="warning" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-4ba21b47-0 joVAFt"><path d="M5.66 4.2L6.05 4.59C6.44 4.97 6.44 5.61 6.05 5.99L6.04 6C5.65 6.39 5.03 6.39 4.64 6L4.25 5.61C3.86 5.23 3.86 4.6 4.25 4.21L4.26 4.2C4.64 3.82 5.27 3.81 5.66 4.2Z"></path><path d="M1.99 10.95H3.01C3.56 10.95 4 11.39 4 11.95V11.96C4 12.51 3.56 12.95 3 12.94H1.99C1.44 12.94 1 12.5 1 11.95V11.94C1 11.39 1.44 10.95 1.99 10.95Z"></path><path d="M12 1H12.01C12.56 1 13 1.44 13 1.99V2.96C13 3.51 12.56 3.95 12 3.94H11.99C11.44 3.94 11 3.5 11 2.95V1.99C11 1.44 11.44 1 12 1Z"></path><path d="M18.34 4.2C18.73 3.82 19.36 3.82 19.75 4.21C20.14 4.6 20.14 5.22 19.75 5.61L19.36 6C18.98 6.39 18.35 6.39 17.96 6L17.95 5.99C17.56 5.61 17.56 4.98 17.95 4.59L18.34 4.2Z"></path><path d="M18.33 19.7L17.94 19.31C17.55 18.92 17.55 18.3 17.95 17.9C18.33 17.52 18.96 17.51 19.35 17.9L19.74 18.29C20.13 18.68 20.13 19.31 19.74 19.7C19.35 20.09 18.72 20.09 18.33 19.7Z"></path><path d="M20 11.95V11.94C20 11.39 20.44 10.95 20.99 10.95H22C22.55 10.95 22.99 11.39 22.99 11.94V11.95C22.99 12.5 22.55 12.94 22 12.94H20.99C20.44 12.94 20 12.5 20 11.95Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6 11.95C6 8.64 8.69 5.95 12 5.95C15.31 5.95 18 8.64 18 11.95C18 15.26 15.31 17.95 12 17.95C8.69 17.95 6 15.26 6 11.95ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"></path><path d="M12 22.9H11.99C11.44 22.9 11 22.46 11 21.91V20.95C11 20.4 11.44 19.96 11.99 19.96H12C12.55 19.96 12.99 20.4 12.99 20.95V21.91C12.99 22.46 12.55 22.9 12 22.9Z"></path><path d="M5.66 19.69C5.27 20.08 4.64 20.08 4.25 19.69C3.86 19.3 3.86 18.68 4.24 18.28L4.63 17.89C5.02 17.5 5.65 17.5 6.04 17.89L6.05 17.9C6.43 18.28 6.44 18.91 6.05 19.3L5.66 19.69Z"></path></svg>
+                <svg viewBox="0 0 24 24" color="warning" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-4ba21b47-0 joVAFt"><path d="M5.66 4.2L6.05 4.59C6.44 4.97 6.44 5.61 6.05 5.99L6.04 6C5.65 6.39 5.03 6.39 4.64 6L4.25 5.61C3.86 5.23 3.86 4.6 4.25 4.21L4.26 4.2C4.64 3.82 5.27 3.81 5.66 4.2Z"></path><path d="M1.99 10.95H3.01C3.56 10.95 4 11.39 4 11.95V11.96C4 12.51 3.56 12.95 3 12.94H1.99C1.44 12.94 1 12.5 1 11.95V11.94C1 11.39 1.44 10.95 1.99 10.95Z"></path><path d="M12 1H12.01C12.56 1 13 1.44 13 1.99V2.96C13 3.51 12.56 3.95 12 3.94H11.99C11.44 3.94 11 3.5 11 2.95V1.99C11 1.44 11.44 1 12 1Z"></path><path d="M18.34 4.2C18.73 3.82 19.36 3.82 19.75 4.21C20.14 4.6 20.14 5.22 19.75 5.61L19.36 6C18.98 6.39 18.35 6.39 17.96 6L17.95 5.99C17.56 5.61 17.56 4.98 17.95 4.59L18.34 4.2Z"></path><path d="M18.33 19.7L17.94 19.31C17.55 18.92 17.55 18.3 17.95 17.9C18.33 17.52 18.96 17.51 19.35 17.9L19.74 18.29C20.13 18.68 20.13 19.31 19.74 19.7C19.35 20.09 18.72 20.09 18.33 19.7Z"></path><path d="M20 11.95V11.94C20 11.39 20.44 10.95 20.99 10.95H22C22.55 10.95 22.99 11.39 22.99 11.94V11.95C22.99 12.5 22.55 12.94 22 12.94H20.99C20.44 12.94 20 12.5 20 11.95Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6 11.95C6 8.64 8.69 5.95 12 5.95C15.31 5.95 18 8.64 18 11.95C18 15.26 15.31 17.95 12 17.95C8.69 17.95 6 15.26 6 11.95ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"></path><path d="M12 22.9H11.99C11.44 22.9 11 22.46 11 21.91V20.95C11 20.4 11.44 19.96 11.99 19.96H12C12.55 19.96 12.99 20.4 12.99 20.95V21.91C12.99 22.46 12.55 22.9 12 22.9Z"></path><path d="M5.66 19.69C5.27 20.08 4.64 20.08 4.25 19.69C3.86 19.3 3.86 18.68 4.24 18.28L4.63 17.89C5.02 17.5 5.65 17.5 6.04 17.89L6.05 17.9C6.43 18.28 6.44 18.91 6.05 19.3L5.66 19.69Z"></path></svg>
               </div>
               <div className="footer__section__bottom--item-1__dark-mode-container_dark">
                 <svg
@@ -120,51 +138,15 @@ const Bridge = () => {
                             <label htmlFor="From-input-token">Token</label>
                             <div>
                               <div>
-                                <svg
-                                  width="18px"
-                                  viewBox="0 0 40 40"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M0 6C0 2.68629 2.68629 0 6 0H34C37.3137 0 40 2.68629 40 6V34C40 37.3137 37.3137 40 34 40H6C2.68629 40 0 37.3137 0 34V6Z"
-                                    fill="#627EEA"
-                                  />
-                                  <path
-                                    d="M19.9834 7V16.4455L27.9664 20.0132L19.9834 7Z"
-                                    fill="white"
-                                    fillOpacity="0.602"
-                                  />
-                                  <path
-                                    d="M19.983 7L12 20.0132L19.983 16.4455V7Z"
-                                    fill="white"
-                                  />
-                                  <path
-                                    d="M19.9834 26.1333V32.5514L27.9711 21.499L19.9834 26.1333Z"
-                                    fill="white"
-                                    fillOpacity="0.602"
-                                  />
-                                  <path
-                                    d="M19.983 32.5514V26.1333L12 21.499L19.983 32.5514Z"
-                                    fill="white"
-                                  />
-                                  <path
-                                    d="M19.9834 24.6472L27.9664 20.013L19.9834 16.4453V24.6472Z"
-                                    fill="white"
-                                    fillOpacity="0.2"
-                                  />
-                                  <path
-                                    d="M12 20.013L19.983 24.6472V16.4453L12 20.013Z"
-                                    fill="white"
-                                    fillOpacity="0.602"
-                                  />
-                                </svg>
+                                <GetIconBySymbol symbol={fromToken} />
                               </div>
-                              <select >
+                              <select onChange={fromTokenSelectHandler} >
                                 <option value="ETH">ETH</option>
-                                <option value="BSC">BSC</option>
-                                <option value="MATIC">MATIC</option>
-
+                                <option value="USDC">USDC</option>
+                                <option value="USDT">USDT</option>
+                                <option value="LUSD">LUSD</option>
+                                <option value="BNB">BNB</option>
+                                <option value="CAKE">CAKE</option>
                               </select>
                             </div>
                           </div>
@@ -173,31 +155,15 @@ const Bridge = () => {
                             <label htmlFor="From-input-network">Network</label>
                             <div>
                               <div>
-                                <svg
-                                  width="18px"
-                                  viewBox="0 0 40 40"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M0 20C0 8.9543 8.9543 0 20 0C31.0457 0 40 8.9543 40 20C40 31.0457 31.0457 40 20 40C8.9543 40 0 31.0457 0 20Z"
-                                    fill="#2775CA"
-                                  />
-                                  <path
-                                    d="M24.6721 22.7261C24.6721 20.2478 23.1851 19.398 20.2111 19.0441C18.0868 18.7608 17.6619 18.1943 17.6619 17.2029C17.6619 16.2114 18.37 15.5743 19.7862 15.5743C21.0608 15.5743 21.7689 15.9992 22.1229 17.0613C22.1938 17.2737 22.4062 17.4153 22.6187 17.4153H23.7515C24.0348 17.4153 24.2472 17.2029 24.2472 16.9197V16.8489C23.9639 15.291 22.6894 14.0873 21.0608 13.9457V12.2463C21.0608 11.963 20.8483 11.7506 20.4944 11.6797H19.4322C19.1489 11.6797 18.9365 11.8921 18.8656 12.2463V13.8749C16.7413 14.1582 15.396 15.5743 15.396 17.3446C15.396 19.6813 16.8122 20.6018 19.7862 20.9559C21.7689 21.3099 22.4062 21.7348 22.4062 22.8678C22.4062 24.0008 21.4148 24.7797 20.0695 24.7797C18.2283 24.7797 17.591 24.0006 17.3786 22.9385C17.3079 22.6554 17.0955 22.5136 16.883 22.5136H15.6792C15.396 22.5136 15.1836 22.7261 15.1836 23.0094V23.0802C15.4667 24.8504 16.5997 26.125 18.9365 26.4791V28.1786C18.9365 28.4617 19.1489 28.6741 19.5029 28.745H20.5651C20.8483 28.745 21.0608 28.5326 21.1316 28.1786V26.4791C23.2559 26.125 24.6721 24.6379 24.6721 22.7261Z"
-                                    fill="white"
-                                  />
-                                  <path
-                                    d="M16.3878 30.1635C10.8646 28.1809 8.03218 22.0204 10.0858 16.5679C11.1479 13.5939 13.4847 11.328 16.3878 10.2659C16.6711 10.1243 16.8127 9.91187 16.8127 9.55771V8.56642C16.8127 8.28313 16.6711 8.0707 16.3878 8C16.317 8 16.1754 8 16.1045 8.0707C9.37763 10.195 5.69544 17.3469 7.81975 24.0738C9.09433 28.0392 12.1392 31.084 16.1045 32.3586C16.3878 32.5002 16.6711 32.3586 16.7418 32.0753C16.8127 32.0046 16.8127 31.9338 16.8127 31.7922V30.8007C16.8127 30.5883 16.6003 30.3052 16.3878 30.1635ZM23.8938 8.0707C23.6105 7.92913 23.3272 8.0707 23.2565 8.35399C23.1856 8.42486 23.1856 8.49556 23.1856 8.63729V9.62858C23.1856 9.91187 23.398 10.195 23.6105 10.3367C29.1337 12.3193 31.9661 18.4798 29.9125 23.9323C28.8504 26.9063 26.5136 29.1722 23.6105 30.2343C23.3272 30.3759 23.1856 30.5883 23.1856 30.9425V31.9338C23.1856 32.2171 23.3272 32.4295 23.6105 32.5002C23.6813 32.5002 23.8229 32.5002 23.8938 32.4295C30.6207 30.3052 34.3029 23.1533 32.1785 16.4263C30.904 12.3902 27.7882 9.34528 23.8938 8.0707Z"
-                                    fill="white"
-                                  />
-                                </svg>
+                                <GetIconBySymbol symbol={fromNetwork} />
                               </div>
-                              <select className="converter-select">
+                              <select className="converter-select" onChange={fromNetworkSelectHandler}>
                                 <option value="USDC">USDC</option>
                                 <option value="ETH">ETH</option>
-                                <option value="BSC">BSC</option>
-                                <option value="MATIC">MATIC</option>
+                                <option value="USDT">USDT</option>
+                                <option value="LUSD">LUSD</option>
+                                <option value="BNB">BNB</option>
+                                <option value="CAKE">CAKE</option>
 
                               </select>
                             </div>
@@ -239,31 +205,13 @@ const Bridge = () => {
                             <label htmlFor="From-input-token">Token</label>
                             <div>
                               <div>
-                                <svg
-                                  width="18px"
-                                  viewBox="0 0 40 40"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M0 20C0 8.9543 8.9543 0 20 0C31.0457 0 40 8.9543 40 20C40 31.0457 31.0457 40 20 40C8.9543 40 0 31.0457 0 20Z"
-                                    fill="#2775CA"
-                                  />
-                                  <path
-                                    d="M24.6721 22.7261C24.6721 20.2478 23.1851 19.398 20.2111 19.0441C18.0868 18.7608 17.6619 18.1943 17.6619 17.2029C17.6619 16.2114 18.37 15.5743 19.7862 15.5743C21.0608 15.5743 21.7689 15.9992 22.1229 17.0613C22.1938 17.2737 22.4062 17.4153 22.6187 17.4153H23.7515C24.0348 17.4153 24.2472 17.2029 24.2472 16.9197V16.8489C23.9639 15.291 22.6894 14.0873 21.0608 13.9457V12.2463C21.0608 11.963 20.8483 11.7506 20.4944 11.6797H19.4322C19.1489 11.6797 18.9365 11.8921 18.8656 12.2463V13.8749C16.7413 14.1582 15.396 15.5743 15.396 17.3446C15.396 19.6813 16.8122 20.6018 19.7862 20.9559C21.7689 21.3099 22.4062 21.7348 22.4062 22.8678C22.4062 24.0008 21.4148 24.7797 20.0695 24.7797C18.2283 24.7797 17.591 24.0006 17.3786 22.9385C17.3079 22.6554 17.0955 22.5136 16.883 22.5136H15.6792C15.396 22.5136 15.1836 22.7261 15.1836 23.0094V23.0802C15.4667 24.8504 16.5997 26.125 18.9365 26.4791V28.1786C18.9365 28.4617 19.1489 28.6741 19.5029 28.745H20.5651C20.8483 28.745 21.0608 28.5326 21.1316 28.1786V26.4791C23.2559 26.125 24.6721 24.6379 24.6721 22.7261Z"
-                                    fill="white"
-                                  />
-                                  <path
-                                    d="M16.3878 30.1635C10.8646 28.1809 8.03218 22.0204 10.0858 16.5679C11.1479 13.5939 13.4847 11.328 16.3878 10.2659C16.6711 10.1243 16.8127 9.91187 16.8127 9.55771V8.56642C16.8127 8.28313 16.6711 8.0707 16.3878 8C16.317 8 16.1754 8 16.1045 8.0707C9.37763 10.195 5.69544 17.3469 7.81975 24.0738C9.09433 28.0392 12.1392 31.084 16.1045 32.3586C16.3878 32.5002 16.6711 32.3586 16.7418 32.0753C16.8127 32.0046 16.8127 31.9338 16.8127 31.7922V30.8007C16.8127 30.5883 16.6003 30.3052 16.3878 30.1635ZM23.8938 8.0707C23.6105 7.92913 23.3272 8.0707 23.2565 8.35399C23.1856 8.42486 23.1856 8.49556 23.1856 8.63729V9.62858C23.1856 9.91187 23.398 10.195 23.6105 10.3367C29.1337 12.3193 31.9661 18.4798 29.9125 23.9323C28.8504 26.9063 26.5136 29.1722 23.6105 30.2343C23.3272 30.3759 23.1856 30.5883 23.1856 30.9425V31.9338C23.1856 32.2171 23.3272 32.4295 23.6105 32.5002C23.6813 32.5002 23.8229 32.5002 23.8938 32.4295C30.6207 30.3052 34.3029 23.1533 32.1785 16.4263C30.904 12.3902 27.7882 9.34528 23.8938 8.0707Z"
-                                    fill="white"
-                                  />
-                                </svg>
+                                <GetIconBySymbol symbol={toToken} />
                               </div>
-                              <select >
+                              <select onChange={toTokenSelectHandler}>
                                 <option value="USDC">USDC</option>
                                 <option value="ETH">ETH</option>
-                                <option value="BSC">BSC</option>
-                                <option value="MATIC">MATIC</option>
+                                <option value="USDT">USDT</option>
+                                <option value="LUSD">LUSD</option>
                               </select>
                             </div>
                           </div>
@@ -272,50 +220,13 @@ const Bridge = () => {
                             <label htmlFor="From-input-network">Network</label>
                             <div>
                               <div>
-                                <svg
-                                  width="18px"
-                                  viewBox="0 0 40 40"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M0 6C0 2.68629 2.68629 0 6 0H34C37.3137 0 40 2.68629 40 6V34C40 37.3137 37.3137 40 34 40H6C2.68629 40 0 37.3137 0 34V6Z"
-                                    fill="#627EEA"
-                                  />
-                                  <path
-                                    d="M19.9834 7V16.4455L27.9664 20.0132L19.9834 7Z"
-                                    fill="white"
-                                    fillOpacity="0.602"
-                                  />
-                                  <path
-                                    d="M19.983 7L12 20.0132L19.983 16.4455V7Z"
-                                    fill="white"
-                                  />
-                                  <path
-                                    d="M19.9834 26.1333V32.5514L27.9711 21.499L19.9834 26.1333Z"
-                                    fill="white"
-                                    fillOpacity="0.602"
-                                  />
-                                  <path
-                                    d="M19.983 32.5514V26.1333L12 21.499L19.983 32.5514Z"
-                                    fill="white"
-                                  />
-                                  <path
-                                    d="M19.9834 24.6472L27.9664 20.013L19.9834 16.4453V24.6472Z"
-                                    fill="white"
-                                    fillOpacity="0.2"
-                                  />
-                                  <path
-                                    d="M12 20.013L19.983 24.6472V16.4453L12 20.013Z"
-                                    fill="white"
-                                    fillOpacity="0.602"
-                                  />
-                                </svg>
+                                <GetIconBySymbol symbol={toNetwork} />
                               </div>
-                              <select >
+                              <select onChange={toNetworkSelectHandler}>
                                 <option value="ETH">ETH</option>
-                                <option value="BSC">BSC</option>
-                                <option value="MATIC">MATIC</option>
+                                <option value="USDC">USDC</option>
+                                <option value="USDT">USDT</option>
+                                <option value="LUSD">LUSD</option>
                               </select>
                             </div>
                           </div>
