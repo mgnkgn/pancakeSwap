@@ -14,6 +14,8 @@ import { TopNavbar } from "./TopNavbar";
 import Home from "./Home";
 import { ThemeProvider } from "./context/light-ctx";
 import DraggableTest from "./DraggableTest";
+import Liquidity from "./Liquidity";
+
 
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
         <Route path="/limit" element={<Limit />} />
         <Route path="/ifo" element={<Ifo />} />
         <Route path="/bridge" element={<Bridge />} />
+        <Route path="/liquidity" element={<Liquidity />} />
+        <Route path="/competition" element={<Competition />} />
       </Routes>
     </ThemeProvider>
   );
