@@ -603,11 +603,12 @@
                 }
 
                 #token-copied {
-                  width: 160px;
+                  width: 165px;
+                  text-align: center;
+                  justify-content: center;
+                  border-radius: 10px;
                   background-color: #555;
                   color: #fff;
-                  text-align: center;
-                  border-radius: 6px;
                   padding: 8px 0;
                   position: absolute;
                   z-index: 1;
@@ -1494,8 +1495,29 @@
                   flex-shrink: 0;
                 }
 
-                #token-copied {
-                  display: none;
+                #token-copied-DM {
+                  width: 165px;
+                  text-align: center;
+                  justify-content: center;
+                  border-radius: 10px;
+                  background-color: #fff;
+                  color: #555;
+                  padding: 8px 0;
+                  position: absolute;
+                  z-index: 1;
+                  bottom: 63%;
+                  left: 42%;
+                  margin-left: -80px;
+                }
+                #token-copied-DM::after {
+                  content: "";
+                  position: absolute;
+                  top: 100%;
+                  left: 50%;
+                  margin-left: -5px;
+                  border-width: 5px;
+                  border-style: solid;
+                  border-color: #fff transparent transparent transparent;
                 }
               }
             }

@@ -103,7 +103,7 @@ const Bridge = () => {
         <div className="swap-main">
           <div className="converter-bottom-combined">
             <div className="converter-container">
-              <div className="converter">
+              <div className="converter" id="converter-bridge">
                 <div className="converter-br-mid">
                   <div>
                     <div>

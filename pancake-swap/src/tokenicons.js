@@ -34,7 +34,7 @@ const BnbIcon = () => {
             color="text"
             xmlns="http://www.w3.org/2000/svg"
             className="sc-4ba21b47-0 IIbzK"
-            style={{ marginRight: 4 }}
+            
         >
             <circle cx={48} cy={48} r={48} fill="#F0B90B" />
             <path
