@@ -516,7 +516,7 @@
                 align-items: center;
                 border: 0px;
                 border-radius: 16px;
-                cursor: pointer;
+                cursor: default;
                 display: inline-flex;
                 font-size: 16px;
                 font-weight: 600;
@@ -531,7 +531,7 @@
 
                 div {
                   display: flex;
-
+                  cursor: default;
                   svg:nth-of-type(1) {
                     margin-right: 8px;
                   }
@@ -1617,7 +1617,7 @@
 
                   div {
                     display: flex;
-
+                    cursor: default;
                     svg:nth-of-type(1) {
                       margin-right: 8px;
                     }
@@ -1711,6 +1711,7 @@
 
                   div {
                     display: flex;
+                    cursor: default;
 
                     img {
                       margin-right: 8px;

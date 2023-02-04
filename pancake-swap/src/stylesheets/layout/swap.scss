@@ -454,6 +454,7 @@
               justify-content: space-between;
 
               button {
+                
                 padding: 0px 0.5rem;
                 background-color: transparent;
                 position: relative;
@@ -461,7 +462,7 @@
                 align-items: center;
                 border: 0px;
                 border-radius: 16px;
-                cursor: pointer;
+                cursor: default;
                 display: inline-flex;
                 font-size: 16px;
                 font-weight: 600;
@@ -482,11 +483,12 @@
                   }
 
                   select {
-                    color: var(--colors-text);
+                    cursor: pointer;
                     font-weight: 600;
                     line-height: 1.5;
                     font-size: 16px;
                     border: none;
+                    outline: none;
                   }
                 }
               }
@@ -546,6 +548,7 @@
               justify-content: flex-start;
 
               button {
+                cursor: default;
                 padding: 0px 0.5rem;
                 background-color: transparent;
                 position: relative;
@@ -553,7 +556,6 @@
                 align-items: center;
                 border: 0px;
                 border-radius: 16px;
-                cursor: pointer;
                 display: inline-flex;
                 font-size: 16px;
                 font-weight: 600;
@@ -568,13 +570,15 @@
 
                 div {
                   display: flex;
+                  cursor: default;
 
                   img {
                     margin-right: 8px;
                   }
 
                   select {
-                    color: var(--colors-text);
+                    cursor: pointer;
+                    outline: none;
                     font-weight: 600;
                     line-height: 1.5;
                     font-size: 16px;
@@ -591,10 +595,6 @@
                 position: relative;
                 display: inline-block;
                 cursor: pointer;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
 
                 svg {
                   align-self: center;
@@ -1350,6 +1350,7 @@
               align-items: center;
               -webkit-box-pack: justify;
               justify-content: space-between;
+              
 
               button {
                 padding: 0px 0.5rem;
@@ -1359,7 +1360,7 @@
                 align-items: center;
                 border: 0px;
                 border-radius: 16px;
-                cursor: pointer;
+                cursor: default;
                 display: inline-flex;
                 font-size: 16px;
                 font-weight: 600;
@@ -1380,12 +1381,14 @@
                   }
 
                   select {
+                    cursor: pointer;
                     color: #f4eeff;
                     background-color: #27262c;
                     font-weight: 600;
                     line-height: 1.5;
                     font-size: 16px;
                     border: none;
+                    outline: none;
                   }
                 }
               }
@@ -1452,7 +1455,7 @@
                 align-items: center;
                 border: 0px;
                 border-radius: 16px;
-                cursor: pointer;
+                cursor: default;
                 display: inline-flex;
                 font-size: 16px;
                 font-weight: 600;
@@ -1473,12 +1476,14 @@
                   }
 
                   select {
+                    cursor: pointer;
                     color: #f4eeff;
                     background-color: #27262c;
                     font-weight: 600;
                     line-height: 1.5;
                     font-size: 16px;
                     border: none;
+                    outline: none;
                   }
                 }
               }
