@@ -516,7 +516,7 @@
                 align-items: center;
                 border: 0px;
                 border-radius: 16px;
-                cursor: pointer;
+                cursor: default;
                 display: inline-flex;
                 font-size: 16px;
                 font-weight: 600;
@@ -531,7 +531,7 @@
 
                 div {
                   display: flex;
-
+                  cursor: default;
                   svg:nth-of-type(1) {
                     margin-right: 8px;
                   }
@@ -649,11 +649,12 @@
                 }
 
                 #token-copied {
-                  width: 160px;
+                  width: 165px;
+                  text-align: center;
+                  justify-content: center;
+                  border-radius: 10px;
                   background-color: #555;
                   color: #fff;
-                  text-align: center;
-                  border-radius: 6px;
                   padding: 8px 0;
                   position: absolute;
                   z-index: 1;
@@ -1616,7 +1617,7 @@
 
                   div {
                     display: flex;
-
+                    cursor: default;
                     svg:nth-of-type(1) {
                       margin-right: 8px;
                     }
@@ -1710,6 +1711,7 @@
 
                   div {
                     display: flex;
+                    cursor: default;
 
                     img {
                       margin-right: 8px;
@@ -1738,8 +1740,29 @@
                     flex-shrink: 0;
                   }
 
-                  #token-copied {
-                    display: none;
+                  #token-copied-DM {
+                    width: 165px;
+                    background-color: #fff;
+                    color: #555;
+                    text-align: center;
+                    justify-content: center;
+                    border-radius: 10px;
+                    padding: 8px 0;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 67%;
+                    left: 43%;
+                    margin-left: -80px;
+                  }
+                  #token-copied-DM::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: #fff transparent transparent transparent;
                   }
                 }
               }

@@ -454,6 +454,7 @@
               justify-content: space-between;
 
               button {
+                
                 padding: 0px 0.5rem;
                 background-color: transparent;
                 position: relative;
@@ -461,7 +462,7 @@
                 align-items: center;
                 border: 0px;
                 border-radius: 16px;
-                cursor: pointer;
+                cursor: default;
                 display: inline-flex;
                 font-size: 16px;
                 font-weight: 600;
@@ -482,11 +483,12 @@
                   }
 
                   select {
-                    color: var(--colors-text);
+                    cursor: pointer;
                     font-weight: 600;
                     line-height: 1.5;
                     font-size: 16px;
                     border: none;
+                    outline: none;
                   }
                 }
               }
@@ -546,6 +548,7 @@
               justify-content: flex-start;
 
               button {
+                cursor: default;
                 padding: 0px 0.5rem;
                 background-color: transparent;
                 position: relative;
@@ -553,7 +556,6 @@
                 align-items: center;
                 border: 0px;
                 border-radius: 16px;
-                cursor: pointer;
                 display: inline-flex;
                 font-size: 16px;
                 font-weight: 600;
@@ -568,13 +570,15 @@
 
                 div {
                   display: flex;
+                  cursor: default;
 
                   img {
                     margin-right: 8px;
                   }
 
                   select {
-                    color: var(--colors-text);
+                    cursor: pointer;
+                    outline: none;
                     font-weight: 600;
                     line-height: 1.5;
                     font-size: 16px;
@@ -591,10 +595,6 @@
                 position: relative;
                 display: inline-block;
                 cursor: pointer;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
 
                 svg {
                   align-self: center;
@@ -603,11 +603,12 @@
                 }
 
                 #token-copied {
-                  width: 160px;
+                  width: 165px;
+                  text-align: center;
+                  justify-content: center;
+                  border-radius: 10px;
                   background-color: #555;
                   color: #fff;
-                  text-align: center;
-                  border-radius: 6px;
                   padding: 8px 0;
                   position: absolute;
                   z-index: 1;
@@ -1349,6 +1350,7 @@
               align-items: center;
               -webkit-box-pack: justify;
               justify-content: space-between;
+              
 
               button {
                 padding: 0px 0.5rem;
@@ -1358,7 +1360,7 @@
                 align-items: center;
                 border: 0px;
                 border-radius: 16px;
-                cursor: pointer;
+                cursor: default;
                 display: inline-flex;
                 font-size: 16px;
                 font-weight: 600;
@@ -1379,12 +1381,14 @@
                   }
 
                   select {
+                    cursor: pointer;
                     color: #f4eeff;
                     background-color: #27262c;
                     font-weight: 600;
                     line-height: 1.5;
                     font-size: 16px;
                     border: none;
+                    outline: none;
                   }
                 }
               }
@@ -1451,7 +1455,7 @@
                 align-items: center;
                 border: 0px;
                 border-radius: 16px;
-                cursor: pointer;
+                cursor: default;
                 display: inline-flex;
                 font-size: 16px;
                 font-weight: 600;
@@ -1472,12 +1476,14 @@
                   }
 
                   select {
+                    cursor: pointer;
                     color: #f4eeff;
                     background-color: #27262c;
                     font-weight: 600;
                     line-height: 1.5;
                     font-size: 16px;
                     border: none;
+                    outline: none;
                   }
                 }
               }
@@ -1494,8 +1500,29 @@
                   flex-shrink: 0;
                 }
 
-                #token-copied {
-                  display: none;
+                #token-copied-DM {
+                  width: 165px;
+                  text-align: center;
+                  justify-content: center;
+                  border-radius: 10px;
+                  background-color: #fff;
+                  color: #555;
+                  padding: 8px 0;
+                  position: absolute;
+                  z-index: 1;
+                  bottom: 63%;
+                  left: 42%;
+                  margin-left: -80px;
+                }
+                #token-copied-DM::after {
+                  content: "";
+                  position: absolute;
+                  top: 100%;
+                  left: 50%;
+                  margin-left: -5px;
+                  border-width: 5px;
+                  border-style: solid;
+                  border-color: #fff transparent transparent transparent;
                 }
               }
             }
