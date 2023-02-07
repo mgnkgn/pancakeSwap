@@ -97,7 +97,7 @@ export const TopNavbar = () => {
                 <Link to="/">Lottery</Link>
               </li>
               <li>
-                <Link to="/">Pottery (BETA)</Link>
+                <Link to="/pottery">Pottery (BETA)</Link>
               </li>
             </ul>
           </li>

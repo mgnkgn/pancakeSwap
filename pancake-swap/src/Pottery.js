@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 import PotteryCard from "./PotteryCard";
 
 const Pottery = () => {
@@ -554,6 +555,7 @@ const Pottery = () => {
         </div>
         {/* <!-- Row3 ends --> */}
       </section>
+      <Footer />
     </>
   );
 };
