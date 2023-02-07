@@ -15,6 +15,7 @@ import Home from "./Home";
 import { ThemeProvider } from "./context/light-ctx";
 import DraggableTest from "./DraggableTest";
 import Liquidity from "./Liquidity";
+import Competition from "./Competition";
 
 
 function App() {

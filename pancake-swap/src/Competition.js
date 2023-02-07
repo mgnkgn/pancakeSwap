@@ -1,12 +1,11 @@
 import React from 'react';
-
-import TopNavBar from "./TopNavbar";
 import Footer from "./Footer";
+import { TopNavbar } from './TopNavbar';
 
 const Competition = () => {
     return (
         <>
-          <TopNavBar />
+          <TopNavbar />
         
           <div class="sub_nav_farms" style="position: relative; z-index: 3">
       <ul>
@@ -602,3 +601,5 @@ const Competition = () => {
         </>
     );
 }
+
+export default Competition;

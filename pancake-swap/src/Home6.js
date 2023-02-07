@@ -1,6 +1,6 @@
 import React from "react";
 
-const home6 = () => {
+const Home6 = () => {
     return (
         <>
 
@@ -83,3 +83,5 @@ const home6 = () => {
         </>
     );
 }
+
+export default Home6;
