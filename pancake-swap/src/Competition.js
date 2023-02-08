@@ -17,33 +17,33 @@ const Competition = () => {
       <div class="competition_s1_container">
         <img
           class="net"
-          src="assets\competition\mod-mesh.f35f83b0.png"
+          src="{require(./assets\competition\mod-mesh.f35f83b0.png).default}"
           alt=""
         />
         <img
           class="halo"
-          src="assets\competition\MoD-bg-shine.b56df09c.png"
+          src="{require(./assets\competition\MoD-bg-shine.b56df09c.png).default}"
           alt=""
         />
         <img
           class="bunnies"
-          src="assets\competition\MoD-hero-bunnies.webp"
+          src="{require(./assets\competition\MoD-hero-bunnies.webp).default}"
           alt=""
         />
         <img
           class="coin1"
-          src="assets\competition\MoD-banner-dar.webp"
+          src="{require(./assets\competition\MoD-banner-dar.webp).default}"
           alt=""
         />
         <img
           class="coin2"
-          src="assets\competition\MoD-banner-dar2.webp"
+          src="{require(assets\competition\MoD-banner-dar2.webp).default}"
           alt=""
         />
         <div class="competition_s1">
           <div class="mines_container">
             <p>May 17-24, 2022</p>
-            <img src="assets\competition\Dalarina.svg" alt="" />
+            <img src="{require(./assets\competition\Dalarina.svg).default}" alt="" />
             <h2 class="trading_competition">TRADING COMPETITION</h2>
             <h2 class="inprizes">$120,000 in Prizes</h2>
             <h2 class="inprizes">with Tokens and NFTs!</h2>
@@ -51,22 +51,22 @@ const Competition = () => {
             <div class="divider"></div>
           </div>
           <div class="finished">
-            <img src="assets\competition\pocket_watch.svg" alt="" />
+            <img src="{require(./assets\competition\pocket_watch.svg).default}" alt="" />
             <div class="finished_bottom">
               <p class="finished_p">Finished!</p>
               <div class="finished_bottom_bottom">
                 <div class="check">
-                  <img src="assets\competition\checkmark.svg" alt="" />
+                  <img src="{require(./assets\competition\checkmark.svg).default}" alt="" />
                   <p>ENTRY</p>
                 </div>
                 <div class="line_divider"></div>
                 <div class="check">
-                  <img src="assets\competition\checkmark.svg" alt="" />
+                  <img src="{require(./assets\competition\checkmark.svg)default}" alt="" />
                   <p>LIVE</p>
                 </div>
                 <div class="line_divider"></div>
                 <div class="check">
-                  <img src="assets\competition\rabbit.svg" alt="" />
+                  <img src="{require(assets\competition\rabbit.svg).default}" alt="" />
                   <p class="end">END</p>
                 </div>
               </div>
@@ -77,28 +77,28 @@ const Competition = () => {
       <div class="competition_s2_container">
         <img
           class="coin3"
-          src="assets\competition\MoD-banner-dar3.webp"
+          src="{require(assets\competition\MoD-banner-dar3.webp).default}"
           alt=""
         />
         <div class="finished_s2">
           <div class="feathered">
-            <img src="assets\competition\left_feather.svg" alt="" />
+            <img src="{require(./assets\competition\left_feather.svg).default}" alt="" />
             <h2>Finished!</h2>
-            <img src="assets\competition\right_feather.svg" alt="" />
+            <img src="{require(./assets\competition\right_feather.svg).default}" alt="" />
           </div>
           <button class="connect_btn">Connect Wallet</button>
         </div>
         <div class="your_score">
           <div class="feathered_bunny_profile">
-            <img src="assets\competition\left_feather_profile.svg" alt="" />
-            <img src="assets\competition\bunny_profile.svg" alt="" />
-            <img src="assets\competition\right_feather_profile .svg" alt="" />
+            <img src="{require(./assets\competition\left_feather_profile.svg).default}" alt="" />
+            <img src="{require(./assets\competition\bunny_profile.svg).default}" alt="" />
+            <img src="{require(./assets\competition\right_feather_profile .svg).default}" alt="" />
           </div>
           <div class="purple_text_container">
             <div class="your_score1">
-              <img src="assets\competition\left_feather_score.svg" alt="" />
+              <img src="{require(./assets\competition\left_feather_score.svg).default}" alt="" />
               <h2>Your Score</h2>
-              <img src="assets\competition\right_feather_score.svg" alt="" />
+              <img src="{require(./assets\competition\right_feather_score.svg).default}" alt="" />
             </div>
             <div class="check_your_rank">
               <h2>Check your Rank</h2>
@@ -109,33 +109,33 @@ const Competition = () => {
         </div>
       </div>
       <div class="competition_s3_container">
-        <img class="trophies" src="assets\competition\trophies.svg" alt="" />
+        <img class="trophies" src="{require(./assets\competition\trophies.svg).default}" alt="" />
         <div class="team_ranks">
-          <img src="assets\competition\left_feather_score.svg" alt="" />
+          <img src="{require(./assets\competition\left_feather_score.svg).default}" alt="" />
           <h2>Team Ranks</h2>
-          <img src="assets\competition\right_feather_score.svg" alt="" />
+          <img src="{require(./assets\competition\right_feather_score.svg).require}" alt="" />
         </div>
         <div class="ranking_table_board">
           <div class="left_side">
             <div class="stage">
               <img
                 class="syrup_storm"
-                src="assets\competition\syrup-storm-lg.png"
+                src="{require(./assets\competition\syrup-storm-lg.png).default}"
                 alt=""
               />
               <img
                 class="chaotic"
-                src="assets\competition\chaotic-cakers-lg.png"
+                src="{require(./assets\competition\chaotic-cakers-lg.png).default}"
                 alt=""
               />
               <img
                 class="fearsome"
-                src="assets\competition\fearsome-flippers-lg.png"
+                src="{(./assets\competition\fearsome-flippers-lg.png).default}"
                 alt=""
               />
               <img
                 class="rankings"
-                src="assets\competition\rankings.svg"
+                src="{(./assets\competition\rankings.svg).default}"
                 alt=""
               />
             </div>
@@ -144,7 +144,7 @@ const Competition = () => {
                 <p>$17,878,338</p>
                 <p>Volume</p>
                 <div class="participants">
-                  <img src="assets\competition\bunnyman.svg" alt="" />
+                  <img src="{require(./assets\competition\bunnyman.svg).default}" alt="" />
                   <p>2,098</p>
                 </div>
                 <p>Participants</p>
@@ -153,7 +153,7 @@ const Competition = () => {
                 <p>$28,187,929</p>
                 <p>Volume</p>
                 <div class="participants">
-                  <img src="assets\competition\bunnyman.svg" alt="" />
+                  <img src="{require(./assets\competition\bunnyman.svg)default}" alt="" />
                   <p>2,230</p>
                 </div>
                 <p>Participants</p>
