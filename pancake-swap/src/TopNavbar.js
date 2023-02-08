@@ -88,7 +88,7 @@ export const TopNavbar = () => {
             <a href="">Win</a>
             <ul className="header__navbar__left-links--submenu">
               <li>
-                <Link to="/">Trading Competition</Link>
+                <Link to="/competition">Trading Competition</Link>
               </li>
               <li>
                 <Link to="/">Prediction (BETA)</Link>
