@@ -17,7 +17,6 @@ import DraggableTest from "./DraggableTest";
 import Liquidity from "./Liquidity";
 import Competition from "./Competition";
 
-
 function App() {
   return (
     <ThemeProvider>
