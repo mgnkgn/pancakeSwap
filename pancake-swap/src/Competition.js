@@ -4,6 +4,42 @@ import { TopNavbar } from "./TopNavbar";
 
 import photoStavrosX from "./assets/competition/MoD-banner-dar.webp";
 import photoStavrosXX from "./assets/competition/MoD-storm-bunny.webp";
+import photo1 from "./assets/competition/mod-mesh.f35f83b0.png";
+import photo2 from "./assets/competition/MoD-bg-shine.b56df09c.png";
+import photo3 from "./assets/competition/MoD-hero-bunnies.webp";
+import photo4 from "./assets/competition/MoD-banner-dar2.webp";
+import photo5 from "./assets/competition/Dalarina.svg"
+import photo6 from "./assets/competition/pocket_watch.svg"
+import photo7 from "./assets/competition/checkmark.svg";
+import photo8 from "./assets/competition/checkmark.svg"
+import photo9 from "./assets/competition/rabbit.svg"
+import photo10 from "./assets/competition/MoD-banner-dar3.webp"
+import photo11 from "./assets/competition/left_feather.svg"
+import photo12 from "./assets/competition/right_feather.svg"
+import photo13 from "./assets/competition/left_feather_profile.svg"
+import photo14 from "./assets/competition/bunny_profile.svg"
+import photo15 from "./assets/competition/right_feather_profile.svg"
+import photo16 from "./assets/competition/left_feather_score.svg"
+import photo17 from "./assets/competition/right_feather_score.svg"
+import photo18 from "./assets/competition/trophies.svg"
+import photo19 from "./assets/competition/left_feather_score.svg"
+import photo20 from "./assets/competition/right_feather_score.svg"
+import photo21 from "./assets/competition/syrup-storm-lg.png"
+import photo22 from "./assets/competition/chaotic-cakers-lg.png"
+import photo23 from "./assets/competition/fearsome-flippers-lg.png"
+import photo24 from "./assets/competition/rankings.svg"
+import photo25 from "./assets/competition/bunnyman.svg"
+import photo26 from "./assets/competition/dollop-1000.png"
+import photo27 from "./assets/competition/skull.svg"
+import photo28 from "./assets/competition/bull.svg"
+import photo29 from "./assets/competition/cracker.svg"
+import photo30 from "assets/farms/arrow down.svg"
+import photo31 from "./assets/competition/MoD-champion-gold.svg"
+import photo32 from "./assets/competition/MoD-top-10-gold.svg"
+import photo33 from "./assets/competition/MoD-top-100-gold.svg"
+import photo34 from "./assets/competition/MoD-top-500-gold.svg"
+import photo35 from "./assets/competition/MoD-participant-gold.svg"
+import photo36 from "./assets/competition/MoD-flipper.webp"
 
 const Competition = () => {
   return (
@@ -27,32 +63,30 @@ const Competition = () => {
         <div class="competition_s1_container">
           <img
             class="net"
-            src={require("./assets/competition/mod-mesh.f35f83b0.png").default}
+            src={photo1}
             alt=""
           />
           <img
             class="halo"
-            src={
-              require("./assets/competition/MoD-bg-shine.b56df09c.png").default
-            }
+            src={photo2}
             alt=""
           />
           <img
             class="bunnies"
-            src={require("./assets/competition/MoD-hero-bunnies.webp").default}
+            src={photo3}
             alt=""
           />
           <img class="coin1" src={photoStavrosX} alt="xxx" />
           <img
             class="coin2"
-            src="{require(assets\competition\MoD-banner-dar2.webp).default}"
+            src={photo4}
             alt=""
           />
           <div class="competition_s1">
             <div class="mines_container">
               <p>May 17-24, 2022</p>
               <img
-                src="{require(./assets\competition\Dalarina.svg).default}"
+                src={photo5}
                 alt=""
               />
               <h2 class="trading_competition">TRADING COMPETITION</h2>
@@ -63,7 +97,7 @@ const Competition = () => {
             </div>
             <div class="finished">
               <img
-                src="{require(./assets\competition\pocket_watch.svg).default}"
+                src={photo6}
                 alt=""
               />
               <div class="finished_bottom">
@@ -71,7 +105,7 @@ const Competition = () => {
                 <div class="finished_bottom_bottom">
                   <div class="check">
                     <img
-                      src="{require(./assets\competition\checkmark.svg).default}"
+                      src={photo7}
                       alt=""
                     />
                     <p>ENTRY</p>
@@ -79,7 +113,7 @@ const Competition = () => {
                   <div class="line_divider"></div>
                   <div class="check">
                     <img
-                      src="{require(./assets\competition\checkmark.svg)default}"
+                      src={photo8}
                       alt=""
                     />
                     <p>LIVE</p>
@@ -87,7 +121,7 @@ const Competition = () => {
                   <div class="line_divider"></div>
                   <div class="check">
                     <img
-                      src="{require(assets\competition\rabbit.svg).default}"
+                      src={photo9}
                       alt=""
                     />
                     <p class="end">END</p>
@@ -100,18 +134,18 @@ const Competition = () => {
         <div class="competition_s2_container">
           <img
             class="coin3"
-            src="{require(assets\competition\MoD-banner-dar3.webp).default}"
+            src={photo10}
             alt=""
           />
           <div class="finished_s2">
             <div class="feathered">
               <img
-                src="{require(./assets\competition\left_feather.svg).default}"
+                src={photo11}
                 alt=""
               />
               <h2>Finished!</h2>
               <img
-                src="{require(./assets\competition\right_feather.svg).default}"
+                src={photo12}
                 alt=""
               />
             </div>
@@ -120,27 +154,27 @@ const Competition = () => {
           <div class="your_score">
             <div class="feathered_bunny_profile">
               <img
-                src="{require(./assets\competition\left_feather_profile.svg).default}"
+                src={photo13}
                 alt=""
               />
               <img
-                src="{require(./assets\competition\bunny_profile.svg).default}"
+                src={photo14}
                 alt=""
               />
               <img
-                src="{require(./assets\competition\right_feather_profile .svg).default}"
+                src={photo15}
                 alt=""
               />
             </div>
             <div class="purple_text_container">
               <div class="your_score1">
                 <img
-                  src="{require(./assets\competition\left_feather_score.svg).default}"
+                  src={photo16}
                   alt=""
                 />
                 <h2>Your Score</h2>
                 <img
-                  src="{require(./assets\competition\right_feather_score.svg).default}"
+                  src={photo17}
                   alt=""
                 />
               </div>
@@ -155,17 +189,17 @@ const Competition = () => {
         <div class="competition_s3_container">
           <img
             class="trophies"
-            src="{require(./assets\competition\trophies.svg).default}"
+            src={photo18}
             alt=""
           />
           <div class="team_ranks">
             <img
-              src="{require(./assets\competition\left_feather_score.svg).default}"
+              src={photo19}
               alt=""
             />
             <h2>Team Ranks</h2>
             <img
-              src="{require(./assets\competition\right_feather_score.svg).require}"
+              src={photo20}
               alt=""
             />
           </div>
@@ -174,22 +208,22 @@ const Competition = () => {
               <div class="stage">
                 <img
                   class="syrup_storm"
-                  src="{require(./assets\competition\syrup-storm-lg.png).default}"
+                  src={photo21}
                   alt=""
                 />
                 <img
                   class="chaotic"
-                  src="{require(./assets\competition\chaotic-cakers-lg.png).default}"
+                  src={photo22}
                   alt=""
                 />
                 <img
                   class="fearsome"
-                  src="{(./assets\competition\fearsome-flippers-lg.png).default}"
+                  src={photo23}
                   alt=""
                 />
                 <img
                   class="rankings"
-                  src="{(./assets\competition\rankings.svg).default}"
+                  src={photo24}
                   alt=""
                 />
               </div>
@@ -199,7 +233,7 @@ const Competition = () => {
                   <p>Volume</p>
                   <div class="participants">
                     <img
-                      src="{require(./assets\competition\bunnyman.svg).default}"
+                      src={photo25}
                       alt=""
                     />
                     <p>2,098</p>
@@ -211,7 +245,7 @@ const Competition = () => {
                   <p>Volume</p>
                   <div class="participants">
                     <img
-                      src="{require(./assets\competition\bunnyman.svg)default}"
+                      src={photo25}
                       alt=""
                     />
                     <p>2,230</p>
@@ -222,7 +256,7 @@ const Competition = () => {
                   <p>$16,149,457</p>
                   <p>Volume</p>
                   <div class="participants">
-                    <img src="assets\competition\bunnyman.svg" alt="" />
+                    <img src={photo25} alt="" />
                     <p>2,762</p>
                   </div>
                   <p>Participants</p>
@@ -231,7 +265,7 @@ const Competition = () => {
               <div class="total_participants">
                 <h2>Total Participants</h2>
                 <div class="bunnyman_numbers">
-                  <img src="assets\competition\bunnyman.svg" alt="" />
+                  <img src={photo25} alt="" />
                   <h2>7090</h2>
                 </div>
               </div>
@@ -260,67 +294,72 @@ const Competition = () => {
                   <p class="numbering">#1</p>
                   <p class="dollar_value">$2,734,120</p>
                   <div class="user">
-                    <img src="assets\competition\dollop-1000.png" alt="" />
+                    <img src={photo26} alt="" />
                     <p>0xd2...6b9A</p>
                   </div>
-                  <img src="assets\competition\skull.svg" alt="" />
+                  <img src={photo27} alt="" />
                 </div>
                 <div class="rows_grid_1">
                   <p class="numbering">#2</p>
                   <p class="dollar_value">$2,734,120</p>
                   <div class="user">
-                    <img src="assets\competition\dollop-1000.png" alt="" />
+                    <img src={photo26} alt="" />
                     <p>0xd2...6b9A</p>
                   </div>
-                  <img src="assets\competition\bull.svg" alt="" />
+                  <img src={photo28} alt="" />
                 </div>
                 <div class="rows_grid_1">
                   <p class="numbering">#3</p>
                   <p class="dollar_value">$2,734,120</p>
                   <div class="user">
-                    <img src="assets\competition\dollop-1000.png" alt="" />
+                    <img src={photo26} alt="" />
                     <p>0xd2...6b9A</p>
                   </div>
-                  <img src="assets\competition\skull.svg" alt="" />
+                  <img src={photo27} alt="" />
                 </div>
                 <div class="rows_grid_1">
                   <p class="numbering">#4</p>
                   <p class="dollar_value">$2,734,120</p>
                   <div class="user">
-                    <img src="assets\competition\dollop-1000.png" alt="" />
+                    <img src={photo26} alt="" />
                     <p>0xd2...6b9A</p>
                   </div>
-                  <img src="assets\competition\skull.svg" alt="" />
+                  <img src={photo27} alt="" />
                 </div>
                 <div class="rows_grid_1">
                   <p class="numbering">#5</p>
                   <p class="dollar_value">$2,734,120</p>
                   <div class="user">
-                    <img src="assets\competition\dollop-1000.png" alt="" />
+                    <img src={photo26} alt="" />
                     <p>0xd2...6b9A</p>
                   </div>
-                  <img src="assets\competition\cracker.svg" alt="" />
+                  <img src={photo29} alt="" />
                 </div>
               </div>
               <div class="table_footer">
                 <p>Show More</p>
-                <img src="assets\farms\arrow down.svg" alt="" />
+                <img src={photo30} alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      //Prizes section starts
+      {//Prizes section starts
+      }
       <section class="competition-prizes">
         <div class="divider-convex no-show">
-          //svg image and laurels
+          {//svg image and laurels
+          }
           <div class="divider-image-container">
-            //top image
+            {//top image
+            }
             <svg></svg>
-            //div wrapper1
+            {//div wrapper1
+            }
             <div>
               <svg></svg>
-              //div wrapper2
+              {//div wrapper2
+              }
               <div>
                 <svg></svg>
                 <h2>Prizes</h2>
@@ -330,24 +369,29 @@ const Competition = () => {
             </div>
           </div>
         </div>
-        //Prizes section content, wrapper div
+        {//Prizes section content, wrapper div
+        }
         <div class="competition-prizes-content">
-          //prizes left
+          {//prizes left
+          }
           <section class="competition-prizes-content-table">
             <div class="competition-prizes-content-table-heading">
               <h3>Prizes by Team</h3>
               <p>Higher trading volume = higher rank!</p>
             </div>
-            //tab buttons container
+            {//tab buttons container
+            }
             <div class="tab">
               <button>#1 Team</button>
               <button>#2 Team</button>
               <button>#3 Team</button>
             </div>
-            <hr></hr>//tab content for team 1
+            <hr></hr>{//tab content for team 1
+            }
             <div class="tab-content">
               <table>
-                //table header (row 0)
+                {//table header (row 0)
+                }
                 <tr>
                   <th>RANK IN TEAM</th>
                   <th>TIER</th>
@@ -367,7 +411,7 @@ const Competition = () => {
                   <td>$10.800</td>
                   <td>
                     <img
-                      src="./assets/competition/MoD-champion-gold.svg"
+                      src={photo31}
                       alt="Champion gold"
                     />
                     <div>+2.500</div>
@@ -388,7 +432,7 @@ const Competition = () => {
                   <td>$25.200</td>
                   <td>
                     <img
-                      src="./assets/competition/MoD-top-10-gold.svg"
+                      src={photo32}
                       alt="Top10"
                     />
                     <div>+1.250</div>
@@ -409,7 +453,7 @@ const Competition = () => {
                   <td>$21.600</td>
                   <td>
                     <img
-                      src="./assets/competition/MoD-top-100-gold.svg"
+                      src={photo33}
                       alt="Top100"
                     />
                     <div>+1.000</div>
@@ -430,7 +474,7 @@ const Competition = () => {
                   <td>$14.400</td>
                   <td>
                     <img
-                      src="./assets/competition/MoD-top-500-gold.svg"
+                      src={photo34}
                       alt="Top500"
                     />
                     <div>+850</div>
@@ -451,7 +495,7 @@ const Competition = () => {
                   <td>$0</td>
                   <td>
                     <img
-                      src="./assets/competition/MoD-participant-gold.svg"
+                      src={photo35}
                       alt="participate"
                     />
                     <div>+500</div>
@@ -494,7 +538,7 @@ const Competition = () => {
               $DAR Trading Volume.
             </p>
             <img
-              src="./assets/competition/MoD-flipper.webp"
+              src={photo36}
               alt="MoD Flipper"
             />
           </section>
