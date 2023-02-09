@@ -55,7 +55,7 @@ export const TopNavbar = () => {
                 <Link to="/limit">Limit</Link>
               </li>
               <li>
-                <Link to="/">Liquidity</Link>
+                <Link to="/liquidity">Liquidity</Link>
               </li>
               <li className="flex-row">
                 <Link to="/perpetual">Perpetual</Link>
