@@ -18,7 +18,7 @@ import photo11 from "./assets/competition/left_feather.svg"
 import photo12 from "./assets/competition/right_feather.svg"
 import photo13 from "./assets/competition/left_feather_profile.svg"
 import photo14 from "./assets/competition/bunny_profile.svg"
-import photo15 from "./assets/competition/right_feather_profile.svg"
+import photo15 from "./assets/competition/right_feather_profile .svg"
 import photo16 from "./assets/competition/left_feather_score.svg"
 import photo17 from "./assets/competition/right_feather_score.svg"
 import photo18 from "./assets/competition/trophies.svg"
@@ -33,7 +33,7 @@ import photo26 from "./assets/competition/dollop-1000.png"
 import photo27 from "./assets/competition/skull.svg"
 import photo28 from "./assets/competition/bull.svg"
 import photo29 from "./assets/competition/cracker.svg"
-import photo30 from "assets/farms/arrow down.svg"
+import photo30 from "./assets/farms/arrow down.svg"
 import photo31 from "./assets/competition/MoD-champion-gold.svg"
 import photo32 from "./assets/competition/MoD-top-10-gold.svg"
 import photo33 from "./assets/competition/MoD-top-100-gold.svg"
@@ -48,12 +48,12 @@ const Competition = () => {
       <div class="sub_nav_farms" style={{ position: "relative", zIndex: "3" }}>
         <ul>
           <li>
-            <a href="#" class="selected_farms top_links">
+            <a href="" class="selected_farms top_links">
               Latest
             </a>
           </li>
           <li>
-            <a href="#" class="top_links">
+            <a href="" class="top_links">
               Finished
             </a>
           </li>
