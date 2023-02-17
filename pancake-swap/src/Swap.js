@@ -1,25 +1,56 @@
 import React, { useContext, useEffect, useState } from "react";
 import Footer from "./Footer";
 import { TopNavbar } from "./TopNavbar";
-import { InputField, Result, } from "./form";
+
 import { ThemeContext } from "./context/light-ctx";
 import { GetIconBySymbol } from "./tokenicons";
 import { useIconChanger } from "./IconChanger";
 import { ReactComponent as HideChart } from "./assets/swap/hide-chart.svg";
 import { ReactComponent as ShowChart } from "./assets/swap/show-chart.svg";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Swap = () => {
-    const { fromToken, setFromToken, toToken, setToToken, fromNetwork, toNetwork, fromTokenSelectHandler,
-        fromNetworkSelectHandler, toTokenSelectHandler, toNetworkSelectHandler } = useIconChanger()
+    const { fromToken, setFromToken, toToken, setToToken, toNetwork, fromTokenSelectHandler, toTokenSelectHandler } = useIconChanger()
     const [inputValue, setInputValue] = useState('');
     const [outputValue, setOutputValue] = useState("");
     const [showTokenCopied, setShowTokenCopied] = useState(false);
     const [showChart, setShowChart] = useState(true);
+    const [exchangeRate, setExchangeRate] = useState(75.414);
+
+    const convert = () => {
+
+        const options = {
+            method: 'GET',
+            url: 'https://alpha-vantage.p.rapidapi.com/query',
+            params: { from_currency: fromToken, function: 'CURRENCY_EXCHANGE_RATE', to_currency: toToken },
+            headers: {
+                'X-RapidAPI-Key': '77ddb0d609mshb9e8da848182ca2p15136ajsnbdf42b34fba4',
+                'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com'
+            }
+        };
+
+        axios.request(options).then(function (response) {
+            setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']);
+        }).catch(function (error) {
+            console.error(error);
+            setExchangeRate(Math.random() * 100);
+        });
+    }
+
+    useEffect(() => {
+        convert();
+    }, [fromToken, toToken]);
+
 
     let hideChartHandler = () => {
         setShowChart(!showChart);
     };
+
+    const inputChangeHandler = (e) => {
+        setInputValue(e.target.value);
+        setOutputValue(e.target.value * exchangeRate);
+    }
 
     let handleCopy = (e) => {
         e.preventDefault();
@@ -29,14 +60,6 @@ const Swap = () => {
             setShowTokenCopied(false);
         }, 600);
     }
-
-    let performConversion = (inputValue) => {
-        return inputValue * 1.341231;
-    };
-    useEffect(() => {
-        const result = performConversion(inputValue);
-        setOutputValue(result);
-    }, [inputValue]);
 
     const { isLight } = useContext(ThemeContext);
 
@@ -281,7 +304,7 @@ const Swap = () => {
                                         </div>
                                         <div className="token-amount-input">
                                             <label>
-                                                <InputField inputValue={inputValue} setInputValue={setInputValue} />
+                                                <div> <input type="text" onChange={inputChangeHandler} value={inputValue} placeholder="0" /></div>
                                                 <div></div>
                                             </label>
                                         </div>
@@ -345,7 +368,7 @@ const Swap = () => {
                                         <div>
                                             <label>
                                                 <div>
-                                                    <Result inputValue={inputValue} />
+                                                    <input value={outputValue} placeholder="0" />;
                                                 </div>
                                                 <div />
                                             </label>

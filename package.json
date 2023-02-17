@@ -1,0 +1,7 @@
+{
+  "proxy": "https://api.cryptonator.com/",
+  "dependencies": {
+    "react-draggable": "^4.4.5",
+    "swr": "^2.0.3"
+  }
+}
