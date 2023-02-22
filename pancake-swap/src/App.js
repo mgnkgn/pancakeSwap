@@ -16,6 +16,7 @@ import { ThemeProvider } from "./context/light-ctx";
 import DraggableTest from "./DraggableTest";
 import Liquidity from "./Liquidity";
 import Competition from "./Competition";
+import Leaderboard from "./Leaderboard";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path="/bridge" element={<Bridge />} />
         <Route path="/liquidity" element={<Liquidity />} />
         <Route path="/competition" element={<Competition />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
       </Routes>
     </ThemeProvider>
   );

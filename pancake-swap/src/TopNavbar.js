@@ -135,7 +135,7 @@ export const TopNavbar = () => {
                 <Link to="/">Voting</Link>
               </li>
               <li>
-                <Link to="/" className="leaderboard">
+                <Link to="/leaderboard" className="leaderboard">
                   Leaderboard
                 </Link>
               </li>
