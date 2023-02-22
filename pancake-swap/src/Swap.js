@@ -10,6 +10,30 @@ import { ReactComponent as ShowChart } from "./assets/swap/show-chart.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+/* const convert = () => {
+
+    const options = {
+        method: 'GET',
+        url: 'https://alpha-vantage.p.rapidapi.com/query',
+        params: { from_currency: fromToken, function: 'CURRENCY_EXCHANGE_RATE', to_currency: toToken },
+        headers: {
+            'X-RapidAPI-Key': '77ddb0d609mshb9e8da848182ca2p15136ajsnbdf42b34fba4',
+            'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com'
+        }
+    };
+
+    axios.request(options).then(function (response) {
+        setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']);
+        let pairPrices = { from: fromToken, to: toToken, price: response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'] };
+        pairs.push(pairPrices);
+
+        console.log(pairs)
+    }).catch(function (error) {
+        console.error(error);
+        setExchangeRate(Math.random() * 100);
+    });
+} */
+
 const Swap = () => {
     const { fromToken, setFromToken, toToken, setToToken, toNetwork, fromTokenSelectHandler, toTokenSelectHandler } = useIconChanger()
     const [inputValue, setInputValue] = useState('');
@@ -18,29 +42,31 @@ const Swap = () => {
     const [showChart, setShowChart] = useState(true);
     const [exchangeRate, setExchangeRate] = useState(75.414);
 
-    const convert = () => {
+    const pairs = [{ from: "BNB", to: "BUSD", price: 1 }]
 
-        const options = {
-            method: 'GET',
-            url: 'https://alpha-vantage.p.rapidapi.com/query',
-            params: { from_currency: fromToken, function: 'CURRENCY_EXCHANGE_RATE', to_currency: toToken },
-            headers: {
-                'X-RapidAPI-Key': '77ddb0d609mshb9e8da848182ca2p15136ajsnbdf42b34fba4',
-                'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com'
-            }
-        };
-
-        axios.request(options).then(function (response) {
-            setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']);
-        }).catch(function (error) {
-            console.error(error);
-            setExchangeRate(Math.random() * 100);
-        });
+      const getCurrency = async (from, to) => {
+        try {
+            const response = await fetch(
+                `https://localhost:3001/api/${from}:${to}`,
+                {
+                    method: "GET",
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8",
+                    },
+                }
+            );
+            const data = await response.json();
+            console.log(data);
+            setExchangeRate(data);
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     useEffect(() => {
-        convert();
+        getCurrency(fromToken, toToken);
     }, [fromToken, toToken]);
+
 
 
     let hideChartHandler = () => {

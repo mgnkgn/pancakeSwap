@@ -8,6 +8,7 @@ import { ReactComponent as HideChart } from "./assets/swap/hide-chart.svg";
 import { ReactComponent as ShowChart } from "./assets/swap/show-chart.svg";
 import { ThemeContext } from "./context/light-ctx";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 
 const Limit = () => {
@@ -17,6 +18,23 @@ const Limit = () => {
     fromNetworkSelectHandler, toTokenSelectHandler, toNetworkSelectHandler } = useIconChanger()
   const [showTokenCopied, setShowTokenCopied] = useState(false);
   const [showChart, setShowChart] = useState(true);
+  const [exchangeRate, setExchangeRate] = useState(1);
+
+  const fetchData = async () => {
+    const options = {
+      "method": "GET",
+      "hostname": "rest.coinapi.io",
+      "path": "/v1/exchangerate/BTC?invert=false",
+      "headers": { 'X-CoinAPI-Key': '28624755-7B92-4967-AE27-56876D7A4547' }
+    };
+    const res = await axios.get(`https://rest.coinapi.io/v1/exchangerate/${fromToken}/${toToken}`, options);
+    console.log(res.data.rate)
+    setExchangeRate(res.data.rate);
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, [fromToken, toToken]);
 
   let hideChartHandler = () => {
     setShowChart(!showChart);
@@ -31,7 +49,7 @@ const Limit = () => {
     }, 600);
   }
   let performConversion = (inputValue) => {
-    return inputValue * 1.341231;
+    return inputValue * exchangeRate;
   };
   useEffect(() => {
     const result = performConversion(inputValue);
@@ -456,7 +474,8 @@ const Limit = () => {
                       <div>
                         <label>
                           <div>
-                            <Result inputValue={inputValue} />
+                            <input value={outputValue} disabled />
+                            {/* <Result inputValue={inputValue} /> */}
                           </div>
                           <div />
                         </label>
