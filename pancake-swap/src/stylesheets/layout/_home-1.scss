@@ -92,6 +92,14 @@
       background-color: #fff;
       bottom: 0;
     }
+
+    &--2 {
+      width: 100%;
+      height: 6rem;
+      position: absolute;
+      background-color: #08060d;
+      bottom: 0;
+    }
   }
 
   &__slideshow {
@@ -289,6 +297,9 @@
 }
 
 // dark mode
+.home1-h1 {
+  color: #9a6aff !important;
+}
 .home1__background--1-DM {
   background: #0e0a15;
 }
@@ -302,7 +313,7 @@
   color: #f4eeff !important;
 }
 .home-1-btn-light-DM {
-  color: #191326 !important;
+  color: #191327 !important;
 }
 .home-1-img-light {
   filter: invert(100%) sepia(0%) saturate(7474%) hue-rotate(52deg)
@@ -311,3 +322,4 @@
 .home-1-img-light-DM {
   filter: none;
 }
+

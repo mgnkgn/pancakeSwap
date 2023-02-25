@@ -16,6 +16,8 @@ import { ThemeProvider } from "./context/light-ctx";
 import DraggableTest from "./DraggableTest";
 import Liquidity from "./Liquidity";
 import Competition from "./Competition";
+import Lottery from "./Lottery"
+import Leaderboard from "./Leaderboard";
 
 function App() {
   return (
@@ -34,12 +36,14 @@ function App() {
         />
         <Route path="/perpetual" element={<Perpetual />} />
         <Route path="/overview" element={<Overview />} />
+        <Route path="/lottery" element={<Lottery />} />
         <Route path="/pottery" element={<Pottery />} />
         <Route path="/swap" element={<Swap />} />
         <Route path="/limit" element={<Limit />} />
         <Route path="/ifo" element={<Ifo />} />
         <Route path="/bridge" element={<Bridge />} />
         <Route path="/liquidity" element={<Liquidity />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
         <Route path="/competition" element={<Competition />} />
       </Routes>
     </ThemeProvider>
