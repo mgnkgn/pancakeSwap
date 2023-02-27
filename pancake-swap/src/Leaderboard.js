@@ -14,14 +14,14 @@ const Leaderboard = () => {
         <>
             <TopNavbar />
 
-            <section class={isLight ? "leaderboard" : "leaderboard lottery-background5-DM"}>
-                <div class="leaderboard__container flex-col">
-                    <div class="leaderboard__top flex-col">
+            <section className={isLight ? "leaderboard" : "leaderboard lottery-background5-DM"}>
+                <div className="leaderboard__container flex-col">
+                    <div className="leaderboard__top flex-col">
                         <h1 className={isLight ? "" : "lottery-textP-DM"}>Teams & Profiles</h1>
                         <p className={isLight ? "" : "lottery-text1-DM"}>Show off your stats and collectibles with your unique profile. Team features will be revealed soon!</p>
                     </div>
 
-                    <div class="leaderboard__teams flex-row">
+                    <div className="leaderboard__teams flex-row">
                         <h2 className={isLight ? "" : "lottery-text1-DM"}>Teams</h2>
                     </div>
 

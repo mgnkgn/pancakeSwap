@@ -122,9 +122,9 @@ export const TopNavbar = () => {
           </li>
 
           <li className="header__navbar__left-links--menu">
-            <a href="">
+            <a href>
               <img
-                src={require("./assets/header/Dots.svg").default}
+                src={isLight ? require("./assets/header/Dots.svg").default : require("./assets/header/Dots-DM.svg").default}
                 alt="..."
               />
             </a>
@@ -144,7 +144,7 @@ export const TopNavbar = () => {
                 </Link>
               </li>
               <li className="flex-row">
-                <a target="_blank" href="https://medium.com/pancakeswap">
+                <a target="blank" href="https://medium.com/pancakeswap">
                   Blog
                 </a>
                 <a href="">
@@ -152,7 +152,7 @@ export const TopNavbar = () => {
                 </a>
               </li>
               <li className="flex-row">
-                <a target="_blank" href="https://docs.pancakeswap.finance/">
+                <a target="blank" href="https://docs.pancakeswap.finance/">
                   Docs
                 </a>
                 <a href="">
@@ -167,10 +167,10 @@ export const TopNavbar = () => {
       <div className="header__navbar__right flex-row">
         <div className="header__navbar__right-price flex-row">
           <img src={require("./assets/header/Price-Logo.svg").default} alt="" />
-          <a href="">$4.339</a>
+          <a href>$4.339</a>
         </div>
         <div className="header__navbar__right-language">
-          <img src={require("./assets/header/Language.svg").default} alt="" />
+          <img src={isLight ? require("./assets/header/Language.svg").default : require("./assets/header/Language-DM.svg").default} alt="" />
           <ul className="header__navbar__right-language--submenu">
             <ul className={isLight ? "flex-col" : "flex-col header-link-bnb-DM"}>
               <li>
@@ -258,7 +258,7 @@ export const TopNavbar = () => {
           </ul>
         </div>
         <div className="header__navbar__right-settings">
-          <img src={require("./assets/header/Settings.svg").default} alt="" />
+          <img src={isLight ? require("./assets/header/Settings.svg").default : require("./assets/header/Settings-DM.svg").default} alt="" />
         </div>
         <div className="header__navbar__right-chain">
           <button className={isLight ? "flex-row" : "flex-row header-link-bnb-DM"}>

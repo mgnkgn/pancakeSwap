@@ -123,7 +123,7 @@ const Lottery = () => {
                     <div className={isLight ? "rounds__table" : "rounds__table lottery-background-border-DM"}>
                         <div className="flex-col table__container">
 
-                            <div className={isLight ? "table__top flex-col" : "table__top flex-col lottery-background-DM"}>
+                            <div className={isLight ? "table__top flex-col" : "table__top flex-col lottery-background-DM lottery-border-DM"}>
                                 <div className="flex-row top__input">
                                     <div className="flex-row">
                                         <h2 className={isLight ? "" : "lottery-text1-DM"}>Round</h2>
