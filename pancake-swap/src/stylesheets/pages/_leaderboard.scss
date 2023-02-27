@@ -157,7 +157,6 @@
             -webkit-font-smoothing : antialiased;
             color : rgb(40, 13, 95);
             font-weight : 600;
-            line-height : 44px;
         }
 
         &--soon {
@@ -209,37 +208,26 @@
             align-self: center;
 
             button {
-                margin : 0px;
-                padding : 0px 16px;
-                border : 2px solid rgb(31, 199, 212);
-                font-size : 16px;
-                vertical-align : baseline;
-                color : rgb(31, 199, 212);
-                text-decoration : none solid rgb(31, 199, 212);
-                box-sizing : border-box;
-                font-family : Kanit, sans-serif;
-                -webkit-font-smoothing : antialiased;
-                position : relative;
-                -webkit-box-align : center;
-                align-items : center;
-                border-radius : 16px;
-                cursor : pointer;
-                display : inline-flex;
-                font-weight : 600;
-                -webkit-box-pack : center;
-                justify-content : center;
-                letter-spacing : 0.48px;
-                line-height : 16px;
-                opacity : 0.810483;
-                transition : background-color 0.2s ease 0s, opacity 0.2s ease 0s;
-                height : 32px;
-                background-color : rgba(0, 0, 0, 0);
-                border-width : 2px;
-                border-style : solid;
-                border-image : none;
-                border-color : rgb(31, 199, 212);
-                box-shadow : none;
-            }
+                margin: 0;
+                padding: 0 16px;
+                font-size: 16px;
+                color: rgb(31, 199, 212);
+                text-decoration: none;
+                font-family: Kanit, sans-serif;
+                font-weight: 600;
+                letter-spacing: 0.48px;
+                line-height: 16px;
+                height: 32px;
+                background: transparent;
+                border: 2px solid rgb(31, 199, 212);
+                border-radius: 16px;
+                cursor: pointer;
+                transition: background-color 0.2s ease, opacity 0.2s ease;
+              }
+
+              button:hover {
+                opacity: 0.6;
+              }
 
         }
 
