@@ -29,10 +29,27 @@ const Home1 = () => {
         setClicked3(true);
     }
 
+    useEffect(() => {
+            if(clicked1){
+                setTimeout(handleClick2, 4000);
+                clearTimeout(handleClick1);
+                clearTimeout(handleClick3);
+            } else if (clicked2) {
+                setTimeout(handleClick3, 4000);
+                clearTimeout(handleClick1);
+                clearTimeout(handleClick2);
+            } else if (clicked3) {
+                setTimeout(handleClick1, 4000);
+                clearTimeout(handleClick2);
+                clearTimeout(handleClick3);
+            }
+    }, [clicked1, clicked2, clicked3])
+
+
 
     return (
         <section className={isLight ? "home1 flex-col home1-light" : "home1 flex-col home1-light-DM"}>
-            <div class="container flex-col">
+            <div className="container flex-col">
 
                 <Slideshow
                     display={clicked1 ? true : false}
@@ -42,7 +59,7 @@ const Home1 = () => {
                         <div className="flex-row">
                             <button className="home-1-btn-light" style={{'padding':'.3rem'}}>Trade Now Using Trust Wallet<img src="/assets/header/arrow.svg" alt="" /></button>
                             <p></p>
-                            <button className="home-1-btn-light" style={{'background':'#fff', 'color':'#1fc7d4', 'margin-left':'.5rem', 'padding':'.3rem'}}>Download Trust Wallet<img src="/assets/header/newtab-TW.svg" alt="" /></button>
+                            <button className="home-1-btn-light" style={{'background':'#fff', 'color':'#1fc7d4', 'marginLeft':'.5rem', 'padding':'.3rem', 'borderColor': '#fff'}}>Download Trust Wallet<img src="/assets/header/newtab-TW.svg" alt="" /></button>
                         </div>
                     }
                     background={'slider-background-TW'}
@@ -50,16 +67,16 @@ const Home1 = () => {
                         <div>
                             <img src='https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FtrustwalletBg.8b07fa25.png&w=1200&q=75' alt=""
                                 style={{
-                                    'min-width': '100%',
-                                    'min-height': '80%',
-                                    'margin-right': '.12rem',
-                                    'margin-top': '2.2rem'
+                                    'minWidth': '100%',
+                                    'minHeight': '80%',
+                                    'marginRight': '.12rem',
+                                    'marginTop': '2.2rem'
                                 }} />
 
                             <img src='https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FtrustwalletBunny.6e8748a6.png&w=256&q=75' alt=""
                                 style={{
                                     'width': '11.6rem',
-                                    'margin-right': '8rem'
+                                    'marginRight': '8rem'
                                 }} />
                         </div>
                     }
@@ -71,7 +88,7 @@ const Home1 = () => {
                     body={'Hello Aptos Project Teams!'}
                     footer={<button className={isLight ? "home-1-btn-light" : "home-1-btn-light-DM"}>👋 Get in Touch <img src={isLight ? "/assets/header/newtab.svg" : "/assets/header/newtab-DM.svg"} alt=""/> </button>}
                     background={'slider-background-A'}
-                    img={<img src='https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAptos.5b502f26.png&w=1080&q=75' alt="" style={{ 'width': '68rem', 'margin-right': '.12rem' }} />}
+                    img={<img src='https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAptos.5b502f26.png&w=1080&q=75' alt="" style={{ 'width': '68rem', 'marginRight': '.12rem' }} />}
                 />
 
                 <Slideshow
@@ -90,20 +107,20 @@ const Home1 = () => {
                 </div>
 
 
-                <div class="home1__hero flex-row">
-                    <div class="home1__hero__text flex-col">
+                <div className="home1__hero flex-row">
+                    <div className="home1__hero__text flex-col">
                         <h1 className={isLight ? "" : "home1-h1"}>The moon is made of pancakes.</h1>
                         <p className={isLight ? "home-1-p-light" : "home-1-p-light-DM"}>
                             Trade, earn, and win crypto on the most popular decentralized
                             platform in the galaxy.
                         </p>
-                        <div class="flex-row">
+                        <div className="flex-row">
                             <button className={isLight ? "home-1-btn-light" : "home-1-btn-light-DM"}>Connect Wallet</button>
                             <button>Trade Now</button>
                         </div>
                     </div>
 
-                    <div class="home1__hero__img flex">
+                    <div className="home1__hero__img flex">
                         <img src="/assets/header/astronaut-bunny.webp" alt="" />
                         <img src="/assets/header/star-l@2x.webp" alt="" />
                         <img src="/assets/header/star-r@2x.webp" alt="" />
@@ -111,11 +128,11 @@ const Home1 = () => {
                     </div>
                 </div>
 
-                <div class="home1__background">
+                <div className="home1__background">
                     <img
                         src={isLight ? "/assets/header/background.svg" : "/assets/header/background-DM.svg"}
                         alt=""
-                        class="home-1-hd-bg"
+                        className="home-1-hd-bg"
                     />
                 </div>
 
