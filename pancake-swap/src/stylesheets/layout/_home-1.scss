@@ -109,6 +109,7 @@
     margin-top: -0.75rem;
     margin-bottom: 0.625rem;
     position: relative;
+    transition: .5s all ease-in-out;
 
     &--1 {
       background: -webkit-linear-gradient(
@@ -140,7 +141,6 @@
           &:nth-child(2) {
             font-size: 2.5rem;
             text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
-            text-transform: uppercase;
             color: rgb(255, 255, 255);
           }
         }
@@ -148,6 +148,10 @@
         button {
           justify-content: space-between;
           align-items: center;
+          cursor: pointer;
+          display: flex;
+
+          z-index: 10;
 
           @extend %button;
           @extend %button-blue;
@@ -173,7 +177,7 @@
     }
 
     &--slider {
-      bottom: 3.5rem;
+      top: 16rem;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -191,20 +195,21 @@
         border: none;
         padding: 0;
 
+
+
         &:first-child {
           border-radius: 0.5rem 0 0 0.5rem;
+          transition: 0.25s all ease-in-out;
         }
 
         &:nth-child(2) {
           border-radius: 0;
+          transition: 0.25s all ease-in-out;
         }
 
         &:last-child {
           border-radius: 0 0.5rem 0.5rem 0;
-        }
-
-        &:focus {
-          opacity: 1;
+          transition: 0.25s all ease-in-out;
         }
       }
     }
@@ -323,3 +328,33 @@
   filter: none;
 }
 
+.slider-background-P{
+  background: linear-gradient(top, rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%)
+}
+
+.slider-background-A{
+  background: linear-gradient(rgb(0, 191, 165) 0%, rgb(0, 90, 90) 100%) !important;
+}
+
+.slider-background-TW {
+  background: radial-gradient(104.12% 231.19% at -4.12% -5.83%, rgb(0, 87, 174) 0.52%, rgb(102, 124, 198) 67.41%, rgb(25, 229, 245) 100%) !important;
+}
+
+.slider-bullet-active {
+  opacity: 1;
+}
+
+.slider-slide-noActive {
+  opacity: 0 !important;
+  position: absolute !important;
+}
+
+.slider-p-tw {
+  font-size: 24px !important;
+  line-height: 110% !important;
+  font-feature-settings: "liga" 0 !important;
+  color: rgb(255, 255, 255) !important;
+  text-shadow: rgb(0 0 0 / 25%) 0px 4px 4px !important;
+  font-style: normal;
+  font-weight: 600;
+}

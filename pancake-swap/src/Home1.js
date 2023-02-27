@@ -1,38 +1,94 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "./context/light-ctx";
+import Slideshow from "./Slideshow";
 
 
 const Home1 = () => {
     const { isLight } = useContext(ThemeContext);
 
+    const [clicked1, setClicked1] = useState(true);
+    const [clicked2, setClicked2] = useState(false);
+    const [clicked3, setClicked3] = useState(false);
+
+
+    const handleClick1 = () => {
+        setClicked1(true);
+        setClicked2(false);
+        setClicked3(false);
+    }
+
+    const handleClick2 = () => {
+        setClicked1(false);
+        setClicked2(true);
+        setClicked3(false);
+    }
+
+    const handleClick3 = () => {
+        setClicked1(false);
+        setClicked2(false);
+        setClicked3(true);
+    }
+
+
     return (
         <section className={isLight ? "home1 flex-col home1-light" : "home1 flex-col home1-light-DM"}>
             <div class="container flex-col">
-                <div class="home1__slideshow flex">
-                    <div class="home1__slideshow--1 flex-row">
-                        <div class="flex-col">
-                            <p>Perpetual Futures</p>
-                            <p>UP TO 100&times LEVERAGE</p>
-                            <button className={isLight ? "home-1-btn-light" : "home-1-btn-light-DM"}>
-                                Trade Now
-                                <img
-                                    src="/assets/dark-mode/right-arrow-Home-1.svg"
-                                    alt=""
-                                    class="home-1-img-light"
-                                />
-                            </button>
-                        </div>
-                        <div>
-                            <img src="/assets/header/image.webp" alt="" />
-                        </div>
-                    </div>
 
-                    <div class="home1__slideshow--slider">
-                        <button class="home1__slideshow--slider-bullet"></button>
-                        <button class="home1__slideshow--slider-bullet"></button>
-                        <button class="home1__slideshow--slider-bullet"></button>
-                    </div>
+                <Slideshow
+                    display={clicked1 ? true : false}
+                    header={<i className="slider-p-tw"> PancakeSwap x Trust Wallet</i>}
+                    body={'Trade and win $10,000 Prize Pool'}
+                    footer={
+                        <div className="flex-row">
+                            <button className="home-1-btn-light" style={{'padding':'.3rem'}}>Trade Now Using Trust Wallet<img src="/assets/header/arrow.svg" alt="" /></button>
+                            <p></p>
+                            <button className="home-1-btn-light" style={{'background':'#fff', 'color':'#1fc7d4', 'margin-left':'.5rem', 'padding':'.3rem'}}>Download Trust Wallet<img src="/assets/header/newtab-TW.svg" alt="" /></button>
+                        </div>
+                    }
+                    background={'slider-background-TW'}
+                    img={
+                        <div>
+                            <img src='https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FtrustwalletBg.8b07fa25.png&w=1200&q=75' alt=""
+                                style={{
+                                    'min-width': '100%',
+                                    'min-height': '80%',
+                                    'margin-right': '.12rem',
+                                    'margin-top': '2.2rem'
+                                }} />
+
+                            <img src='https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FtrustwalletBunny.6e8748a6.png&w=256&q=75' alt=""
+                                style={{
+                                    'width': '11.6rem',
+                                    'margin-right': '8rem'
+                                }} />
+                        </div>
+                    }
+                />
+
+                <Slideshow
+                    display={clicked2 ? true : false}
+                    header={<img alt="" src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAptosXPancakeSwap.e487f52c.png&w=256&q=75" />}
+                    body={'Hello Aptos Project Teams!'}
+                    footer={<button className={isLight ? "home-1-btn-light" : "home-1-btn-light-DM"}>👋 Get in Touch <img src={isLight ? "/assets/header/newtab.svg" : "/assets/header/newtab-DM.svg"} alt=""/> </button>}
+                    background={'slider-background-A'}
+                    img={<img src='https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAptos.5b502f26.png&w=1080&q=75' alt="" style={{ 'width': '68rem', 'margin-right': '.12rem' }} />}
+                />
+
+                <Slideshow
+                    display={clicked3 ? true : false}
+                    header={<p>Perpetual Futures</p>}
+                    body={'UP TO 100× LEVERAGE'}
+                    footer={<button className={isLight ? "home-1-btn-light" : "home-1-btn-light-DM"}>Trade Now <img src={isLight ? "/assets/header/arrow.svg" : "/assets/header/arrow-DM.svg"} alt="" /> </button>}
+                    background={'slider-background-P'}
+                    img={<img src='https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fperpetual.fd0aa080.png&w=640&q=75' alt="" style={{ 'width': '24.5rem' }} />}
+                />
+
+                <div className="home1__slideshow--slider">
+                    <button onClick={handleClick1} className={clicked1 ? "home1__slideshow--slider-bullet slider-bullet-active" : "home1__slideshow--slider-bullet"} ></button>
+                    <button onClick={handleClick2} className={clicked2 ? "home1__slideshow--slider-bullet slider-bullet-active" : "home1__slideshow--slider-bullet"} ></button>
+                    <button onClick={handleClick3} className={clicked3 ? "home1__slideshow--slider-bullet slider-bullet-active" : "home1__slideshow--slider-bullet"}></button>
                 </div>
+
 
                 <div class="home1__hero flex-row">
                     <div class="home1__hero__text flex-col">
@@ -57,7 +113,7 @@ const Home1 = () => {
 
                 <div class="home1__background">
                     <img
-                        src={isLight ? "/assets/header/background.svg" : "/assets/header/background-DM.svg" }
+                        src={isLight ? "/assets/header/background.svg" : "/assets/header/background-DM.svg"}
                         alt=""
                         class="home-1-hd-bg"
                     />
@@ -69,4 +125,4 @@ const Home1 = () => {
     );
 };
 
-export default Home1 ;
+export default Home1;
