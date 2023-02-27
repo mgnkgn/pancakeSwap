@@ -30,20 +30,28 @@ const Home1 = () => {
     }
 
     useEffect(() => {
-            if(clicked1){
-                setTimeout(handleClick2, 4000);
-                clearTimeout(handleClick1);
-                clearTimeout(handleClick3);
-            } else if (clicked2) {
-                setTimeout(handleClick3, 4000);
-                clearTimeout(handleClick1);
-                clearTimeout(handleClick2);
-            } else if (clicked3) {
-                setTimeout(handleClick1, 4000);
-                clearTimeout(handleClick2);
-                clearTimeout(handleClick3);
-            }
-    }, [clicked1, clicked2, clicked3])
+        let timeout1;
+        let timeout2;
+        let timeout3;
+
+        if (clicked1) {
+           timeout2 = setTimeout(handleClick2, 4000);
+        }
+
+        if (clicked2) {
+           timeout3 = setTimeout(handleClick3, 4000);
+        }
+
+        if (clicked3) {
+           timeout1 = setTimeout(handleClick1, 4000);
+        }
+
+        return () => {
+            clearTimeout(timeout1);
+            clearTimeout(timeout2);
+            clearTimeout(timeout3);
+          };
+    }, [clicked1, clicked2, clicked3]);
 
 
 
