@@ -35,22 +35,22 @@ const Home1 = () => {
         let timeout3;
 
         if (clicked1) {
-           timeout2 = setTimeout(handleClick2, 4000);
+            timeout2 = setTimeout(handleClick2, 4000);
         }
 
         if (clicked2) {
-           timeout3 = setTimeout(handleClick3, 4000);
+            timeout3 = setTimeout(handleClick3, 4000);
         }
 
         if (clicked3) {
-           timeout1 = setTimeout(handleClick1, 4000);
+            timeout1 = setTimeout(handleClick1, 4000);
         }
 
         return () => {
             clearTimeout(timeout1);
             clearTimeout(timeout2);
             clearTimeout(timeout3);
-          };
+        };
     }, [clicked1, clicked2, clicked3]);
 
 
@@ -60,14 +60,14 @@ const Home1 = () => {
             <div className="container flex-col">
 
                 <Slideshow
-                    display={clicked1 ? true : false}
+                    display={clicked1}
                     header={<i className="slider-p-tw"> PancakeSwap x Trust Wallet</i>}
                     body={'Trade and win $10,000 Prize Pool'}
                     footer={
                         <div className="flex-row">
-                            <button className="home-1-btn-light" style={{'padding':'.3rem'}}>Trade Now Using Trust Wallet<img src="/assets/header/arrow.svg" alt="" /></button>
+                            <button className="home-1-btn-light" style={{ 'padding': '.3rem' }}>Trade Now Using Trust Wallet<img src="/assets/header/arrow.svg" alt="" /></button>
                             <p></p>
-                            <button className="home-1-btn-light" style={{'background':'#fff', 'color':'#1fc7d4', 'marginLeft':'.5rem', 'padding':'.3rem', 'borderColor': '#fff'}}>Download Trust Wallet<img src="/assets/header/newtab-TW.svg" alt="" /></button>
+                            <button className="home-1-btn-light" style={{ 'background': '#fff', 'color': '#1fc7d4', 'marginLeft': '.5rem', 'padding': '.3rem', 'borderColor': '#fff' }}>Download Trust Wallet<img src="/assets/header/newtab-TW.svg" alt="" /></button>
                         </div>
                     }
                     background={'slider-background-TW'}
@@ -91,16 +91,16 @@ const Home1 = () => {
                 />
 
                 <Slideshow
-                    display={clicked2 ? true : false}
+                    display={clicked2}
                     header={<img alt="" src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAptosXPancakeSwap.e487f52c.png&w=256&q=75" />}
                     body={'Hello Aptos Project Teams!'}
-                    footer={<button className={isLight ? "home-1-btn-light" : "home-1-btn-light-DM"}>👋 Get in Touch <img src={isLight ? "/assets/header/newtab.svg" : "/assets/header/newtab-DM.svg"} alt=""/> </button>}
+                    footer={<button className={isLight ? "home-1-btn-light" : "home-1-btn-light-DM"}>👋 Get in Touch <img src={isLight ? "/assets/header/newtab.svg" : "/assets/header/newtab-DM.svg"} alt="" /> </button>}
                     background={'slider-background-A'}
                     img={<img src='https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAptos.5b502f26.png&w=1080&q=75' alt="" style={{ 'width': '68rem', 'marginRight': '.12rem' }} />}
                 />
 
                 <Slideshow
-                    display={clicked3 ? true : false}
+                    display={clicked3}
                     header={<p>Perpetual Futures</p>}
                     body={'UP TO 100× LEVERAGE'}
                     footer={<button className={isLight ? "home-1-btn-light" : "home-1-btn-light-DM"}>Trade Now <img src={isLight ? "/assets/header/arrow.svg" : "/assets/header/arrow-DM.svg"} alt="" /> </button>}
