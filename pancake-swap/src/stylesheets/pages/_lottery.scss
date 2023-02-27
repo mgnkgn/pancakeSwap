@@ -1,5 +1,5 @@
-@use "../base/helpers" as helper;
-@use "../themes/base-colors" as bc;
+@use "../base/helpers"as helper;
+@use "../themes/base-colors"as bc;
 
 body {
   width: calc(100vw - 0.5rem);
@@ -110,10 +110,8 @@ p {
         width: 240px;
         padding: 10px 30px;
         background: #5f38ac;
-        background: linear-gradient(
-          rgb(118, 69, 217) 0%,
-          rgb(69, 42, 122) 100%
-        );
+        background: linear-gradient(rgb(118, 69, 217) 0%,
+            rgb(69, 42, 122) 100%);
         box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
         border: none;
         border-radius: 1rem;
@@ -351,6 +349,7 @@ p {
   cursor: pointer;
 
   &:active {
+
     a,
     svg {
       opacity: 0.85;
@@ -372,11 +371,9 @@ p {
 }
 
 .wallet {
-  background: linear-gradient(
-    139.73deg,
-    rgb(49, 61, 92) 0%,
-    rgb(61, 42, 84) 100%
-  );
+  background: linear-gradient(139.73deg,
+      rgb(49, 61, 92) 0%,
+      rgb(61, 42, 84) 100%);
   padding: 6rem 0;
   width: 100%;
 
@@ -698,6 +695,7 @@ p {
       }
     }
   }
+
   padding-bottom: 62px;
 }
 
@@ -825,6 +823,7 @@ p {
 
   &__winning {
     gap: 24px;
+
     .winning__text {
       flex: 2 1 0%;
     }
@@ -979,6 +978,7 @@ p {
 
         &__elements {
           gap: 4px;
+
           .color {
             border-radius: 50%;
             width: 20px;
@@ -1077,3 +1077,69 @@ p {
   margin: 40px 0px;
   width: 100%;
 }
+
+
+//Dark Mode
+.lottery-a-DM {
+  a {
+    color: #b8add2 !important;
+  }
+}
+
+.lottery-hover-DM {
+  li {
+    &:hover {
+      background-color: #353547 !important;
+    }
+  }
+}
+
+.lottery-background-DM {
+  background-color: #27262c !important;
+}
+
+.lottery-background2-DM {
+  background: linear-gradient(166.77deg,#3b4155,#3a3045) !important;
+}
+
+.lottery-background3-DM {
+  background-color: #1e1d22 !important;
+}
+
+.lottery-background4-DM{
+  background: linear-gradient(rgb(67, 69, 117) 0%, rgb(102, 87, 141) 100%) !important;
+}
+
+.lottery-background5-DM {
+  background-color: #08060b !important;
+}
+
+.lottery-background-border-DM {
+  background-color: #383241 !important;
+}
+
+.lottery-border-DM {
+  border-bottom: 0px solid !important;
+  border: 1px solid #383241 !important;
+}
+
+.lottery-text1-DM {
+  color: #f4eeff !important;
+}
+
+.lottery-text2-DM {
+  color: #191326 !important;
+}
+
+.lottery-text3-DM {
+  color: #b8add2 !important;
+}
+
+.lottery-textP-DM {
+  color: #9a6aff !important;
+}
+
+.lottery-input-DM {
+  background-color: #372f47 !important;
+}
+
