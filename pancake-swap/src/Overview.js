@@ -230,8 +230,8 @@ const Overview = () => {
   return (
     <>
       <TopNavbar />{" "}
-      <div className="sub_nav sub_nav_adj-overview">
-        <ul>
+      <div className={isLight ? "sub_nav" : "sub_nav lottery-background3-DM lottery-a-DM lottery-hover-DM"}>
+      <ul>
           <li>
             <a href="#" className="selected_pottery">
               Overview

@@ -45,6 +45,7 @@ function App() {
         <Route path="/liquidity" element={<Liquidity />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
         <Route path="/competition" element={<Competition />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
       </Routes>
     </ThemeProvider>
   );

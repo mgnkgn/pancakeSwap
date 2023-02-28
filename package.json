@@ -1,6 +1,13 @@
 {
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"cd pancake-server && npm run start\" \"cd pancake-swap && npm start\""
+  },
+  "proxy": "https://api.cryptonator.com/",
   "dependencies": {
-    "react-dragable": "^0.0.4-1",
-    "react-draggable": "^4.4.5"
+    "concurrently": "^7.6.0",
+    "express": "^4.18.2",
+    "react-draggable": "^4.4.5",
+    "swr": "^2.0.3"
   }
 }

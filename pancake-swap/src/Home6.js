@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import photoStavros from "./assets/home6/bottom-right@2x.webp";
 import photoStavros1 from "./assets/home6/coin@2x.webp";
 import photoStavros2 from "./assets/home6/top-left@2x.webp";
 import photoStavros3 from "./assets/home6/top-right@2x.webp";
+import { ThemeContext } from "./context/light-ctx";
 const Home6 = () => {
+  const { isLight } = useContext(ThemeContext)
   return (
     <>
       {
         //<!-- Home6 - Stavros -->
       }
-      <section class="home6">
-        <div class="home6-container">
+      <section class={isLight ? "home6" : "home6 home6-DM"}>
+        <div class={isLight ? "home6-container" : "home6-container home6-DM"}>
           <div class="home6-top">
             <div>
-              <h2 class="home6-h2">
+              <h2 class={isLight ? "home6-h2" : "home6-h2 home6-h2-DM"}>
                 <span class="stavros_span">CAKE</span> makes our world go round.
               </h2>
               <p>
@@ -22,7 +24,7 @@ const Home6 = () => {
                 with it!
               </p>
               <div>
-                <button class="home6-buy-cake-btn">Buy CAKE</button>
+                <button class={isLight ? "home6-buy-cake-btn" : "home6-buy-cake-btn home6-btn-DM"}>Buy CAKE</button>
                 <a href="">Learn</a>
               </div>
             </div>

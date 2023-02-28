@@ -1,2 +1,4 @@
+cd
 node_modules
 .history
+.gitignore

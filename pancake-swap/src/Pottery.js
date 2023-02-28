@@ -1,26 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import PotteryCard from "./PotteryCard";
+import { TopNavbar } from "./TopNavbar";
+import { ThemeContext } from "./context/light-ctx";
 
 const Pottery = () => {
+  const { isLight } = useContext(ThemeContext)
   return (
     <>
       {" "}
-      <div className="sub_nav">
+      <TopNavbar />
+      <div className={isLight ? "sub_nav" : "sub_nav lottery-background3-DM lottery-a-DM lottery-hover-DM"}>
         <ul>
           <li>
-            <a href="competition.html">Trading Competition</a>
+            <Link href="#">Trading Competition</Link>
           </li>
           <li>
-            <a href="#">Prediction (BETA)</a>
+            <Link href="#">Prediction (BETA)</Link>
           </li>
           <li>
-            <a href="lottery.html">Lottery</a>
+            <Link href="#">Lottery</Link>
           </li>
           <li>
-            <a href="#" className="selected_pottery">
+            <Link href="#" className="selected_pottery">
               Pottery (BETA)
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
