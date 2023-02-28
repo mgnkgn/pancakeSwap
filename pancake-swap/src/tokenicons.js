@@ -2,6 +2,14 @@ export function GetIconBySymbol({ symbol }) {
     switch (symbol) {
         case 'ETH':
             return <EthIcon />
+        case 'ADA':
+            return <AdaIcon />
+        case 'BTC':
+            return <BtcIcon />
+        case 'SOL':
+            return <SolIcon />
+        case 'DOGE':
+            return <DogeIcon />
         case 'USDC':
             return <UsdcIcon />
         case 'USDT':
@@ -15,6 +23,26 @@ export function GetIconBySymbol({ symbol }) {
         default:
             return <EthIcon />
     }
+}
+const AdaIcon = () => {
+    return (
+        <img class="sc-b8d1b41-0 ethRlo" width="24px" alt="ADA logo" src="https://tokens.pancakeswap.finance/images/0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47.png" />
+    )
+}
+const BtcIcon = () => {
+    return (
+        <img class="sc-b8d1b41-0 ethRlo" width="24px" alt="BTC logo" src="https://tokens.pancakeswap.finance/images/symbol/wbtc.png" />
+    )
+}
+const DogeIcon = () => {
+    return (
+        <img class="sc-b8d1b41-0 ethRlo" width="24px" alt="DOGE logo" src="https://tokens.pancakeswap.finance/images/0xbA2aE424d960c26247Dd6c32edC70B295c744C43.png" />
+    )
+}
+const SolIcon = () => {
+    return (
+        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png" width="24px" alt="SOL logo"></img>
+    )
 }
 const CakeIcon = () => {
     return (
@@ -34,7 +62,7 @@ const BnbIcon = () => {
             color="text"
             xmlns="http://www.w3.org/2000/svg"
             className="sc-4ba21b47-0 IIbzK"
-            
+
         >
             <circle cx={48} cy={48} r={48} fill="#F0B90B" />
             <path
@@ -118,7 +146,7 @@ const UsdtIcon = () => {
 }
 const LusdIcon = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="18"  viewBox="0 0 40 40" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 40 40" fill="none">
             <g clip-path="url(#clip0_16025_96537)">
                 <path d="M39.4175 25.6862C37.2806 33.0542 31.1537 38.5752 23.6039 39.9362V34.1807C24.9687 33.6608 26.197 32.8364 27.1952 31.7701C27.7497 31.1752 28.2237 30.5101 28.605 29.7917C29.3308 28.4233 29.7065 26.8964 29.6984 25.3475C29.6984 20.2594 26.0252 18.2252 22.5815 16.7165L20.8377 15.9456C18.9731 15.1095 17.5469 14.3656 17.5469 13.0923C17.5469 11.3323 19.0828 10.3864 20.5315 10.3864C22.073 10.3864 22.9475 10.9553 23.8712 12.5566L24.5873 13.7973L29.1953 10.8403L28.5949 9.72534C27.5381 7.71038 25.7536 6.17353 23.6042 5.42741V0.148438C24.0523 0.224966 24.495 0.323208 24.9435 0.438267C24.9871 0.449336 25.0364 0.460086 25.0857 0.469878C25.1356 0.479351 25.185 0.492125 25.2332 0.50809C25.2482 0.509793 25.2629 0.513517 25.2769 0.519159C25.3973 0.550771 25.5228 0.57919 25.6486 0.617401C30.7988 2.11572 35.1431 5.59866 37.7253 10.3C40.3075 15.0014 40.9162 20.5361 39.4175 25.6862Z" fill="#745DDF" />
                 <path d="M24.041 25.6265C24.041 27.9441 21.9474 29.3761 20.0124 29.3761C17.6893 29.3761 16.361 27.4575 16.104 25.6754L15.8854 24.1285L10.31 25.6985L10.5629 26.9449C11.3608 30.875 14.0449 33.7012 17.6908 34.5539V40.1239C16.7018 40.008 15.7224 39.8199 14.761 39.5607C14.6244 39.5291 14.493 39.4896 14.3564 39.4514C5.72425 36.9378 -0.21463 29.0306 -0.223145 20.04V0.607531C-0.222612 0.167094 0.134378 -0.189898 0.574815 -0.19043H17.6896V5.37422C15.6868 5.95409 13.9804 7.2754 12.9176 9.06919C12.236 10.2621 11.8814 11.614 11.8898 12.9879V13.0972C11.9439 17.6347 15.2789 19.5315 18.4274 20.9581L20.0026 21.6413L20.1337 21.7014C22.631 22.8441 24.041 23.5928 24.041 25.6265Z" fill="#2EB6EA" />

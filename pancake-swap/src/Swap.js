@@ -8,31 +8,6 @@ import { useIconChanger } from "./IconChanger";
 import { ReactComponent as HideChart } from "./assets/swap/hide-chart.svg";
 import { ReactComponent as ShowChart } from "./assets/swap/show-chart.svg";
 import { Link } from "react-router-dom";
-import axios from "axios";
-
-/* const convert = () => {
-
-    const options = {
-        method: 'GET',
-        url: 'https://alpha-vantage.p.rapidapi.com/query',
-        params: { from_currency: fromToken, function: 'CURRENCY_EXCHANGE_RATE', to_currency: toToken },
-        headers: {
-            'X-RapidAPI-Key': '77ddb0d609mshb9e8da848182ca2p15136ajsnbdf42b34fba4',
-            'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com'
-        }
-    };
-
-    axios.request(options).then(function (response) {
-        setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate']);
-        let pairPrices = { from: fromToken, to: toToken, price: response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'] };
-        pairs.push(pairPrices);
-
-        console.log(pairs)
-    }).catch(function (error) {
-        console.error(error);
-        setExchangeRate(Math.random() * 100);
-    });
-} */
 
 const Swap = () => {
   const {
@@ -49,12 +24,11 @@ const Swap = () => {
   const [showTokenCopied, setShowTokenCopied] = useState(false);
   const [showChart, setShowChart] = useState(true);
   const [exchangeRate, setExchangeRate] = useState(75.414);
-  const [myFrom, setMyFrom] = useState("");
-  const [myTo, setMyTo] = useState("");
+  const [myFrom, setMyFrom] = useState("BNB");
+  const [myTo, setMyTo] = useState("CAKE");
   const [myFromChanged, setMyFromChanged] = useState(false);
   const [myToChanged, setMyToChanged] = useState(false);
 
-  const pairs = [{ from: "BNB", to: "BUSD", price: 1 }];
 
   const getCurrency = async (from, to) => {
     try {
@@ -75,9 +49,6 @@ const Swap = () => {
     }
   };
 
-  //   useEffect(() => {
-  //     getCurrency(myFrom, myTo);
-  //   }, [fromToken, toToken]);
 
   useEffect(() => {
     const data = getCurrency(myFrom, myTo);
@@ -361,16 +332,20 @@ const Swap = () => {
                           <select
                             onChange={(e) => {
                               fromTokenSelectHandler(e);
-                              setMyFrom(e.target.value.substring(0, 3));
+                              setMyFrom(e.target.value);
                               setMyFromChanged(true);
                             }}
                           >
                             <option value="BNB">BNB</option>
+                            <option value="CAKE">CAKE</option>
+                            <option value="BTC">BTC</option>
+                            <option value="ADA">ADA</option>
+                            <option value="DOGE">DOGE</option>
                             <option value="ETH">ETH</option>
                             <option value="USDC">USDC</option>
                             <option value="USDT">USDT</option>
                             <option value="LUSD">LUSD</option>
-                            <option value="CAKE">CAKE</option>
+                            <option value="SOL">SOL</option>
                           </select>
                         </div>
                       </button>
@@ -431,12 +406,16 @@ const Swap = () => {
                             }}
                           >
                             <option value="CAKE">CAKE</option>
+                            <option value="BTC">BTC</option>
+                            <option value="ADA">ADA</option>
+                            <option value="DOGE">DOGE</option>
                             <option value="BNB">BNB</option>
                             <option value="ETH">ETH</option>
                             <option value="USDC">USDC</option>
                             <option value="USDT">USDT</option>
                             <option value="LUSD">LUSD</option>
-                          </select>
+                            <option value="SOL">SOL</option>
+                          </select> 
                         </div>
                       </button>
                       <div onClick={handleCopy}>
